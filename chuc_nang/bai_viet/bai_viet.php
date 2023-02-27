@@ -1,4 +1,6 @@
+<div class="khung">
 <h2>BÀI VIẾT SẢN PHẨM</h2>
+<br>
 <div class="wrapper">
   <?php
     $tv="select * from bai_viet order by id limit 3";
@@ -8,7 +10,6 @@
       $link_menu = "?thamso=xuat_san_pham&id=".$tv_2['id'];
       $link_anh="hinh_anh/bai_viet/".$tv_2['anh'];
       $tieu_de=$tv_2['tieu_de'];
-      $noi_dung=$tv_2['noi_dung'];
       if ($i == 0) {
         echo '<div class="main-article">';
         echo "<img src='$link_anh'>";
@@ -18,13 +19,18 @@
         echo "<img src='$link_anh'>";
         echo '<a href="'.$link_menu.'">';
         echo "<h4>$tieu_de</h4>";
-        echo "</a>";
-        echo $noi_dung;
+        echo "</a><br>";
+        $str = $tv_2['noi_dung'];
+							$words = explode(" ", $str); 
+							$first_three_words = array_slice($words, 0, 84);
+							$noi_dung = implode(" ", $first_three_words); 
+              echo $noi_dung;
         echo '</div>';
       }
       $i++;
     }     
   ?>
+</div>
 </div>
 <style>
   .wrapper {
@@ -37,6 +43,7 @@
   .article {
     width: 25%;
     height: 100%;
+    max-height:300px;
     margin-bottom: 20px;
     background-color: #f0f0f0;
     text-align: left;

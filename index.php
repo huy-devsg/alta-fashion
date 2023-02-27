@@ -32,21 +32,21 @@
 					include("chuc_nang/menu_ngang/menu_ngang.php");
 					?>
 			</div>	
-			<div style="width:90%;margin:10px">
-				<?php
-					if(!isset($_GET['thamso']))
-					{
-						include("chuc_nang/banner/banner.php");	
-					}
-				?> 	
-				<?php 
-					include("chuc_nang/dieu_huong.php");
-				?>
-			</div>
-			<div style="width:100%">
-				<?php
-					include("chuc_nang/footer/footer.php");
-				 ?>
+			<?php 
+					echo'<div style="width:90%;margin-top:18px">';
+						if(!isset($_GET['thamso']))
+						{
+							include("chuc_nang/banner/banner.php");	
+						}
+					?> 	
+					<?php 
+						include("chuc_nang/dieu_huong.php");
+					?>
+				</div>
+				<div style="width:100%">
+					<?php
+						include("chuc_nang/footer/footer.php");
+					?>
 			</div>
 		</center>
 	</body>

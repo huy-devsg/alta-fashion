@@ -1,6 +1,10 @@
-<div style="margin:72px 0 52px 0;">	
+<div style="margin:100px 0 30px 0;">
+
 	<?php 
-	if(isset($_GET['thamso'])){$tham_so=$_GET['thamso'];}else{$tham_so="";}
+	if(isset($_GET['thamso'])){$tham_so=$_GET['thamso'];
+		echo '<div class="khung">';
+	}
+	else{$tham_so="";}
 	switch($tham_so)
 	{
 		case "xuat_san_pham":
@@ -27,5 +31,6 @@
 			include("chuc_nang/san_pham/san_pham_noi_bat.php");	
 			include("chuc_nang/bai_viet/bai_viet.php");
 	}
+	echo '</div>';
 ?>
 </div>
