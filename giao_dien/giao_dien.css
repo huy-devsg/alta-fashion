@@ -27,7 +27,7 @@ div.menu_ngang a
 	font-size:20px;
 }
 .navbar {
-    background-color: white !important;
+    background-color: #fff !important;
     color: black !important;
     border: none;
 	box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
@@ -38,8 +38,8 @@ div.menu_ngang a
 }
 
 .navbar a:hover {
-    background-color: #000 !important;
-	color: #fff !important;
+    background-color:#fff !important;
+	color: rgba(255,105,0,1) !important;
 	border-radius:8px;
 }
 .navbar a.active:hover {

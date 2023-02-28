@@ -12,7 +12,45 @@
       $tieu_de=$tv_2['tieu_de'];
       if ($i == 0) {
         echo '<div class="main-article">';
-        echo "<img src='$link_anh'>";
+        echo '<div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+    
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+    
+          <div class="item active">
+          <img src="hinh_anh/slideshow/a_1.jpg" alt="'.$tieu_de.'" style="width:100%;">
+          <div class="carousel-caption">
+              <h3>'.$tieu_de.'</h3>
+            </div>
+          </div>
+    
+          <div class="item">
+          <img src="hinh_anh/slideshow/a_2.jpeg" alt="Los Angeles" style="width:100%;">
+          <div class="carousel-caption">
+              <h3>Chicago</h3>
+              <p>Thank you, Chicago!</p>
+            </div>
+          </div>
+      
+        </div>
+    
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>';
+        
         echo '</div>';
       } else {
         echo '<div class="article">';
@@ -35,6 +73,19 @@
 </div>
 </div>
 <style>
+  .carousel-inner
+  {
+    max-height: 500px;
+  }
+.carousel-control{
+  opacity: 0;
+}
+.carousel-control{
+border-radius: 20px;}
+  .carousel-caption
+  {
+    background-color:black;
+  }
   .wrapper {
     width: 100%;
     display: flex;
@@ -45,14 +96,14 @@
   .article {
     width: 25%;
     height: 100%;
-    max-height:300px;
+    max-height:250px;
     margin-bottom: 20px;
     text-align: left;
-
   }
 
   .main-article {
-    
+    background-color: #fff;
+    border-radius: 20px;
     display: flex;
     flex-direction: row;
     width: 47%;
@@ -62,6 +113,8 @@
   .main-article img {
     width: 100%; /* thêm một div mới để bao bọc ảnh và thay đổi giá trị của width */
     border-radius: 20px;
+    min-height: 458px;
+
   }
 
 
@@ -89,7 +142,8 @@ text-decoration: underline;
 }
 .noi_dung
 {
-  margin-top: 10px;
+  margin-top: 8px;
+  margin-bottom: 200px;
 }
 .tieu_de
 {

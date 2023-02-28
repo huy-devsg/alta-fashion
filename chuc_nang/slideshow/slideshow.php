@@ -1,4 +1,3 @@
-<center>
 <div id="myCarousel" class="carousel slide" data-ride="carousel" style="margin:52px 0 15px 0;">
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -35,8 +34,6 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-</center>
-
 <script type="text/javascript" >
 
 	var i_img=0;

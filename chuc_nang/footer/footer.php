@@ -62,6 +62,7 @@
 }
 
 .footer-col-inner h3 {
+  color: rgba(255,105,0,1);
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 15px;
@@ -89,8 +90,8 @@
 }
 
 .footer-bottom {
-  background-color: #333;
-  color: #fff;
+  background-color: rgba(255,105,0,1);
+  color: #000;
   padding: 10px 0;
 }
 
