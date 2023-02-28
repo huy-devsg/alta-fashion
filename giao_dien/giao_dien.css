@@ -207,10 +207,6 @@ div.phan_trang a:hover
 {
 	color:red
 }
-.page-link
-{
-
-}
 @media (max-width: 767px) {
 	.product {
 		flex-basis: 100%;
