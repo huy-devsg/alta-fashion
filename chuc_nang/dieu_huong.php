@@ -1,4 +1,4 @@
-<div style="margin:100px 0 30px 0;">
+<div style="margin:95px 0 0 0;">
 
 	<?php 
 	if(isset($_GET['thamso'])){$tham_so=$_GET['thamso'];

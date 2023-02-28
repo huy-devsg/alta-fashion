@@ -17,15 +17,17 @@
       } else {
         echo '<div class="article">';
         echo "<img src='$link_anh'>";
+        echo "<div class='tieu_de'>";
         echo '<a href="'.$link_menu.'">';
         echo "<h4>$tieu_de</h4>";
-        echo "</a><br>";
+        echo "</div>";
+        echo "</a><div class='noi_dung'>";
         $str = $tv_2['noi_dung'];
 							$words = explode(" ", $str); 
 							$first_three_words = array_slice($words, 0, 84);
 							$noi_dung = implode(" ", $first_three_words); 
               echo $noi_dung;
-        echo '</div>';
+        echo '</div></div>';
       }
       $i++;
     }     
@@ -45,7 +47,6 @@
     height: 100%;
     max-height:300px;
     margin-bottom: 20px;
-    background-color: #f0f0f0;
     text-align: left;
 
   }
@@ -85,5 +86,15 @@ text-decoration: none;
 
 .article a:hover {
 text-decoration: underline;
+}
+.noi_dung
+{
+  margin-top: 10px;
+}
+.tieu_de
+{
+  margin-top: 10px;
+  min-height: 40px;
+  font-weight: bold;
 }
 </style>

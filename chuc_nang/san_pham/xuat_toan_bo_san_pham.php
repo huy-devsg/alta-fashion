@@ -1,7 +1,10 @@
+<?php
+    include('chuc_nang/danh_muc/xuat_danh_muc_san_pham.php');
+?>
 <h2>TẤT CẢ SẢN PHẨM</h2>
 <div class="product-list">
 <?php 
-    $so_du_lieu=10;
+    $so_du_lieu=8;
     $tv="select count(*) from san_pham";
     $tv_1=mysqli_query($conn,$tv);
     $tv_2=mysqli_fetch_array($tv_1);
@@ -19,7 +22,7 @@
             $gia=$tv_2['gia'];
             $gia=number_format($gia,0,",",".");
             echo "<a href='$link_chi_tiet' >";
-            echo "<img src='$link_anh' width='200px' >";
+            echo "<img src='$link_anh' width='200px' class='product_img'>";
             echo "</a>";
             echo "<br>";
             echo "<br>";
@@ -44,25 +47,7 @@
         echo "</div>";
     }
 ?>
-<div class="phan_trang">
-    <?php
-        for($i=1;$i<=$so_trang;$i++)
-        {
-            $link="?thamso=xuat_san_pham_2&trang=".$i;
-            echo "<a href='$link' >";
-            echo $i;echo " ";
-            echo "</a>";
-        }
-    ?>
 </div>
-</div>
-
-<style>
-
-    .phan_trang {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-    }
-</style>
+<?php
+	include('chuc_nang/pagination/pagination.php');
+?>

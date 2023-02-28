@@ -5,6 +5,7 @@
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
 	$link_anh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
+	echo '<h2>CHI TIẾT SẢN PHẨM</h2><br>';
 	echo "<table>";
 		echo "<tr>";
 			echo "<td width='250px' align='center' >";

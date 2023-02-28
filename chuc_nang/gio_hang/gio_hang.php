@@ -46,7 +46,8 @@
 		}
 	}
 	
-	echo "Giỏ hàng";
+	echo "<h2>GIỎ HÀNG</h2>";
+	echo '<div class="product_list">';
 	echo "<br>";
 	echo "<br>";
 	if($gio_hang=="khong")
@@ -57,7 +58,7 @@
 	{
 		echo "<form action='' method='post' >"; 
 		echo "<input type='hidden' name='cap_nhat_gio_hang' value='co' > ";
-		echo "<table>";
+		echo "<table border=1 width=100%>";
 			echo "<tr>";
 				echo "<td width='200px' >Tên</td>";
 				echo "<td width='150px' >Số lượng</td>";
@@ -90,16 +91,13 @@
 				}
 			}	
 			echo "<tr>";
-				echo "<td>&nbsp;</td>";
+				echo "<td colspan=3>Tổng giá trị đơn hàng là : ".$tong_cong." VNĐ</td>";
 				echo "<td><input type='submit' value='Cập nhật' > </td>";
-				echo "<td>&nbsp;</td>";
-				echo "<td>&nbsp;</td>";
 			echo "</tr>";	
 		echo "</table>";
 		echo "</form>";
 		echo "<br>";
-		echo "Tổng giá trị đơn hàng là : ".$tong_cong." VNĐ";
 		include("chuc_nang/gio_hang/bieu_mau_mua_hang.php");
 	}
-	
+	echo '</div>';
 ?>
