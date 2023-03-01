@@ -8,14 +8,14 @@
 
 	$tv="select count(id) from san_pham where trang_chu='co' ";
 
-	$tv_1=mysql_query($tv);
-	$tv_2=mysql_fetch_array($tv_1);
+	$tv_1=mysqli_query($conn,$tv);
+	$tv_2=mysqli_fetch_array($tv_1);
 	$so_trang=ceil($tv_2[0]/$so_dong_tren_mot_trang);
 	
 	$vtbd=($_GET['trang']-1)*$so_dong_tren_mot_trang;
 	$tv="select id,ten,gia,hinh_anh,sap_xep_trang_chu from san_pham where trang_chu='co' order by sap_xep_trang_chu desc limit $vtbd,$so_dong_tren_mot_trang";
 
-	$tv_1=mysql_query($tv);
+	$tv_1=mysqli_query($conn,$tv);
 ?>
 
 <form method="post" >
@@ -29,7 +29,7 @@
 		</tr>
 		<?php 
 			$i=1;
-			while($tv_2=mysql_fetch_array($tv_1))
+			while($tv_2=mysqli_fetch_array($tv_1))
 			{
 				$id=$tv_2['id'];
 				$ten=$tv_2['ten'];

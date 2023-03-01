@@ -8,5 +8,4 @@
 	html = '$noi_dung'
 	WHERE vi_tri='trai';
 	";
-	mysql_query($tv);
-?>
+	mysqli_query($conn,$tv);?>

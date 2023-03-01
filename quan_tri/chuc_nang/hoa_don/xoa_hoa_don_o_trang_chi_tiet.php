@@ -4,7 +4,7 @@
 <?php 
 	$id=$_GET['id'];
 	$tv="DELETE FROM hoa_don WHERE id = $id ";
-	mysql_query($tv);
+	mysqli_query($conn,$tv);			
 	$link="?thamso=hoa_don&trang=".$_GET['trang'];
 ?>
 <html>

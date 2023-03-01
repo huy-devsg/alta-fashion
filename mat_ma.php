@@ -4,7 +4,7 @@
 		<title>Tạo mật mã</title>
 	</head>
 	<body>
-		<?php 
+		<?php 	
 			$c="admin";
 			$mat_khau=md5($c);
 			$mat_khau=md5($mat_khau);

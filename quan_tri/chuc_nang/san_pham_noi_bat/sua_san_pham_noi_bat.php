@@ -12,7 +12,6 @@
 					noi_bat='$noi_bat' 
 					where id='$id';
 			";
-			mysql_query($tv);
-		}
+			mysqli_query($conn,$tv);		}
 	}
 ?>

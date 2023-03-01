@@ -62,7 +62,7 @@
         echo "</a><div class='noi_dung'>";
         $str = $tv_2['noi_dung'];
 							$words = explode(" ", $str); 
-							$first_three_words = array_slice($words, 0, 84);
+							$first_three_words = array_slice($words, 0, 75);
 							$noi_dung = implode(" ", $first_three_words); 
               echo $noi_dung;
         echo '</div></div>';

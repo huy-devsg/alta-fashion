@@ -1,8 +1,8 @@
 <?php 
 	if(!isset($bien_bao_mat)){exit();}
 	$tv="select * from banner limit 0,1 ";
-	$tv_1=mysql_query($tv);
-	$tv_2=mysql_fetch_array($tv_1);
+	$tv_1=	mysqli_query($conn,$tv);			
+	$tv_2=mysqli_fetch_array($tv_1);
 	$rong=$tv_2['rong'];
 	$cao=$tv_2['cao'];
 	$ten_anh=$tv_2['hinh'];

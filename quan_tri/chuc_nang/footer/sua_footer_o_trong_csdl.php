@@ -8,5 +8,5 @@
 	html = '$noi_dung'
 	WHERE id=1;
 	";
-	mysql_query($tv);
+	mysqli_query($conn,$tv);			
 ?>

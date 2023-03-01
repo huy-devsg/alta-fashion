@@ -22,7 +22,7 @@
 		'$noi_dung',
 		'$loai_menu'
 		);";
-		mysql_query($tv);
+		mysqli_query($conn,$tv);
 		$_SESSION['loai_menu_wr8']=$loai_menu;
 	}
 	else 

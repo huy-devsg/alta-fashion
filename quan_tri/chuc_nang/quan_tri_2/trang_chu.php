@@ -7,15 +7,15 @@
 </style>
 <br>
 <center>
-<a href="index.php" style="font-size:72px;color:blue;text-decoration:none" >Quản trị cửa hàng</a>
+<a href="index.php" style="font-size:72px;color:blue;text-decoration:none" >Hi, <?php echo $_SESSION['ky_danh']; ?></a>
 </center>
 <br><br>
 <table width="990px" >
 	<tr>
 		<td width="800px">
 			<a href="index.php" class="lk_1" >Trang chủ</a>
-			<a href="?thamso=menu_doc" class="lk_1" >Menu dọc</a>
-			<a href="?thamso=menu_ngang" class="lk_1" >Menu ngang</a>
+			<a href="?thamso=menu_doc" class="lk_1" >Danh mục sản phẩm</a>
+			<a href="?thamso=menu_ngang" class="lk_1" >Menu</a>
 			<a href="?thamso=san_pham" class="lk_1" >Sản phẩm</a>
 			<a href="?thamso=hoa_don" class="lk_1" >Hóa đơn</a>
 		</td>
@@ -31,27 +31,11 @@
 <br><br>
 <table width="990px" >
 	<tr>
-		<td width="445px" align="right">
-			Cửa hàng :
-		</td>
-		<td width="445px" >
-			ten_cua_hang
-		</td>
-	</tr>
-	<tr>
 		<td align="right" >
-			Quản trị viên :
+		Footer
 		</td>
 		<td>
-			ten_quan_tri_vien
-		</td>
-	</tr>
-	<tr>
-		<td align="right" >
-			Điện thoại :
-		</td>
-		<td>
-			so_dien_thoai
+			Footer
 		</td>
 	</tr>
 </table>

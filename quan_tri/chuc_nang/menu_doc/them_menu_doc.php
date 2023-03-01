@@ -4,7 +4,7 @@
 <form action="" method="post">
 	<table width="990px" >
 		<tr>
-			<td colspan="2" ><b style="color:blue;font-size:20px" >Thêm menu dọc</b><br><br> </td>
+			<td colspan="2" ><b style="color:blue;font-size:20px" >Thêm danh mục sản phẩm</b><br><br> </td>
 			
 		</tr>
 		<tr>

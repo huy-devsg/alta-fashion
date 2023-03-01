@@ -4,8 +4,8 @@
 <?php 
 	$id=$_GET['id'];
 	$tv="select * from menu_ngang where id='$id' ";
-	$tv_1=mysql_query($tv);
-	$tv_2=mysql_fetch_array($tv_1);
+	$tv_1=mysqli_query($conn,$tv);
+	$tv_2=mysqli_fetch_array($tv_1);
 	$ten=$tv_2['ten'];
 	$loai_menu=$tv_2['loai_menu'];
 	$noi_dung=$tv_2['noi_dung'];

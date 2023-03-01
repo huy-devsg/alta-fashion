@@ -12,8 +12,7 @@
 		ten = '$ten_menu'
 		WHERE id =$id;
 		";
-		mysql_query($tv);
-	}
+		mysqli_query($conn,$tv);	}
 	else 
 	{
 		thong_bao_html("Tên menu chưa được điền vào");

@@ -4,5 +4,4 @@
 <?php 
 	$id=$_GET['id'];
 	$tv="DELETE FROM menu_ngang WHERE id = $id ";
-	mysql_query($tv);
-?>
+	mysqli_query($conn,$tv);?>
