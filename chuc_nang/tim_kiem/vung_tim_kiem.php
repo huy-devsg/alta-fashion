@@ -1,6 +1,8 @@
-<form>
-<div class="input-group rounded">
-<input type="hidden" name="thamso" value="tim_kiem" >
-  <input type="search" class="form-control rounded" placeholder="Search" name="tu_khoa" aria-label="Search" aria-describedby="search-addon" style="100%" />
-</div>
-</form> 
+<div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
+            <div class="input-group">
+              <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light">
+              <div class="input-group-append">
+                <button id="button-addon1" type="submit" class="btn btn-link text-primary"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </div>
