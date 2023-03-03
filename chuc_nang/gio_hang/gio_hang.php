@@ -82,7 +82,7 @@
 					<td><img src="hinh_anh/san_pham/<?php echo $tv_2['hinh_anh'] ?>" width="100px"></td>
 					<td><?php echo $tv_2['ten'] ?></td>
 					<td>
-						<input type="text" align="center" name="<?php echo $name_sl ?>" value="<?php echo $_SESSION['sl_them_vao_gio'][$i] ?>" size=5>
+						<input type="text" name="<?php echo $name_sl ?>" value="<?php echo $_SESSION['sl_them_vao_gio'][$i] ?>" size=5>
 					</td>
 					<td><?php echo $tv_2['gia'] ?></td>
 					<td><?php echo number_format($thanh_tien) ?></td>
@@ -110,17 +110,18 @@ endif; ?>
 <style>
 .product_table {
   border-collapse: collapse;
-  margin: 0 auto;
 }
 
 .product_table th,
 .product_table td {
   padding: 10px;
-  text-align: center;
-  border: 1px solid #ccc;
+  border: 0.5px solid #ccc;
+    vertical-align: middle;
+
 }
 
 .product_table th {
+	vertical-align:center;
   background-color: #f5f5f5;
   text-transform: uppercase;
   font-weight: bold;

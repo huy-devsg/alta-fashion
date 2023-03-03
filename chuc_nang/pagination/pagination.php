@@ -20,10 +20,10 @@
                 }
                     if($trang_hien_tai == $i)
                     {
-                        echo '<li class="page-item"><a class="page-link" href='.$link.' style="background-color:#000;color:#fff;">'.$i.'</a></li>';
+                        echo '<li class="page-item"><a class="page-link" href='.$link.' style="background-color:#000;color:rgba(255,105,0,1);">'.$i.'</a></li>';
                     }
                     else{
-                        echo '<li class="page-item"><a class="page-link" href='.$link.' ">'.$i.'</a></li>';
+                        echo '<li class="page-item"><a class="page-link" style="color:rgba(255,105,0,1);" href='.$link.' ">'.$i.'</a></li>';
                     }
             }
         }

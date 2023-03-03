@@ -1,7 +1,7 @@
 <?php 
     $tv="select id,ten,loai_menu from menu_ngang order by id";
     $tv_1=mysqli_query($conn,$tv);
-    echo '<nav class="navbar navbar-inverse navbar-fixed-top">
+    echo '<nav class="navbar navbar-fixed-top">
 				<ul class="nav navbar-nav navbar-left">
 					<li style="margin-right:1em"><a href="index.php" class="active"><img src="hinh_anh/logo/logo.png" class="logo"></a></li>
 					<li><a href="index.php">TRANG CHỦ</a></li>';
