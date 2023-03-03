@@ -20,7 +20,7 @@
                 }
                     if($trang_hien_tai == $i)
                     {
-                        echo '<li class="page-item"><a class="page-link" href='.$link.' style="background-color:rgba(255,105,0,1);color:#000;">'.$i.'</a></li>';
+                        echo '<li class="page-item"><a class="page-link" href='.$link.' style="background-color:#000;color:#fff;">'.$i.'</a></li>';
                     }
                     else{
                         echo '<li class="page-item"><a class="page-link" href='.$link.' ">'.$i.'</a></li>';

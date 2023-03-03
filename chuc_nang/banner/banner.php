@@ -4,6 +4,6 @@
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
 	$link_hinh="hinh_anh/banner/".$tv_2['hinh'];	
-	echo "<img src='".$link_hinh."' width='98%'style='border-radius:20px' >";
+	echo "<img src='".$link_hinh."' >";
 ?>	
 </div>

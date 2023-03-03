@@ -9,6 +9,7 @@
 					{
 						if($tv_2['loai_menu']==""){$link_menu="?thamso=xuat_mot_tin&id=".$tv_2['id'];}
 						if($tv_2['loai_menu']=="gio_hang"){$link_menu="?thamso=gio_hang";}
+						if($tv_2['loai_menu']=="tin_tuc"){$link_menu="?thamso=bai_viet";}
 						if($tv_2['loai_menu']=="san_pham"){$link_menu="?thamso=xuat_san_pham_2";}
 						echo "<li class='nav-item'><a href='$link_menu'>";
 							echo $tv_2['ten'];
@@ -19,8 +20,8 @@
 		<li style="margin-top:9px;">';
 		include('chuc_nang/tim_kiem/vung_tim_kiem.php');
 		echo '</li>
-					<li><a href="#"><span class="glyphicon glyphicon-user"></span> SIGN UP</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> LOGIN</a></li>
+					<li><a href="quan_tri/index.php"><span class="glyphicon glyphicon-user"></span> Trang admin</a></li>
+					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
 			</ul>
     </nav>';
 ?>

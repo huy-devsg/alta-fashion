@@ -3,24 +3,33 @@
   <ol class="carousel-indicators">
     <?php
     // Lấy dữ liệu từ bảng "bai_viet"
-    $sql = "SELECT * FROM bai_viet";
-    $result = mysqli_query($conn, $sql);
+    $tv = "SELECT * FROM bai_viet";
+    $tv_1 = mysqli_query($conn, $tv);
     // Tạo các indicators
 ?>
 </ol>
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <?php
-    // Tạo các slide
     $index = 0;
-    while ($row = mysqli_fetch_assoc($result)) {
+    while ($tv_2 = mysqli_fetch_array($tv_1)) {
       $active = $index == 0 ? "active" : "";
+      $link_menu = "?thamso=xuat_bai_viet&id=".$tv_2['id'];
+      $link_anh="hinh_anh/bai_viet/".$tv_2['anh'];
+      echo '<a href="'.$link_menu.'">';
       echo '<div class="item ' . $active . '">';
-      echo '<img src="hinh_anh/bai_viet/'.$row['anh'].'" alt="' . $row["tieu_de"] . '" style="width:100%;">';
+      echo '<img src="hinh_anh/bai_viet/'.$tv_2['anh'].'" alt="' . $tv_2["tieu_de"] . '" style="width:100%;">';
       echo '<div class="carousel-caption d-none d-md-block">';
-      echo '<h3 class="animated">' . $row["tieu_de"] . '</h3>';
+      echo '<h3 class="animated">' . $tv_2["tieu_de"] . '</h3>';
+      echo '<div class="time_post">';
+        include('time_post.php');
       echo '</div>';
+        echo '<div class="author_left">';
+          echo 'Author : <b><span style="color:rgba(255,105,0,1);">'.$tv_2["tac_gia"].'</span></b>';
+        echo '</div>';
+      echo '</a>';
       echo '</div>';
+  echo '</div>';
       $index++;
     }
     ?>
@@ -36,42 +45,6 @@
   </a>
 </div>
 <style>
-  .carousel-inner
-  {
-border-radius:20px;
-}
-  .slide
-  {
-    width: 100%;
-    height: 100%;
-  }
-  .item
-  {
-    width: 100%;
-    height: 100%;
-  }
-  .item img
-  {
-    width: 100%;
-    height: 100%;  }
-.carousel-caption {
-        position: absolute;
-        bottom: -8%; 
-        left: 2%;
-        padding: 5%;
-        max-width: 70%;
-        border-radius:5px;
-        color: #fff;
-        transform: translateY(100%);
-        animation: slide-up 1s forwards;
-        background-color:red;
-}
-
-@keyframes slide-up {
-  to {
-    transform: translateY(-50px);
-  }
-}
 
 
 

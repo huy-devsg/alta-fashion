@@ -3,10 +3,10 @@
 	echo '<h2>TÌM KIẾM SẢN PHẨM</h2>';
 	if(isset($_GET['trang']))
 	{
-		echo '<h4> Từ khóa tìm kiếm : <b>'.strtoupper($tu_khoa).'</b> / Trang '.$_GET['trang'].'</h4>';
+		echo '<h4> Từ khóa tìm kiếm : <b><span style="color:rgba(255,105,0,1)">"'.strtoupper($tu_khoa).'"</span></b> / Trang <b><span style="color:rgba(255,105,0,1)">'.$_GET['trang'].'</span></b></h4>';
 	}
 	else{
-		echo '<h4> Từ khóa tìm kiếm : <b>'.strtoupper($tu_khoa).'</b></h4>';
+		echo '<h4> Từ khóa tìm kiếm : <b><span style="color:rgba(255,105,0,1)">"'.strtoupper($tu_khoa).'"</span></b></h4>';
 	}
 ?>
 <div class="product-list">

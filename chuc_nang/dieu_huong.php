@@ -16,6 +16,12 @@
 		case "xuat_san_pham_2":
 			include("chuc_nang/san_pham/xuat_toan_bo_san_pham.php");
 		break;
+		case "bai_viet":
+			include("chuc_nang/bai_viet/tat_ca_bai_viet.php");
+		break;
+		case "xuat_bai_viet":
+			include("chuc_nang/bai_viet/xuat_bai_viet.php");
+		break;
 		case "xuat_mot_tin":
 			include("chuc_nang/xuat_mot_tin.php");
 		break;
@@ -25,6 +31,7 @@
 		case "gio_hang":
 			include("chuc_nang/gio_hang/gio_hang.php");
 		break;
+
 		default:
 			include("chuc_nang/san_pham/san_pham_trang_chu.php");	
 			include("chuc_nang/danh_muc/xuat_danh_muc_san_pham.php");

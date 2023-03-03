@@ -1,56 +1,38 @@
-<?php 
-	echo "<br>";
-	echo "<br>";
-	echo "<form method='post' action='' >";
-		echo "<input type='hidden' name='thong_tin_khach_hang' value='co' > ";
-		echo "<table>";
-			echo "<tr>";
-				echo "<td colspan='2' height='30px' >";
-					echo "<b>Thông tin mua hàng</b>";
-				echo "</td>";
-			echo "</tr>";
-			echo "<tr>";
-				echo "<td height='40px' >Lưu ý : </td>";
-				echo "<td>";
-					echo "Những trường có (<font color='red'>*</font>) bắt buộc điền vào";
-				echo "</td>";
-			echo "</tr>";
-			echo "<tr>";
-				echo "<td width='180px' >Tên người mua <font color='red' weight='bold'>(*)</font></td>";
-				echo "<td>";
-					echo "<input type='text' style='width:400px' name='ten_nguoi_mua' >";
-				echo "</td>";
-			echo "</tr>";
-			echo "<tr>";
-				echo "<td>Email </td>";
-				echo "<td>";
-					echo "<input type='text' style='width:400px' name='email' >";
-				echo "</td>";
-			echo "</tr>";
-			echo "<tr>";
-				echo "<td>Địa chỉ <font color='red'>(*)</font></td>";					
-				echo "<td>";
-					echo "<textarea style='width:400px;' name='dia_chi' ></textarea>";
-				echo "</td>";
-			echo "</tr>";
-			echo "<tr>";
-				echo "<td>Điện thoại <font color='red'>(*)</font></td>";
-				echo "<td>";
-					echo "<input type='text' style='width:400px' name='dien_thoai' >";
-				echo "</td>";
-			echo "</tr>";
-			echo "<tr>";
-				echo "<td>Nội dung </td>";
-				echo "<td>";
-					echo "<textarea style='width:400px;height:100px' name='noi_dung' ></textarea>";
-				echo "</td>";
-			echo "</tr>";
-			echo "<tr>";
-				echo "<td>&nbsp;</td>";
-				echo "<td>";
-					echo "<input type='submit' value='Mua hàng' >";
-				echo "</td>";
-			echo "</tr>";
-		echo "</table>";
-	echo "</form>";
-?>
+<form method="post" action="">
+    <input type="hidden" name="thong_tin_khach_hang" value="co">
+    <table>
+        <tr>
+            <td colspan="2" height="30px"><b>Thông tin mua hàng</b></td>
+        </tr>
+        <tr>
+            <td height="40px">Lưu ý :</td>
+            <td>Những trường có (<span style="color:red;font-weight:bold;">*</span>) bắt buộc điền vào</td>
+        </tr>
+        <tr>
+            <td width="180px">Tên người mua <span style="color:red;">(*)</span></td>
+            <td><input type="text" style="width:400px" name="ten_nguoi_mua"></td>
+        </tr>
+        <tr>
+            <td>Email </td>
+            <td><input type="text" style="width:400px" name="email"></td>
+        </tr>
+        <tr>
+            <td>Địa chỉ <span style="color:red;">(*)</span></td>
+            <td><textarea style="width:400px;" name="dia_chi"></textarea></td>
+        </tr>
+        <tr>
+            <td>Điện thoại <span style="color:red;">(*)</span></td>
+            <td><input type="text" style="width:400px" name="dien_thoai"></td>
+        </tr>
+        <tr>
+            <td>Nội dung </td>
+            <td><textarea style="width:400px;height:100px" name="noi_dung"></textarea></td>
+        </tr>
+		<tr>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td colspan=2 align="center"><input type="submit" value="Thanh toán"></td>
+        </tr>
+    </table>
+</form>

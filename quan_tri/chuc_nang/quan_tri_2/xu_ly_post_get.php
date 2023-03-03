@@ -132,7 +132,7 @@
 		if($_GET['thamso']=="thoat")
 		{
 			include("chuc_nang/quan_tri_2/thoat.php");
-			trang_truoc_html();
+			header('location:../index.php');
 		}
 	}
 ?>

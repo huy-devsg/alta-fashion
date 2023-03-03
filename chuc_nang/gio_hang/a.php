@@ -45,83 +45,113 @@
 			$gio_hang="co";
 		}
 	}
-	
-	echo "<h2>GIỎ HÀNG</h2>";
-	echo '<div class="product_wrapper">';
-	if($gio_hang=="khong")
-	{
-		echo "Không có sản phẩm trong giỏ hàng";
-	}
-	else 
-	{
-		echo "<form action='' method='post' >"; 
-		echo "<input type='hidden' name='cap_nhat_gio_hang' value='co' > ";
-			$tong_cong=0;
-			echo "<div class='cart'>";
-
-			for($i=0;$i<count($_SESSION['id_them_vao_gio']);$i++)
-			{
-			
-				$tv="select * from san_pham where id='".$_SESSION['id_them_vao_gio'][$i]."'";
-				$tv_1=mysqli_query($conn,$tv);
-				$tv_2=mysqli_fetch_array($tv_1);		
-				$tien=$tv_2['gia']*$_SESSION['sl_them_vao_gio'][$i];
-				$tong_cong=$tong_cong+$tien;
-				$name_id="id_".$i;
-				$name_sl="sl_".$i;
-				$link_anh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
-				$link_chi_tiet="?thamso=chi_tiet_san_pham&id=".$tv_2['id'];
-				if($_SESSION['sl_them_vao_gio'][$i]!=0)
-				{
-					echo "<a href='$link_chi_tiet' >";
-					echo "<img src='$link_anh' width='200px' class='cart_img'>";
-					echo "</a>";
-					echo "<div class='cart_details'>";                      
-					echo "<div class='cart_name'>";                      
-					echo "<a href='$link_chi_tiet' >";
-					echo $tv_2['ten'];
-					echo "</a><br>";
-					echo "</div>";
-					echo "<input type='hidden' name='".$name_id."' value='".$_SESSION['id_them_vao_gio'][$i]."' >";
-					echo "<input type='text' style='width:50px' name='".$name_sl."' value='". $_SESSION['sl_them_vao_gio'][$i]."' > ";
-					echo "<div class='cart_price'>";                     
-					echo $tv_2['gia'].'&ensp;VNĐ';
-					echo '<br>';
-					echo $tien;
-					echo "</div>";
-					echo "</div>";
-					echo '</div>';
-				}
-			}	
-				echo "Tổng giá trị đơn hàng là : ".$tong_cong." VNĐ";
-				echo '<br>';
-				echo "<input type='submit' value='Cập nhật' > ";
-		echo "</form>";
-		echo '</div>';
-		echo "<br>";
-		include("chuc_nang/gio_hang/bieu_mau_mua_hang.php");
-	}
 ?>
+<h2>GIỎ HÀNG</h2>
+<div class="product_list">
+	<br>
+	<br>
+	<?php if($gio_hang=="khong") : ?>
+		Không có sản phẩm trong giỏ hàng
+	<?php else : ?>
+		<form action="" method="post">
+			<input type="hidden" name="cap_nhat_gio_hang" value="co">
+			<table border=1 width=100% class="product_table">
+				<tr>
+					<td width="100px">&nbsp;</td>
+					<td width="200px"><b>Tên</b></td>
+					<td width="150px"><b>Số lượng</b></td>
+					<td width="150px"><b>Đơn giá</b></td>
+					<td width="170px"><b>Thành tiền</b></td>
+				</tr>
+				<?php
+					$tong_cong=0;
+					for($i=0;$i<count($_SESSION['id_them_vao_gio']);$i++)
+					{
+						$tv="select * from san_pham where id='".$_SESSION['id_them_vao_gio'][$i]."'";
+						$tv_1= mysqli_query($conn,$tv);
+						while($tv_2=mysqli_fetch_array($tv_1))
+						{
+							$thanh_tien=$_SESSION['sl_them_vao_gio'][$i]*$tv_2['gia'];
+							$tong_cong=$tong_cong+$thanh_tien;
+				?>
+				<tr>
+					<td><img src="<?php echo $tv_2['anh'] ?>" width="100px"></td>
+					<td><?php echo $tv_2['ten'] ?></td>
+					<td>
+						<input type="text" name="sl_<?php echo $_SESSION['id_them_vao_gio'][$i] ?>" value="<?php echo $_SESSION['sl_them_vao_gio'][$i] ?>" size=5>
+					</td>
+					<td><?php echo $tv_2['gia'] ?></td>
+					<td><?php echo number_format($thanh_tien) ?></td>
+				</tr>
+				<?php
+						}
+					}
+				?>
+				<tr>
+					<td colspan=4 align="right"><b>Tổng cộng:</b></td>
+					<td><?php echo number_format($tong_cong) ?></td>
+				</tr>
+			</table>
+			<br>
+			<br>
+			<input type="submit" value="Cập nhật giỏ hàng">
+			<a href="?reset_gio_hang=co"><input type="button" value="Xóa giỏ hàng"></a>
+			<a href="?thanh_toan=co"><input type="button" value="Thanh toán"></a>
+		</form>
+	<?php endif; ?>
+</div>
 <style>
-	.cart-list {
-	display: flex;
-	flex-wrap: wrap;
-  }
-  .cart {
-	flex-basis:25%;
-	text-align: left;
-	border-radius: 20px;
-	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-	transition: transform 0.2s;
-	overflow: hidden;
-	width: 25%;
+	h2 {
+  font-size: 24px;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.product_list p {
+  font-size: 18px;
+  text-align: center;
+  color: #666;
+}
 
-  }
-  .cart_img {
-	transition: transform 0.2s;
+.product_table {
+  border-collapse: collapse;
+  margin: 0 auto;
+}
 
-  }
-  .cart_img:hover {
-	transform: scale(1.2);
-  }
+.product_table th,
+.product_table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.product_table th {
+  background-color: #f5f5f5;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #333;
+}
+input[type="submit"],
+input[type="button"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-color: #555;
+}
+.product_table img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 </style>

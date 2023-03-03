@@ -34,11 +34,11 @@
 			mysqli_query($conn,$tv);
 			unset($_SESSION['id_them_vao_gio']);
 			unset($_SESSION['sl_them_vao_gio']);
-			thong_bao_html_roi_chuyen_trang("Cảm ơn bạn đã mua hàng tại web site chúng tôi","index.php");
+			thong_bao_html_roi_chuyen_trang("Alta Fashion Thanks You","index.php");
 		}
 		else 
 		{
-			thong_bao_html("Không được bỏ trống tên người mua , điện thoại , địa chỉ");
+			thong_bao_html("Không được bỏ trống nội dung có (*)");
 			trang_truoc();
 			exit();
 		}

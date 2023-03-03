@@ -18,7 +18,7 @@
 
 <table width="990px" >
 	<tr>
-		<td width="250px" ><b style="color:blue;font-size:20px" >Sản phẩm được đặt hàng </b><br><br> </td>	
+		<td width="250px" ><b style="color:blue;font-size:20px" >Sản phẩm </b><br><br> </td>	
 		<td width="740px" align="right" >
 			<a href="<?php echo $link_dong; ?>" class="lk_a1" style="margin-right:30px" >Đóng</a>
 		</td>		
@@ -26,7 +26,7 @@
 	<tr>
 		<td align="left" colspan="2" >
 			<table width="880px" >
-				<tr>
+				<tr style="font-weight:bold">
 					<td width="100px">STT</td>
 					<td width="300px" >Tên</td>
 					<td width="180px">Giá bán</td>
@@ -90,9 +90,9 @@
 <br><br>
 <table width="990px" >
 	<tr>
-		<td width="180px" ><b style="color:blue;font-size:20px" >Thông tin người mua</b><br><br> </td>
+		<td width="250px" ><b style="color:blue;font-size:20px" >Thông tin người mua</b><br><br> </td>
 	</tr>
-	<tr height="30px" >
+	<tr style="font-weight:bold">
 		<td>Tên người mua : </td>
 		<td>Email : </td>
 		<td>Điện thoại : </td>
@@ -103,14 +103,14 @@
 
 				</tr>
 			<?php echo '<td>'.$ten_nguoi_mua.'</td>'; 
+			echo '<td>'.$email.'</td>';
 			 echo '<td>'.$dien_thoai.'</td>';
 			 echo '<td>'.$dia_chi.'</td>';
 			 echo '<td>'.$noi_dung.'</td>';
 			 ?>
 			 </tr>
 	<tr height="30px" >
-		<td>&nbsp;</td>
-		<td>
+		<td colspan="5" style="text-align:center;">
 			<a href="<?php echo $link_xoa; ?>" class="lk_a1" >Xóa</a>
 		</td>
 	</tr>
