@@ -66,6 +66,18 @@
 		case "sua_slideshow":
 			include("chuc_nang/slideshow/sua_slideshow.php");
 		break;
+		case "bai_viet":
+			include("chuc_nang/bai_viet/lien_ket_bai_viet.php");
+		break;
+		case "them_bai_viet":
+			include("chuc_nang/bai_viet/them_bai_viet.php");
+		break;
+		case "quan_ly_bai_viet":
+			include("chuc_nang/bai_viet/quan_ly_bai_viet.php");
+		break;
+		case "sua_bai_viet":
+			include("chuc_nang/bai_viet/sua_bai_viet.php");
+		break;
 		case "sua_banner":
 			include("chuc_nang/banner/sua_banner.php");
 		break;

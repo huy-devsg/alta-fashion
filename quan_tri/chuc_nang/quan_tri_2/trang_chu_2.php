@@ -9,12 +9,12 @@
 	<tr>
 		<td width="495px" valign="top" >
 			<a href="?thamso=them_menu_ngang" class="lk_2" >Thêm menu</a><br>
-			<a href="?thamso=them_menu_doc" class="lk_2" >Thêm danh mục sản phẩm</a><br>
+			<a href="?thamso=them_menu_doc" class="lk_2" >Thêm danh mục</a><br>
 			<a href="?thamso=them_san_pham" class="lk_2" >Thêm sản phẩm</a><br>
 		</td>
 		<td width="495px" valign="top" >
 			<a href="?thamso=quan_ly_menu_ngang" class="lk_2" >Quản lý menu</a><br>
-			<a href="?thamso=quan_ly_menu_doc" class="lk_2" >Quản lý danh mục sản phẩm</a><br>
+			<a href="?thamso=quan_ly_menu_doc" class="lk_2" >Quản lý danh mục</a><br>
 			<a href="?thamso=quan_ly_san_pham" class="lk_2" >Quản lý sản phẩm</a><br>
 			<a href="?thamso=hoa_don" class="lk_2" >Quản lý hóa đơn</a><br><br><br>
 		</td>

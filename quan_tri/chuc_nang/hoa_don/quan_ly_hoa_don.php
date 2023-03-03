@@ -53,14 +53,14 @@
 		}
 	?>
 	<tr>
-		<td colspan="5" align="center" >
+		<td colspan="5" style="text-align:center" >
 			<br>
 			<?php 
 				for($i=1;$i<=$so_trang;$i++)
 				{
 					$link_phan_trang="?thamso=hoa_don&trang=".$i;
 					echo "<a href='$link_phan_trang' class='phan_trang' >";
-						echo $i;
+						echo 'Trang '.$i;
 					echo "</a> ";
 				}
 			?>

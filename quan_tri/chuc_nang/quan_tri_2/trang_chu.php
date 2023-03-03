@@ -99,10 +99,11 @@
 		<h1>Hi, <?php echo $_SESSION['ky_danh']; ?></h1>
 		<nav>
 			<a href="index.php">Trang chủ</a>
-			<a href="?thamso=menu_doc">Danh mục sản phẩm</a>
+			<a href="?thamso=menu_doc">Danh mục</a>
 			<a href="?thamso=menu_ngang">Menu</a>
 			<a href="?thamso=san_pham">Sản phẩm</a>
 			<a href="?thamso=hoa_don">Hóa đơn</a>
+			<a href="?thamso=bai_viet">Bài viết</a>
 			<a href="?thamso=thoat">Thoát</a>
 		</nav>
 	</header>

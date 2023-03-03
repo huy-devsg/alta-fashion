@@ -43,7 +43,7 @@
 		}
 	?>
 	<tr>
-		<td colspan="3" align="center" >
+		<td colspan="3" style="text-align:center" >
 			<br>
 			<?php 
 				for($i=1;$i<=$so_trang;$i++)

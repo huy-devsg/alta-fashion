@@ -82,6 +82,21 @@
 		include("chuc_nang/slideshow/xoa_slideshow.php");
 		trang_truoc_html();
 	}
+	if(isset($_POST['bieu_mau_them_bai_viet']))
+	{
+		include("chuc_nang/bai_viet/them_bai_viet_vao_csdl.php");
+		trang_truoc_html();
+	}
+	if(isset($_POST['bieu_mau_sua_bai_viet']))
+	{
+		include("chuc_nang/bai_viet/sua_bai_viet_o_trong_csdl.php");
+		trang_truoc_html();
+	}
+	if(isset($_GET['xoa_bai_viet']))
+	{
+		include("chuc_nang/bai_viet/xoa_bai_viet.php");
+		trang_truoc_html();
+	}
 	if(isset($_POST['bieu_mau_sua_banner']))
 	{
 		include("chuc_nang/banner/sua_banner_o_trong_csdl.php");
