@@ -9,6 +9,7 @@
 		if($xac_dinh_dang_nhap=="co")
 		{
 			include("chuc_nang/quan_tri_2/xu_ly_post_get.php");
+			
 		}   
 	}
 ?>
@@ -29,9 +30,16 @@
 			{
 				if($xac_dinh_dang_nhap=="co")
 				{
+						if(isset($_GET['thamso'])&&$tham_so="move_home")
+						{
+							header('location:../index.php');
+						}
+					else
+					{
 					echo "<center>";
 						include("chuc_nang/quan_tri_2/trang_chu.php");
 					echo "</center>";
+					}
 				}
 			}
 		?>

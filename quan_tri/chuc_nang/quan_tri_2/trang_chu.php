@@ -104,7 +104,7 @@
 			<a href="?thamso=san_pham">Sản phẩm</a>
 			<a href="?thamso=hoa_don">Hóa đơn</a>
 			<a href="?thamso=bai_viet">Bài viết</a>
-			<a href="?thamso=thoat">Thoát</a>
+			<a href="../index.php">Thoát</a>
 		</nav>
 	</header>
 	<main>

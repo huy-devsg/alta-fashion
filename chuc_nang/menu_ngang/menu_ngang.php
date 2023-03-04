@@ -18,10 +18,33 @@
 		echo '</ul>';
 		echo'<ul class="nav navbar-nav navbar-right">
 		<li style="margin-top:9px;">';
+		
 		include('chuc_nang/tim_kiem/vung_tim_kiem.php');
 		echo '</li>
-					<li><a href="quan_tri/index.php"><span class="glyphicon glyphicon-user"></span> Trang admin</a></li>
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+					<li>';
+						if(isset($_SESSION['ky_danh']))
+							{
+								echo '<a href="quan_tri/index.php"><span class="glyphicon glyphicon-user"></span>';
+								echo ' Hi, '.ucfirst($_SESSION['ky_danh']);
+								echo '</a>';
+							}
+							else
+							{
+								echo '<a href="quan_tri/index.php?thamso=move_home"><span class="glyphicon glyphicon-user"></span>';
+								echo ' Đăng nhập';
+								echo '</a>';
+							}
+					echo '</a></li>
+					<li><a href="quan_tri/index.php?thamso=thoat"><span class="glyphicon glyphicon-log-in"></span>';
+							if(isset($_SESSION['ky_danh']))
+							{
+								echo ' Đăng xuất';
+							}
+							else
+							{
+								echo ' Đăng kí';
+							}
+					echo '</a></li>
 			</ul>
     </nav>';
 ?>

@@ -31,7 +31,6 @@
 		case "gio_hang":
 			include("chuc_nang/gio_hang/gio_hang.php");
 		break;
-
 		default:
 			include("chuc_nang/san_pham/san_pham_trang_chu.php");	
 			include("chuc_nang/danh_muc/xuat_danh_muc_san_pham.php");
