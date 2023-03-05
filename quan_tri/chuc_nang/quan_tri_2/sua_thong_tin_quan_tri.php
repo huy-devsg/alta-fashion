@@ -2,7 +2,8 @@
 	if(!isset($bien_bao_mat)){exit();}
 ?>
 <?php 
-	$tv="select * from thong_tin_quan_tri where id='1' ";
+	$ky_danh=$_SESSION['ky_danh'];
+	$tv="select * from tai_khoan where ky_danh='$ky_danh'";
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
 	$ky_danh=$tv_2['ky_danh'];	
@@ -10,7 +11,7 @@
 <form action="" method="post" >
 	<table width="990px" >
 		<tr>
-			<td colspan="2" ><b style="color:blue;font-size:20px" >Sửa thông tin quản trị</b><br><br> </td>			
+			<td colspan="2" ><b style="color:blue;font-size:20px" >Sửa thông tin</b><br><br> </td>			
 		</tr>
 		<tr>
 			<td width="100px" >Ký danh : </td>

@@ -1,10 +1,18 @@
 <?php 
 	if(isset($_GET['thamso']))
 	{$tham_so=$_GET['thamso'];
-		echo '<div style="margin:95px 0 0 0;">';
-		echo '<div class="khung">';
+		if($tham_so=='profile')
+		{
+			echo '<div style="margin-top:95px;">';
+		}
+		else
+		{
+			echo '<div style="margin-top:95px;">';
+			echo '<div class="khung">';
+		}
 	}
-	else{$tham_so="";}
+	else{$tham_so="";
+	}
 	switch($tham_so)
 	{
 		case "xuat_san_pham":
@@ -30,6 +38,9 @@
 		break;
 		case "gio_hang":
 			include("chuc_nang/gio_hang/gio_hang.php");
+		break;
+		case "profile":
+			include("chuc_nang/profile/profile.php");
 		break;
 		default:
 			include("chuc_nang/san_pham/san_pham_trang_chu.php");	

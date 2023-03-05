@@ -7,7 +7,7 @@
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
 	$ten=$tv_2['ten'];
-	$link_dong="?thamso=quan_ly_menu_doc&trang=".$_GET['trang'];
+	$link_dong="?thamso=profile&dieu_huong=quan_ly_menu_doc&trang=".$_GET['trang'];
 ?>
 <form action="" method="post">
 	<table width="990px" >

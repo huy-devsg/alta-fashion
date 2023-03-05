@@ -9,7 +9,7 @@
 	$ten_anh=$tv_2['anh'];
 	$lien_ket=$tv_2['lien_ket'];
 	$link_hinh="../hinh_anh/bai_viet/".$tv_2['anh'];
-	$link_dong="?thamso=quan_ly_bai_viet";
+	$link_dong="?thamso=profile&dieu_huong=quan_ly_bai_viet";
 	$tieu_de=$tv_2['tieu_de'];
 	$noi_dung = $tv_2['noi_dung'];
 ?>

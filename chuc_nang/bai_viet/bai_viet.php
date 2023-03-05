@@ -24,8 +24,18 @@
         echo "</div>";
         echo "</a><div class='noi_dung'>";
         $noi_dung = $tv_2['noi_dung'];
-        $noi_dung = mb_substr($noi_dung, 0, 270) . "...";
-        echo $noi_dung;
+        $words = explode(" ", $noi_dung);
+        $subtext = "";
+        $i = 0;
+        while ($i < count($words) && str_word_count($subtext) < 86) {
+            $subtext .= $words[$i] . " ";
+            $i++;
+        }
+        $subtext = rtrim($subtext);
+        if (str_word_count($subtext) >= 86) {
+          $subtext .= "...";
+      }
+        echo $subtext;
         echo '</div></div>';
     }     
   ?>

@@ -19,7 +19,7 @@
 		{
 			$id=$tv_2['id'];
 			$link_hinh="../hinh_anh/bai_viet/".$tv_2['anh'];
-			$link_sua="?thamso=sua_bai_viet&id=".$id;
+			$link_sua="?thamso=profile&dieu_huong=sua_bai_viet&id=".$id;
 			$link_xoa="?xoa_bai_viet=co&id=".$id;
 			$tieu_de=$tv_2['tieu_de'];
 			$noi_dung = $tv_2['noi_dung'];

@@ -372,6 +372,7 @@ text-decoration: underline;
 {
   margin-top: 5px;
   margin-bottom: 200px;
+ 
 }
 .tieu_de
 {
@@ -409,15 +410,12 @@ text-decoration: underline;
     width: 47%;
     height: 458px;
   }
-
   .main-article img {
     width: 100%; 
     border-radius: 20px;
     min-height: 458px;
 
   }
-
-
   .main-article h3 {
     margin-top: 0;
   }

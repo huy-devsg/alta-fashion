@@ -24,25 +24,29 @@
 					<li>';
 						if(isset($_SESSION['ky_danh']))
 							{
-								echo '<a href="quan_tri/index.php"><span class="glyphicon glyphicon-user"></span>';
-								echo ' Hi, '.ucfirst($_SESSION['ky_danh']);
+								echo '<a href="?thamso=profile"><span class="glyphicon glyphicon-user"></span>';
+								echo ' Hi, <span style="color:rgba(255,105,0,1);font-weight:bold;">'.ucfirst($_SESSION['ky_danh']).'</span>';
 								echo '</a>';
 							}
 							else
 							{
-								echo '<a href="quan_tri/index.php?thamso=move_home"><span class="glyphicon glyphicon-user"></span>';
+								echo '<a href="quan_tri/index.php?thamso=dang_nhap"><span class="glyphicon glyphicon-user"></span>';
 								echo ' Đăng nhập';
 								echo '</a>';
 							}
-					echo '</a></li>
-					<li><a href="quan_tri/index.php?thamso=thoat"><span class="glyphicon glyphicon-log-in"></span>';
+					echo '</li>
+					<li>';
 							if(isset($_SESSION['ky_danh']))
 							{
+								echo '<a href="quan_tri/index.php?thamso=thoat"><span class="glyphicon glyphicon-log-in"></span>';
 								echo ' Đăng xuất';
+								echo '</a>';
 							}
 							else
 							{
+								echo '<a href="quan_tri/index.php?thamso=dang_ky"><span class="glyphicon glyphicon-user"></span>';
 								echo ' Đăng kí';
+								echo '</a>';
 							}
 					echo '</a></li>
 			</ul>
