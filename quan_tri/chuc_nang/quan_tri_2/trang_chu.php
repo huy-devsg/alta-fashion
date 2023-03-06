@@ -3,10 +3,11 @@
 ?>
 	<style type="text/css">
 
-		nav {
+		.nav_admin {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			margin-bottom: 20px;
 		}
 
 		.menu_admin {
@@ -22,7 +23,6 @@
 
 
 		table {
-			border-collapse: collapse;
 			width: 100%;
 			max-width: 990px;
 			margin: 0 auto;
@@ -30,7 +30,6 @@
 
 		th, td {
 			padding: 10px;
-			border: 1px solid #ccc;
 			text-align: left;
 			vertical-align: top;
 		}
@@ -39,13 +38,13 @@
 			background-color: #eee;
 		}
 	</style>
-		<nav>
+		<nav class="nav_admin">
 			<a class="menu_admin"  href="index.php">Trang chủ</a>
-			<a class="menu_admin" href="?thamso=menu_doc">Danh mục</a>
-			<a class="menu_admin" href="?thamso=menu_ngang">Menu</a>
-			<a class="menu_admin" href="?thamso=san_pham">Sản phẩm</a>
-			<a class="menu_admin" href="?thamso=hoa_don">Hóa đơn</a>
-			<a class="menu_admin" href="?thamso=bai_viet">Bài viết</a>
-			<a class="menu_admin" href="index.php">Thoát</a>
+			<a class="menu_admin" href="?thamso=profile&dieu_huong=menu_doc">Danh mục</a>
+			<a class="menu_admin" href="?thamso=profile&dieu_huong=menu_ngang">Menu</a>
+			<a class="menu_admin" href="?thamso=profile&dieu_huong=san_pham">Sản phẩm</a>
+			<a class="menu_admin" href="?thamso=profile&dieu_huong=hoa_don">Hóa đơn</a>
+			<a class="menu_admin" href="?thamso=profile&dieu_huong=bai_viet">Bài viết</a>
+			<a class="menu_admin" href="?thamso=thoat">Thoát</a>
 		</nav>
 			<?php include("quan_tri/chuc_nang/quan_tri_2/dieu_huong.php"); ?>

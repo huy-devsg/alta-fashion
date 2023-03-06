@@ -105,6 +105,9 @@
 		case "sua_thong_tin_quan_tri":
 			include("quan_tri/chuc_nang/quan_tri_2/sua_thong_tin_quan_tri.php");
 		break;
+		case "dang_nhap":
+			header('location:../../index.php');
+		break;
 		default: 
 			include("quan_tri/chuc_nang/quan_tri_2/trang_chu_2.php");
 	}

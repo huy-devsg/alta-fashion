@@ -22,7 +22,7 @@
 		include('chuc_nang/tim_kiem/vung_tim_kiem.php');
 		echo '</li>
 					<li>';
-						if(isset($_SESSION['ky_danh']))
+						if(isset($_SESSION['xac_dinh_dang_nhap']))
 							{
 								echo '<a href="?thamso=profile"><span class="glyphicon glyphicon-user"></span>';
 								echo ' Hi, <span style="color:rgba(255,105,0,1);font-weight:bold;">'.ucfirst($_SESSION['ky_danh']).'</span>';
@@ -30,23 +30,23 @@
 							}
 							else
 							{
-								echo '<a href="quan_tri/index.php?thamso=dang_nhap"><span class="glyphicon glyphicon-user"></span>';
+								echo '<a href="?thamso=dang_nhap"><span class="glyphicon glyphicon-user"></span>';
 								echo ' Đăng nhập';
 								echo '</a>';
 							}
 					echo '</li>
 					<li>';
-							if(isset($_SESSION['ky_danh']))
+							if(isset($_SESSION['xac_dinh_dang_nhap']))
 							{
-								echo '<a href="quan_tri/index.php?thamso=thoat"><span class="glyphicon glyphicon-log-in"></span>';
-								echo ' Đăng xuất';
-								echo '</a>';
+								echo '<a href="?thamso=profile&dieu_huong=gio_hang">';
+								echo '<span class="glyphicon glyphicon-shopping-cart"></span>';
+								echo ' Giỏ hàng</a>';
 							}
 							else
 							{
-								echo '<a href="quan_tri/index.php?thamso=dang_ky"><span class="glyphicon glyphicon-user"></span>';
-								echo ' Đăng kí';
-								echo '</a>';
+								echo '<a href="?thamso=gio_hang">';
+								echo '<span class="glyphicon glyphicon-shopping-cart"></span>';
+								echo ' Giỏ hàng</a>';
 							}
 					echo '</a></li>
 			</ul>

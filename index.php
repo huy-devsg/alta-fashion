@@ -1,8 +1,8 @@
 <?php
 	session_start();
 	$bien_bao_mat="co";
+	include('chuc_nang/ham/ham.php');	
     include("ket_noi.php");	
-    include("chuc_nang/ham/ham.php");	
 	if(isset($_POST['thong_tin_khach_hang']))
 	{
 		include("chuc_nang/gio_hang/thuc_hien_mua_hang.php");
@@ -11,7 +11,12 @@
 	{
 		include("chuc_nang/gio_hang/cap_nhat_gio_hang.php");
 		trang_truoc();
-	}	
+	}
+	if(isset($_GET['thamso']))
+	{
+		
+	}
+	
 ?> 
 <html>
 	<head>

@@ -8,13 +8,14 @@
                 include("chuc_nang/gio_hang/gio_hang.php");
             break;
             case "don_hang":
-                echo '<h2>ĐƠN HÀNG</h2><br><br>Chưa có thông tin đơn hàng';
+                echo '<h2>ĐƠN HÀNG ĐÃ MUA</h2>';
+                include('hoa_don.php');
             break;
             case "cap_nhat":
                 echo '<h2>CẬP NHẬT THÔNG TIN</h2><br><br>Chưa có thông tin';
             break;
             case "quan_tri":
-                echo '<h2>QUẢN TRỊ WEBSITE</h2><br><br>';
+                echo '<h2>QUẢN TRỊ WEBSITE</h2>';
                 include("quan_tri/index.php");
             break;
             case "thong_tin":
@@ -60,7 +61,7 @@
                 include("quan_tri/chuc_nang/hoa_don/quan_ly_hoa_don.php");
             break;
             case "xem_hoa_don":
-                include("quan_tri/chuc_nang/hoa_don/xem_hoa_don.php");
+                include("chuc_nang/profile/xem_hoa_don.php");
             break;
             case "san_pham_trang_chu":
                 include("quan_tri/chuc_nang/san_pham_trang_chu/san_pham_trang_chu.php");

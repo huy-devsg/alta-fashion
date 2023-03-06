@@ -11,8 +11,9 @@
 	$dien_thoai=$tv_2['dien_thoai'];
 	$dia_chi=$tv_2['dia_chi'];
 	$noi_dung=$tv_2['noi_dung'];
+    $tinh_trang=$tv_2['tinh_trang'];
 	$hang_duoc_mua=$tv_2['hang_duoc_mua'];
-	$link_dong="?thamso=profile&dieu_huong=hoa_don&&trang=".$_GET['trang'];
+	$link_dong="?thamso=hoa_don&&trang=".$_GET['trang'];
 	$link_xoa="?xoa_hoa_don_o_trang_chi_tiet=co&id=".$id."&trang=".$_GET['trang'];
 ?>
 
@@ -111,7 +112,7 @@
 			 </tr>
 	<tr height="30px" >
 		<td colspan="5" style="text-align:center;">
-			<a href="<?php echo $link_xoa; ?>" class="lk_a1" >Xóa</a>
+			<?php echo $tinh_trang; ?>
 		</td>
 	</tr>
 </table>

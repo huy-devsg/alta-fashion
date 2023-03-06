@@ -1,4 +1,10 @@
-    <div class="row profile">
+<?php
+    $id_user=$_SESSION['id_user'];
+    $tv="select * from tai_khoan where id='$id_user'";
+    $tv_1=mysqli_query($conn,$tv);
+    $tv_2=mysqli_fetch_array($tv_1);
+?>
+<div class="row profile">
 		<div class="col-md-3">
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
@@ -9,12 +15,10 @@
 				<!-- SIDEBAR USER TITLE -->
 				<div class="profile-usertitle">
 					<div class="profile-usertitle-name">
-						Huy Nguyen Thanh
+						<?php echo $tv_2['ho_ten'] ?>
 					</div>
 					<div class="profile-usertitle-job">
-                    <a href="quan_tri/index.php">
-						Admin
-                        </a>
+                    <?php echo $tv_2['quyen'] ?>
 					</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
@@ -27,7 +31,7 @@
 				<!-- SIDEBAR MENU -->
 				<div class="profile-usermenu">
 					<ul class="nav">
-						<li class="active">
+						<li>
 							<a href="?thamso=profile&dieu_huong=thong_tin">
 							<i class="glyphicon glyphicon-home"></i>
 							Thông tin cá nhân </a>
@@ -37,15 +41,19 @@
 							<i class="glyphicon glyphicon-user"></i>
 							Cập nhật thông tin </a>
 						</li>
+            <?php if($tv_2['quyen']!="")
+                {
+            ?>
 						<li>
 							<a href="?thamso=profile&dieu_huong=quan_tri">
 							<i class="glyphicon glyphicon-ok"></i>
 							Trang quản trị </a>
 						</li>
+            <?php } ?>
 						<li>
-							<a href="#">
-							<i class="glyphicon glyphicon-flag"></i>
-							Help </a>
+							<a href="?thamso=dang_xuat">
+							<i class="glyphicon glyphicon-log-out"></i>
+              Đăng xuất </a>
 						</li>
 					</ul>
 				</div>

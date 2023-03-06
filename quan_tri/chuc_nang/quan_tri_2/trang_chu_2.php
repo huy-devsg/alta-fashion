@@ -1,8 +1,9 @@
 <?php 
 	if(!isset($bien_bao_mat)){exit();}
+	echo $_SESSION['id_user'];
 ?>
 <style type="text/css" >
-	a.lk_2{font-weight:none;text-decoration:none;color:black;font-size:20px;line-height:30px;}
+	a.lk_2{font-weight:400;text-decoration:none;color:black;font-size:20px;line-height:30px;}
 	a.lk_2:hover{color:red;}
 </style>
 <table width="80%" >

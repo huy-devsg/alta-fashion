@@ -9,7 +9,7 @@
 	$ten=$tv_2['ten'];
 	$loai_menu=$tv_2['loai_menu'];
 	$noi_dung=$tv_2['noi_dung'];
-	$link_dong="?thamso=quan_ly_menu_ngang&trang=".$_GET['trang'];
+	$link_dong="?thamso=profile&dieu_huong=quan_ly_menu_ngang&trang=".$_GET['trang'];
 ?>
 <form action="" method="post">
 	<table width="990px" >

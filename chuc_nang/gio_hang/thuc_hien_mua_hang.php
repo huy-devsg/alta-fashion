@@ -2,6 +2,7 @@
 	if(isset($_SESSION['id_them_vao_gio']))
 	{
 		$ten_nguoi_mua=trim($_POST['ten_nguoi_mua']);
+		$id_user=$_SESSION['id_user'];
 		$email=trim($_POST['email']);
 		$dien_thoai=trim($_POST['dien_thoai']);
 		$dia_chi=trim(nl2br($_POST['dia_chi']));
@@ -20,7 +21,9 @@
             dia_chi ,
             dien_thoai ,
             noi_dung ,
-            hang_duoc_mua
+            hang_duoc_mua,
+			id_user,
+			tinh_trang
             )
             VALUES (
             NULL ,
@@ -29,7 +32,9 @@
             '$dia_chi',
             '$dien_thoai',
             '$noi_dung',
-            '$hang_duoc_mua'
+            '$hang_duoc_mua',
+			'$id_user',
+			'Chờ xử lý'
             );";
 			mysqli_query($conn,$tv);
 			unset($_SESSION['id_them_vao_gio']);

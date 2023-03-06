@@ -39,14 +39,28 @@
 		case "gio_hang":
 			include("chuc_nang/gio_hang/gio_hang.php");
 		break;
+		case "dang_nhap":
+		case "dang_ky":
+			include("quan_tri/chuc_nang/quan_tri_2/khung_dang_nhap.php");
+		break;
+		case "dang_xuat":
+			session_destroy();
+			header('location:index.php');
+		break;
 		case "profile":
-			include("chuc_nang/profile/profile.php");
+			if(!isset($_SESSION['xac_dinh_dang_nhap']))
+			{header('location:index.php');}
+			else
+			{
+				include("chuc_nang/profile/profile.php");
+			}
 		break;
 		default:
 			include("chuc_nang/san_pham/san_pham_trang_chu.php");	
 			include("chuc_nang/danh_muc/xuat_danh_muc_san_pham.php");
 			include("chuc_nang/san_pham/san_pham_noi_bat.php");	
 			include("chuc_nang/bai_viet/bai_viet.php");
+		
 	}
 	echo '</div>';
 ?>
