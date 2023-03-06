@@ -75,7 +75,7 @@
 		</div>
 		<div class="col-md-9">
             <div class="profile-content">
-            <?php include('dieu_huong_profile.php'); ?>
+            <?php include('chuc_nang/dieu_huong_profile.php'); ?>
             </div>
 		</div>
 	</div>

@@ -1,5 +1,4 @@
 <?php 
-	include('quan_tri/ham/ham.php');
 	if(isset($_GET['thamso']))
 	{$tham_so=$_GET['thamso'];
 		if($tham_so=='profile')
@@ -64,3 +63,4 @@
 	echo '</div>';
 ?>
 </div>
+<!--------------------------------------------------->

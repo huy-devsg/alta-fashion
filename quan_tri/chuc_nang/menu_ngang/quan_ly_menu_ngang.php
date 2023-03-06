@@ -26,7 +26,7 @@
 			$id=$tv_2['id'];
 			$ten=$tv_2['ten'];
 			$link_sua="?thamso=profile&dieu_huong=sua_menu_ngang&id=".$id."&trang=".$_GET['trang'];
-			$link_xoa="?xoa_menu_ngang=co&id=".$id;
+			$link_xoa="?thamso=profile&xoa_menu_ngang=co&id=".$id;
 			?>
 				<tr class="a_1" >
 					<td>

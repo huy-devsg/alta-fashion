@@ -20,6 +20,6 @@
 		mysqli_query($conn,$tv);	}
 	else 
 	{
-		thong_bao_html("Tên menu chưa được điền vào");
+		thong_bao("Tên menu chưa được điền vào");
 	}
 ?>

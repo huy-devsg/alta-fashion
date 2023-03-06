@@ -47,4 +47,3 @@
 			<a class="menu_admin" href="?thamso=profile&dieu_huong=bai_viet">Bài viết</a>
 			<a class="menu_admin" href="?thamso=thoat">Thoát</a>
 		</nav>
-			<?php include("quan_tri/chuc_nang/quan_tri_2/dieu_huong.php"); ?>

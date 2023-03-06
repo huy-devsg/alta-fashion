@@ -2,13 +2,23 @@
   <div class="footer-top">
     <div class="container">
       <div class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12 footer-col">
+          <div class="footer-col-inner">
+            <h3>Theo dõi chúng tôi</h3>
+            <ul>
+              <li class="social"><a href="#"><i class="fab fa-facebook-f fa-2x" style="color: #3b5998;"></i></a>
+              <a href="#">&emsp;<i class="fab fa-twitter fa-2x" style="color: #55acee;"></i></a>
+              <a href="#">&emsp;<i class="fab fa-instagram fa-2x" style="color: #ac2bac;"></i></a>
+              <a href="#">&emsp;<i class="fab fa-linkedin-in fa-2x" style="color: #0082ca;"></i></a></li>
+            </ul>
+          </div>
+        </div>
         <div class="col-md-4 col-sm-6 col-xs-12 footer-col">
           <div class="footer-col-inner">
             <h3>Về Alta Fashion</h3>
             <ul>
               <li><a href="#">Giới thiệu</a></li>
               <li><a href="#">Tuyển dụng</a></li>
-              <li><a href="#">Hợp tác kinh doanh</a></li>
               <li><a href="#">Chính sách bảo mật</a></li>
               <li><a href="#">Điều khoản sử dụng</a></li>
             </ul>
@@ -26,15 +36,14 @@
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12 footer-col">
           <div class="footer-col-inner">
-            <h3>Theo dõi chúng tôi</h3>
+            <h3>Liên hệ hỗ trợ</h3>
             <ul>
-              <li><a href="#">Facebook</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">LinkedIn</a></li>
+              <li><i class="fas fa-map-marker-alt"></i><a href="#">&ensp;193 Lê Đức Thọ, Phường 17, Quận Gò Vấp, Thành Phố Hồ Chí Minh</a></li>
+              <li><i class="fas fa-phone me-3"></i><a href="#">&ensp;+843 7574 3633</a></li>
+              <li><i class="fas fa-envelope me-3"></i><a href="#">&ensp;Support@alta.com.vn</a></li>
             </ul>
           </div>
-        </div>
+        </div> 
       </div>
     </div>
   </div>
@@ -48,3 +57,10 @@
     </div>
   </div>
 </div>
+<style>
+  .footer-col {
+  width: 25%;
+  float: left;
+}
+
+</style>
