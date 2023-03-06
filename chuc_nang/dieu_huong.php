@@ -1,4 +1,5 @@
 <?php 
+	include('quan_tri/ham/ham.php');
 	if(isset($_GET['thamso']))
 	{$tham_so=$_GET['thamso'];
 		if($tham_so=='profile')
@@ -45,15 +46,13 @@
 		break;
 		case "dang_xuat":
 			session_destroy();
-			header('location:index.php');
-		break;
+			thong_bao('Đăng xuất thành công');
+			break;
 		case "profile":
 			if(!isset($_SESSION['xac_dinh_dang_nhap']))
-			{header('location:index.php');}
+			{header('location:index.php'); }
 			else
-			{
-				include("chuc_nang/profile/profile.php");
-			}
+			{include("chuc_nang/profile/profile.php");}
 		break;
 		default:
 			include("chuc_nang/san_pham/san_pham_trang_chu.php");	

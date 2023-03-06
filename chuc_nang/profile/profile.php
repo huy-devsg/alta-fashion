@@ -18,7 +18,15 @@
 						<?php echo $tv_2['ho_ten'] ?>
 					</div>
 					<div class="profile-usertitle-job">
-                    <?php echo $tv_2['quyen'] ?>
+                    <?php
+                      if($tv_2['quyen']=="")
+                      {
+                        echo 'CUSTOMER';
+                      }
+                      else
+                      {
+                        echo $tv_2['quyen'];
+                      } ?>
 					</div>
 				</div>
 				<!-- END SIDEBAR USER TITLE -->
@@ -44,12 +52,17 @@
             <?php if($tv_2['quyen']!="")
                 {
             ?>
-						<li>
+            <li>
 							<a href="?thamso=profile&dieu_huong=quan_tri">
 							<i class="glyphicon glyphicon-ok"></i>
 							Trang quản trị </a>
 						</li>
             <?php } ?>
+            <li>
+							<a href="?thamso=profile&dieu_huong=doi_mat_khau">
+							<i class="glyphicon glyphicon-wrench"></i>
+							Đổi mật khẩu </a>
+						</li>
 						<li>
 							<a href="?thamso=dang_xuat">
 							<i class="glyphicon glyphicon-log-out"></i>

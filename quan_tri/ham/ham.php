@@ -10,5 +10,13 @@
 		<?php 
 		exit();
 	}
-	
+	function chuyen_trang($link)
+	{
+?>
+				<script type="text/javascript">
+					window.location.href=$link;
+				</script>
+		<?php 
+		exit();
+	}
 ?>

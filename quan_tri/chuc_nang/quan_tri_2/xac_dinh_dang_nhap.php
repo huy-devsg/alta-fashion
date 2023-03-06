@@ -1,56 +1,5 @@
 <?php 
 	if(!isset($bien_bao_mat)){exit();}
-	function thong_bao_abc($c)
-	{
-		$lien_ket_trang_truoc=$_SERVER['HTTP_REFERER'];
-		?>
-			<html><head>
-			  <meta charset="UTF-8">
-			  <title>Thông báo</title></head>
-			<body>
-				<style type="text/css">
-				a.trang_truoc_c8w{text-decoration:none;color:blue;font-size:36px;margin-left:50px}
-				a.trang_truoc_c8w:hover{color:red;}
-				</style>
-				<br><br><br><br>
-				<a href="<?php echo $lien_ket_trang_truoc; ?>" class="trang_truoc_c8w" >Bấm vào đây để trở về trang trước</a>
-				<script type="text/javascript">
-					alert("<?php echo $c; ?>");
-				</script>
-			</body>
-			</html>		
-		<?php 
-		exit();
-	}
-	function trang_truoc_abc()
-	{
-		?>
-			<html><head>
-			  <meta charset="UTF-8">
-			  <title>Đang chuyển về trang trước</title></head>
-			<body>
-				<script type="text/javascript">
-					window.history.back();
-				</script>	
-			</body>
-			</html>
-		<?php 
-	}
-	function trang_truoc_html()
-	{
-		?>
-			<html><head>
-			  <meta charset="UTF-8">
-			  <title>Đang chuyển về trang trước</title></head>
-			<body>
-				<script type="text/javascript">
-					window.history.back();
-				</script>	
-			</body>
-			</html>
-		<?php 
-	}
-	
 	if(isset($_POST['dang_nhap_quan_tri']))
 	{
 		$ky_danh=$_POST['ky_danh'];
@@ -65,12 +14,13 @@
 		{
 			$_SESSION['ky_danh']=$ky_danh;
 			$_SESSION['mat_khau']=$mat_khau;
+			thong_bao("Đăng nhập thành công");	
+
 		}
 		else 
 		{
-			thong_bao_abc("Thông tin nhập vào không đúng");
+			thong_bao("Thông tin nhập vào không đúng");
 		}
-		trang_truoc_abc();
 	}
 
 	if(isset($_POST['dang_ky']))
@@ -87,7 +37,7 @@
 		$tv_2=mysqli_fetch_array($tv_1);
 		if($tv_2[0]>0)
 		{
-			thong_bao_abc("Tài khoản đã tồn tại");
+			thong_bao("Tài khoản đã tồn tại");
 		}
 		else 
 		{
@@ -97,9 +47,8 @@
 			mysqli_query($conn,$tv);	
 			$_SESSION['ky_danh']=$ky_danh;
 			$_SESSION['mat_khau']=$mat_khau;
-			thong_bao_html("Đăng kí thành công");	
+			thong_bao("Đăng kí thành công");	
 		}
-		trang_truoc_abc();
 
 	}
 	if(isset($_SESSION['ky_danh']))

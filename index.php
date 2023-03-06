@@ -1,7 +1,6 @@
 <?php
 	session_start();
 	$bien_bao_mat="co";
-	include('chuc_nang/ham/ham.php');	
     include("ket_noi.php");	
 	if(isset($_POST['thong_tin_khach_hang']))
 	{
