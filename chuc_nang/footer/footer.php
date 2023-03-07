@@ -51,7 +51,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p>© 2023 Alta Fashion. All rights reserved.</p>
+          <p><?php
+              $tv="select * from footer";
+              $tv_1=mysqli_query($conn,$tv);
+              $tv_2=mysqli_fetch_array($tv_1);
+              echo $tv_2['html'];
+          ?></p>
         </div>
       </div>
     </div>

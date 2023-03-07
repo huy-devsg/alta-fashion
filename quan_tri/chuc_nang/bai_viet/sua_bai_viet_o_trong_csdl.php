@@ -3,6 +3,10 @@
 	$id=$_GET['id'];
 	$lien_ket=trim($_POST['lien_ket']);
 	$ten_file_anh_tai_len=$_FILES['anh']['name'];
+	$tieu_de=$_POST['tieu_de'];
+	$noi_dung=$_POST['noi_dung'];
+	$tac_gia=$_SESSION['ky_danh'];
+	$time=time();
 	if($ten_file_anh_tai_len!="")
 	{
 		$ten_file_anh=$ten_file_anh_tai_len;
@@ -34,16 +38,15 @@
 		}		
 
 		$tv="
-		UPDATE slideshow SET 
-		hinh = '$ten_file_anh',
-		lien_ket = '$lien_ket'
-		WHERE id =$id;
-		";
+			UPDATE bai_viet SET
+			tieu_de='$tieu_de',anh='$ten_file_anh',noi_dung='$noi_dung',tac_gia='$tac_gia',lien_ket='$lien_ket',time='$time'
+			WHERE id ='$id'
+			";
 		mysqli_query($conn,$tv);				
 
 	}
 	else 
 	{
-		thong_bao_html("Hình ảnh bị trùng tên");
+		thong_bao("Hình ảnh bị trùng tên");
 	}
 ?>

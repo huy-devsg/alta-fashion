@@ -49,11 +49,11 @@
 		}
 		else 
 		{
-			thong_bao_html("Hình ảnh bị trùng tên");
+			thong_bao("Hình ảnh bị trùng tên");
 		}
 	}
 	else 
 	{
-		thong_bao_html("Tên sản phẩm chưa được điền vào");
+		thong_bao("Tên sản phẩm chưa được điền vào");
 	}
 ?>

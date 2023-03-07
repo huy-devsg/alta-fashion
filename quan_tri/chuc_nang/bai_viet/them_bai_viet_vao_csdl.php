@@ -3,8 +3,11 @@
 ?>
 <?php 
 	$lien_ket=trim($_POST['lien_ket']);
-	$ten_file_anh=$_FILES['anh']['name'];
-
+	$ten_file_anh=$_FILES['hinh_anh']['name'];
+	$tieu_de=$_POST['tieu_de'];
+	$noi_dung=$_POST['noi_dung'];
+	$tac_gia=$_SESSION['ky_danh'];
+	$time=time();
 	if($ten_file_anh!="")
 	{
 		$tv_k="select count(*) from bai_viet where anh='$ten_file_anh' ";
@@ -15,29 +18,34 @@
 			$tv="
 			INSERT INTO bai_viet (
 			id ,
-			anh,
-			lien_ket,
 			tieu_de,
+			anh,
 			noi_dung,
+			tac_gia,
+			lien_ket,
 			time
 			)
 			VALUES (
 			NULL ,
+			'$tieu_de',
 			'$ten_file_anh',
-			'$lien_ket'
+			'$noi_dung',
+			'$tac_gia',
+			'$lien_ket',
+			'$time'
 			);";
 			mysqli_query($conn,$tv_k);
-			$duong_dan_anh="../hinh_anh/slideshow/".$ten_file_anh;
+			$duong_dan_anh="hinh_anh/bai_viet/".$ten_file_anh;
 			move_uploaded_file($_FILES['hinh_anh']['tmp_name'],$duong_dan_anh);
 		}
 		else 
 		{
-			thong_bao_html("Hình ảnh bị trùng tên");
+			thong_bao("Hình ảnh bị trùng tên");
 		}
 	}
 	else 
 	{
-		thong_bao_html("Chưa chọn ảnh");
+		thong_bao("Chưa chọn ảnh");
 	}
 
 ?>

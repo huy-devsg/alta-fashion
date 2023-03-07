@@ -29,12 +29,12 @@
 		}
 		else 
 		{
-			thong_bao_html("Hình ảnh bị trùng tên");
+			thong_bao("Hình ảnh bị trùng tên");
 		}
 	}
 	else 
 	{
-		thong_bao_html("Chưa chọn ảnh");
+		thong_bao("Chưa chọn ảnh");
 	}
 
 ?>

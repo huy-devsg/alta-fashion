@@ -15,11 +15,11 @@
 	$tv_1=	mysqli_query($conn,$tv);			
 ?>
 <table width="990px" class="tb_a1" >
-	<tr style="background:#CCFFFF;height:40px;" >
+	<tr class="tr_title" >
 		<td width="370px" ><b>Tên</b></td>
 		<td width="300px" ><b>Email</b></td>
 		<td width="120px" ><b>Điện thoại</b></td>
-		<td align="center" width="100px" ><b>Sửa</b></td>
+		<td align="center" width="100px" ><b>Xem</b></td>
 		<td align="center" width="100px" ><b>Xóa</b></td>
 	</tr>
 	<?php 
@@ -30,7 +30,7 @@
 			$email=$tv_2['email'];
 			$dien_thoai=$tv_2['dien_thoai'];
 			$link_xem="?thamso=profile&dieu_huong=xem_hoa_don&id=".$id."&trang=".$_GET['trang'];
-			$link_xoa="?xoa_hoa_don=co&id=".$id;
+			$link_xoa="?thamso=profile&xoa_hoa_don=co&id=".$id;
 			?>
 				<tr class="a_1" >
 					<td>
@@ -43,10 +43,14 @@
 						<?php echo $dien_thoai; ?>
 					</td>
 					<td align="center" >
-						<a href="<?php echo $link_xem; ?>" class="lk_a1" >Xem</a>
+						<a href="<?php echo $link_xem; ?>" class="lk_a1" >
+							<span class="glyphicon glyphicon-eye-open"></span>
+					</a>
 					</td>
 					<td align="center" >
-						<a href="<?php echo $link_xoa; ?>" class="lk_a1" >Xóa</a>
+						<a href="<?php echo $link_xoa; ?>" class="lk_a1" >
+							<span class="glyphicon glyphicon-remove"></span>
+					</a>
 					</td>
 				</tr>
 			<?php 

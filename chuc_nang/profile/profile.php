@@ -79,6 +79,13 @@
             </div>
 		</div>
 	</div>
+  <script>
+    window.onload = function() {
+  var sidebarHeight = document.querySelector(".profile-sidebar").offsetHeight;
+  document.querySelector(".profile-content").style.minHeight = sidebarHeight + "px";
+}
+
+  </script>
 <style>
     /***
 User Profile Sidebar by @keenthemes
@@ -196,6 +203,5 @@ body {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   padding: 20px;
   background: #fff;
-  min-height: 62%;
 }
 </style>

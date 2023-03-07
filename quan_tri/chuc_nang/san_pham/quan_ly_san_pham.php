@@ -18,9 +18,8 @@
 		}
 	}
 ?>
-<br>
 <div style="width:990px;text-align:left" >
-	Chọn : <select name="danh_muc" onchange="window.location='?thamso=quan_ly_san_pham&id_menu='+this.value" >
+	Chọn : <select name="danh_muc" onchange="window.location='?thamso=profile&dieu_huong=quan_ly_san_pham&id_menu='+this.value" >
 	<option value="" >Toàn bộ sản phẩm</option>
 	<?php 
 		$tv="select * from menu_doc order by id ";
@@ -72,12 +71,12 @@
 ?>
 
 <table width="990px" class="tb_a1" >
-	<tr style="background:#CCFFFF;height:40px;" >
-		<td width="120px" ><b>Hình ảnh</b></td>
-		<td width="450px" ><b>Tên</b></td>
-		<td align="center" width="140px" ><b>Giá</b></td>
-		<td align="center" width="140px" ><b>Sửa</b></td>
-		<td align="center" width="140px" ><b>Xóa</b></td>
+	<tr class="tr_title" >
+		<td class="td_content" ><b>Hình ảnh</b></td>
+		<td class="td_content" ><b>Tên</b></td>
+		<td class="td_content" width="140px" ><b>Giá</b></td>
+		<td class="td_content" width="140px" ><b>Sửa</b></td>
+		<td class="td_content" width="140px" ><b>Xóa</b></td>
 	</tr>
 	<?php 
 		while($tv_2=mysqli_fetch_array($tv_1))
@@ -86,28 +85,31 @@
 			$ten=$tv_2['ten'];
 			$gia=$tv_2['gia'];
 			$gia=number_format($gia,0,",",".");
-			$link_hinh="../hinh_anh/san_pham/".$tv_2['hinh_anh'];
+			$link_hinh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
 			$link_sua="?thamso=sua_san_pham&id_menu=".$id_menu."&id=".$id."&trang=".$_GET['trang'];
-			$link_xoa="?xoa_san_pham=co&id=".$id;
+			$link_xoa="?thamso=profile&xoa_san_pham=co&id=".$id;
 			?>
 				<tr class="a_1" >
-					<td align="center" >
+					<td class="td_content" >
 						<a href="<?php echo $link_sua; ?>" >
 							<img src="<?php echo $link_hinh; ?>" style="width:100px;margin-top:10px;margin-bottom:10px;" border="0" >
 						</a>
 					</td>
-					<td>
+					<td class="td_content">
 						<a href="<?php echo $link_sua; ?>" class="lk_a1" style="margin-left:10px" ><?php echo $ten; ?></a>
 					</td>
-					<td align="center" >
+					<td class="td_content">
 						<?php echo $gia; ?>
 					</td>
-					<td align="center" >
-						<a href="<?php echo $link_sua; ?>" class="lk_a1" >Sửa</a>
+					<td class="td_content" >
+						<a href="<?php echo $link_sua; ?>" class="lk_a1" >
+							<span class="glyphicon glyphicon-edit"></span>
+					</a>
 					</td>
-					<td align="center" >
-						<a href="<?php echo $link_xoa; ?>" class="lk_a1" >Xóa</a>
-					</td>
+					<td class="td_content" >
+						<a href="<?php echo $link_xoa; ?>" class="lk_a1" >
+							<span class="glyphicon glyphicon-remove"></span>
+					</a>
 				</tr>
 			<?php 
 		}
@@ -118,7 +120,7 @@
 			<?php 
 				for($i=1;$i<=$so_trang;$i++)
 				{
-					$link_phan_trang="?thamso=quan_ly_san_pham&id_menu=".$id_menu."&trang=".$i;
+					$link_phan_trang="?thamso=profile&dieu_huong=quan_ly_san_pham&id_menu=".$id_menu."&trang=".$i;
 					echo "<a href='$link_phan_trang' class='phan_trang' >";
 						echo 'Trang '.$i;
 					echo "</a> ";

@@ -6,7 +6,7 @@
 	$rong=$tv_2['rong'];
 	$cao=$tv_2['cao'];
 	$ten_anh=$tv_2['hinh'];
-	$link_hinh="../hinh_anh/banner/".$tv_2['hinh'];	
+	$link_hinh="hinh_anh/banner/".$tv_2['hinh'];	
 ?>
 <form action="" method="post" enctype="multipart/form-data" >
 	<table width="990px" >

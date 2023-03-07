@@ -44,6 +44,6 @@
 	}
 	else 
 	{
-		thong_bao_html("Hình ảnh bị trùng tên");
+		thong_bao("Hình ảnh bị trùng tên");
 	}
 ?>

@@ -1,5 +1,5 @@
-<div class="khung">
 <h2>BÀI VIẾT SẢN PHẨM</h2>
+<div class="khung">
 <br>
 <div class="wrapper">
   <?php
@@ -40,4 +40,5 @@
     }     
   ?>
 </div>
+<br>
 </div>

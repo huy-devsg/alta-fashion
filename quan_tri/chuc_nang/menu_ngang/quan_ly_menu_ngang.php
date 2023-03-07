@@ -15,7 +15,7 @@
 	$tv_1=mysqli_query($conn,$tv);
 ?>
 <table width="990px" class="tb_a1" >
-	<tr style="background:#CCFFFF;height:40px;" >
+	<tr class="tr_title" >
 		<td width="550px" ><b>Tên</b></td>
 		<td align="center" width="220px" ><b>Sửa</b></td>
 		<td align="center" width="220px" ><b>Xóa</b></td>
@@ -33,10 +33,14 @@
 						<a href="<?php echo $link_sua; ?>" class="lk_a1" ><?php echo $ten; ?></a>
 					</td>
 					<td align="center" >
-						<a href="<?php echo $link_sua; ?>" class="lk_a1" >Sửa</a>
+						<a href="<?php echo $link_sua; ?>" class="lk_a1" >
+							<span class="glyphicon glyphicon-edit"></span>
+					</a>
 					</td>
 					<td align="center" >
-						<a href="<?php echo $link_xoa; ?>" class="lk_a1" >Xóa</a>
+						<a href="<?php echo $link_xoa; ?>" class="lk_a1" >
+							<span class="glyphicon glyphicon-remove"></span>
+					</a>
 					</td>
 				</tr>
 			<?php 

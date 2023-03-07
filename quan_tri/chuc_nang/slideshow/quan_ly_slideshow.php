@@ -7,7 +7,7 @@
 ?>
 
 <table width="990px" class="tb_a1" >
-	<tr style="background:#CCFFFF;height:40px;" >
+	<tr class="tr_title" >
 		<td width="710px" ><b>Hình ảnh</b></td>
 		<td align="center" width="140px" ><b>Sửa</b></td>
 		<td align="center" width="140px" ><b>Xóa</b></td>
@@ -18,7 +18,7 @@
 			$id=$tv_2['id'];
 			$link_hinh="../hinh_anh/slideshow/".$tv_2['hinh'];
 			$link_sua="?thamso=sua_slideshow&id=".$id;
-			$link_xoa="?xoa_slideshow=co&id=".$id;
+			$link_xoa="?thamso=profile&xoa_slideshow=co&id=".$id;
 			?>
 				<tr class="a_1" >
 					<td align="center" >

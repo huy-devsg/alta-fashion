@@ -49,7 +49,7 @@
 				'$sap_xep_trang_chu'
 				);";
 				mysqli_query($conn,$tv);
-				$duong_dan_anh="../hinh_anh/san_pham/".$ten_file_anh;
+				$duong_dan_anh="hinh_anh/san_pham/".$ten_file_anh;
 				move_uploaded_file($_FILES['hinh_anh']['tmp_name'],$duong_dan_anh);
 				
 				$_SESSION['danh_muc_menu']=$danh_muc;
@@ -58,16 +58,16 @@
 			}
 			else 
 			{
-				thong_bao_html("Hình ảnh bị trùng tên");
+				thong_bao("Hình ảnh bị trùng tên");
 			}
 		}
 		else 
 		{
-			thong_bao_html("Chưa chọn ảnh");
+			thong_bao("Chưa chọn ảnh");
 		}
 	}
 	else 
 	{
-		thong_bao_html("Tên sản phẩm chưa được điền vào");
+		thong_bao("Tên sản phẩm chưa được điền vào");
 	}
 ?>

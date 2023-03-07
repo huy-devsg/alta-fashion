@@ -10,7 +10,7 @@
 		<tr>
 			<td width="150px" >Liên kết : </td>
 			<td width="840px" >
-				<input name="lien_ket" style="width:400px;margin-top:3px;margin-bottom:3px;" >
+				<input type="text" name="lien_ket" style="width:400px;margin-top:3px;margin-bottom:3px;" >
 			</td>
 		</tr>
 		<tr>
@@ -22,13 +22,13 @@
 		<tr>
 			<td>Tiêu đề : </td>
 			<td>
-				<input type="file" name="tieu_de" >
+				<input type="text" name="tieu_de" >
 			</td>
 		</tr>
 		<tr>
 			<td>Nội dung : </td>
 			<td>
-				<input type="file" name="noi_dung" >
+				<input type="text" name="noi_dung" >
 			</td>
 		</tr>
 		<tr>

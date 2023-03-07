@@ -11,7 +11,7 @@
 <div style="width:990px;text-align:left" >
 	<form method="post" >
 		<table width="850px" class="tb_a1" >
-			<tr style="background:#CCFFFF;height:40px;" >
+			<tr class="tr_title" >
 				<td width="120px" ><b>Hình ảnh</b></td>
 				<td width="450px" ><b>Tên</b></td>
 				<td align="center" width="140px" ><b>Giá</b></td>
