@@ -1,7 +1,7 @@
 <?php 
 	if(isset($_GET['thamso']))
 	{$tham_so=$_GET['thamso'];
-		if($tham_so=='profile')
+		if($tham_so=='profile'||$tham_so=='bai_viet')
 		{
 			echo '<div style="margin-top:95px;">';
 		}

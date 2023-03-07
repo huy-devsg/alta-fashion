@@ -79,37 +79,16 @@ table td a {
 }
 
 table td a:hover {
-  text-decoration: underline;
+	background: #fe8c00;
+	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+	background: linear-gradient(to right, #f83600, #fe8c00);
+	-webkit-background-clip: text  !important;
+	-webkit-text-fill-color: transparent !important;
+  text-decoration: none;
 }
 
 table td form {
   margin-top: 10px;
-}
-
-table td form input[type="text"] {
-  border: 1px solid #ddd;
-  font-size: 16px;
-  padding: 5px;
-  text-align: center;
-  width: 50px;
-}
-
-table td form input[type="submit"] {
-  background-color: rgba(255,105,0,1);
-  border: none;
-  color: #000;
-  cursor: pointer;
-  font-size: 16px;
-  padding: 10px;
-  text-align: center;
-  border-radius: 20px;
-
-}
-
-table td form input[type="submit"]:hover {
-  background-color: #fff;
-color: rgba(255,105,0,1);
-border: solid 0.5px rgba(255,105,0,1) ;
 }
 
 table td:nth-child(2) {

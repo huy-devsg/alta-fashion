@@ -1,7 +1,7 @@
 <?php 
 	if(!isset($bien_bao_mat)){exit();}
 ?>
-<?php 
+<?php
 	$lien_ket=trim($_POST['lien_ket']);
 	$ten_file_anh=$_FILES['hinh_anh']['name'];
 	$tieu_de=$_POST['tieu_de'];

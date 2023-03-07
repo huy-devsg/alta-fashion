@@ -20,12 +20,6 @@
 				echo "<div class='product_details'>";						
 				echo "<div class='product_name'>";						
 				echo "<a href='$link_chi_tiet' >";
-							/*$str = $tv_2['ten'];
-							$words = explode(" ", $str); 
-							$first_three_words = array_slice($words, 0, 5);
-							$result = implode(" ", $first_three_words); 
-							echo $result;
-							*/
 				echo $tv_2['ten'];
 				echo "</a><br>";
 				echo "</div>";

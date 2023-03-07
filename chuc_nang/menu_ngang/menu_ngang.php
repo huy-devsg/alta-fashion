@@ -25,7 +25,11 @@
 						if(isset($_SESSION['xac_dinh_dang_nhap']))
 							{
 								echo '<a href="?thamso=profile"><span class="glyphicon glyphicon-user"></span>';
-								echo ' Hi, <span style="color:rgba(255,105,0,1);font-weight:bold;">'.ucfirst($_SESSION['ky_danh']).'</span>';
+								echo ' Hi, <span style="background: #fe8c00;
+								background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+								background: linear-gradient(to right, #f83600, #fe8c00);
+								-webkit-background-clip: text  !important;
+								-webkit-text-fill-color: transparent !important;font-weight:bold;">'.ucfirst($_SESSION['ky_danh']).'</span>';
 								echo '</a>';
 							}
 							else

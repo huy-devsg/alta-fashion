@@ -188,7 +188,7 @@
         if(isset($_GET['xoa_hoa_don']))
         {
             include("quan_tri/chuc_nang/hoa_don/xoa_hoa_don.php");
-            thong_bao("aaa");
+            thong_bao("Xóa đơn thành công");
             trang_truoc();
         }
         if(isset($_GET['xoa_hoa_don_o_trang_chi_tiet']))
