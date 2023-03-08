@@ -39,7 +39,7 @@
 			<td>&nbsp;</td>
 			<td>
 				<br>
-				<input type="submit" name="bieu_mau_sua_slideshow" value="Sửa" style="width:200px;height:50px;font-size:24px" >
+				<input type="submit" name="bieu_mau_sua_slideshow" value="Sửa">
 			</td>
 		</tr>
 	</table>

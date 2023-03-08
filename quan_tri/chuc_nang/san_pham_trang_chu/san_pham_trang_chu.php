@@ -35,7 +35,7 @@
 				$ten=$tv_2['ten'];
 				$gia=$tv_2['gia'];
 				$gia=number_format($gia,0,",",".");
-				$link_hinh="../hinh_anh/san_pham/".$tv_2['hinh_anh'];
+				$link_hinh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
 				$sap_xep_trang_chu=$tv_2['sap_xep_trang_chu'];
 				$ten_select="select_".$i;
 				$ten_input="input_".$i;
@@ -67,15 +67,12 @@
 			}
 		?>
 		<tr>
-			<td colspan="3" align="center" >
-				&nbsp;
-			</td>
-			<td colspan="2" align="center" >
-				<br>
-				<input type="submit" name="bieu_mau_san_pham_trang_chu" value="Cập nhật" style="width:180px;height:50px;font-size:24px" >
+			<td colspan="5" align="center" >
+			<br>
+				<input type="submit" name="bieu_mau_san_pham_trang_chu" value="Cập nhật" >
 				<br><br>
-			</td>			
-		</tr>
+			</td>
+			</tr>
 		<tr>
 			<td colspan="5" align="center" >
 				<br>

@@ -46,7 +46,6 @@
 		}
 	}
 ?>
-<h2>GIỎ HÀNG</h2>
 <div class="product_list">
 	<br>
 	<br>
@@ -108,43 +107,6 @@
 endif; ?>
 </div>
 <style>
-.product_table {
-  border-collapse: collapse;
-}
-
-.product_table th,
-.product_table td {
-  padding: 10px;
-  border: 0.5px solid #ccc;
-    vertical-align: middle;
-
-}
-
-.product_table th {
-	vertical-align:center;
-  background-color: #f5f5f5;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #333;
-}
-input[type="submit"],
-input[type="button"] {
-	background-color: rgba(255,105,0,1);
-  border: none;
-  color: #000;
-  cursor: pointer;
-  border-radius: 20px;
-  font-size: 16px;
-  padding: 10px;
-  text-align: center;
-}
-
-input[type="submit"]:hover,
-input[type="button"]:hover {
-	background-color: #fff;
-color: rgba(255,105,0,1);
-border: solid 0.5px rgba(255,105,0,1) ;
-}
 .product_table img {
   max-width: 100%;
   height: auto;

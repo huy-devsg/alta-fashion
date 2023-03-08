@@ -4,10 +4,6 @@
 <form action="" method="post" enctype="multipart/form-data" >
 	<table width="990px" >
 		<tr>
-			<td colspan="2" ><b style="color:blue;font-size:20px" >Thêm sản phẩm</b><br><br> </td>
-			
-		</tr>
-		<tr>
 			<td width="150px" >Tên : </td>
 			<td width="840px">
 				<input style="width:400px;margin-top:3px;margin-bottom:3px;" name="ten" value="" >
@@ -122,7 +118,7 @@
 			<td>&nbsp;</td>
 			<td>
 				<br>
-				<input type="submit" name="bieu_mau_them_san_pham" value="Thêm sản phẩm" style="width:200px;height:50px;font-size:24px" >
+				<input type="submit" name="bieu_mau_them_san_pham" value="Thêm sản phẩm">
 			</td>
 		</tr>
 	</table>

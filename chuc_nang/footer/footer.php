@@ -65,7 +65,10 @@
 <style>
   .footer-col {
   width: 25%;
-  float: left;
+}
+.container
+{
+  width:89%
 }
 
 </style>

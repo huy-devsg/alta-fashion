@@ -1,7 +1,7 @@
 <?php 
 	if(isset($_GET['thamso']))
 	{$tham_so=$_GET['thamso'];
-		if($tham_so=='profile'||$tham_so=='bai_viet')
+		if($tham_so=='profile'||$tham_so=='bai_viet'||$tham_so=='xuat_bai_viet')
 		{
 			echo '<div style="margin-top:95px;">';
 		}
@@ -15,6 +15,7 @@
 	}
 	switch($tham_so)
 	{
+
 		case "xuat_san_pham":
 			include("chuc_nang/san_pham/xuat.php");
 		break;

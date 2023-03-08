@@ -25,7 +25,7 @@
 					$ten=$tv_2['ten'];
 					$gia=$tv_2['gia'];
 					$gia=number_format($gia,0,",",".");
-					$link_hinh="../hinh_anh/san_pham/".$tv_2['hinh_anh'];
+					$link_hinh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
 					$ten_select="select_".$i;
 					$ten_id="id_".$i;
 					?>
@@ -53,14 +53,11 @@
 				}
 			?>
 			<tr>
-				<td colspan="3" align="center" >
-					&nbsp;
-				</td>
-				<td align="center" >
-					<br>
-					<input type="submit" name="bieu_mau_san_pham_noi_bat" value="Cập nhật" style="width:120px;height:40px;font-size:20px" >
+				<td colspan="5" align="center" >
+				<br>
+					<input type="submit" name="bieu_mau_san_pham_noi_bat" value="Cập nhật">
 					<br><br>
-				</td>			
+				</td>
 			</tr>
 
 		</table>

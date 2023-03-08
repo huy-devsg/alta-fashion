@@ -38,7 +38,7 @@
 		<tr>
 			<td>
 				<br>
-				<input type="submit" name="bieu_mau_sua_quang_cao_phai" value="Sửa quảng cáo" style="width:200px;height:50px;font-size:24px" >
+				<input type="submit" name="bieu_mau_sua_quang_cao_phai" value="Sửa quảng cáo">
 			</td>
 		</tr>
 	</table>

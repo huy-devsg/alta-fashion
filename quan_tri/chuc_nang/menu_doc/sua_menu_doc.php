@@ -27,7 +27,7 @@
 			<td>&nbsp;</td>
 			<td>
 				<br>
-				<input type="submit" name="bieu_mau_sua_menu_doc" value="Sửa menu" style="width:200px;height:50px;font-size:24px" >
+				<input type="submit" name="bieu_mau_sua_menu_doc" value="Sửa menu">
 			</td>
 		</tr>
 	</table>

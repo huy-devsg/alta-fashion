@@ -1,22 +1,24 @@
 <?php 
 	if(!isset($bien_bao_mat)){exit();}
 ?>
-<style type="text/css" >
-	a.lk_2{font-weight:400;text-decoration:none;color:black;font-size:20px;line-height:30px;}
-	a.lk_2:hover{color:red;}
-</style>
+		<nav class="nav_admin">
+			<a href="?thamso=thoat">Thoát</a>
+		</nav>
 <table width="80%" >
 	<tr>
 		<td width="495px" valign="top" >
 			<a href="?thamso=profile&dieu_huong=them_menu_ngang" class="lk_2" >Thêm menu</a><br>
 			<a href="?thamso=profile&dieu_huong=them_menu_doc" class="lk_2" >Thêm danh mục</a><br>
 			<a href="?thamso=profile&dieu_huong=them_san_pham" class="lk_2" >Thêm sản phẩm</a><br>
+			<a href="?thamso=profile&dieu_huong=them_bai_viet" class="lk_2" >Thêm bài viết</a><br>
 		</td>
 		<td width="495px" valign="top" >
 			<a href="?thamso=profile&dieu_huong=quan_ly_menu_ngang" class="lk_2" >Quản lý menu</a><br>
 			<a href="?thamso=profile&dieu_huong=quan_ly_menu_doc" class="lk_2" >Quản lý danh mục</a><br>
 			<a href="?thamso=profile&dieu_huong=quan_ly_san_pham" class="lk_2" >Quản lý sản phẩm</a><br>
-			<a href="?thamso=profile&dieu_huong=hoa_don" class="lk_2" >Quản lý hóa đơn</a><br><br><br>
+			<a href="?thamso=profile&dieu_huong=hoa_don" class="lk_2" >Quản lý hóa đơn</a><br>
+			<a href="?thamso=profile&dieu_huong=quan_ly_bai_viet" class="lk_2" >Quản lý bài viết</a><br><br><br>
+
 		</td>
 	</tr>
 	<tr>

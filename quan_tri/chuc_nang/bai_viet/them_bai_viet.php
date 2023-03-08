@@ -4,10 +4,6 @@
 <form action="" method="post" enctype="multipart/form-data" >
 	<table width="990px" >
 		<tr>
-			<td colspan="2" ><b style="color:blue;font-size:20px" >Thêm bài viết</b><br><br> </td>
-			
-		</tr>
-		<tr>
 			<td width="150px" >Liên kết : </td>
 			<td width="840px" >
 				<input type="text" name="lien_ket" style="width:400px;margin-top:3px;margin-bottom:3px;" >

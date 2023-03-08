@@ -38,7 +38,7 @@
 		<tr>
 			<td>
 				<br>
-				<input type="submit" name="bieu_mau_sua_footer" value="Sửa footer" style="width:200px;height:50px;font-size:24px" >
+				<input type="submit" name="bieu_mau_sua_footer" value="Sửa footer">
 			</td>
 		</tr>
 	</table>

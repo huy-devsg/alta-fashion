@@ -1,7 +1,7 @@
 <h2>SẢN PHẨM BÁN CHẠY</h2>
 	<div class="product-list">
 		<?php 
-		$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham WHERE noi_bat='co' order by id desc limit 8";
+		$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham WHERE noi_bat='co' order by id desc limit 15";
 		$tv_1=mysqli_query($conn,$tv);
 		while($tv_2=mysqli_fetch_array($tv_1))
 		{

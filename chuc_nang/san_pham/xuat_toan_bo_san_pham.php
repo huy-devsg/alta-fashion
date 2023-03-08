@@ -4,7 +4,7 @@
 <h2>TẤT CẢ SẢN PHẨM</h2>
 <div class="product-list">
 <?php 
-    $so_du_lieu=8;
+    $so_du_lieu=15;
     $tv="select count(*) from san_pham";
     $tv_1=mysqli_query($conn,$tv);
     $tv_2=mysqli_fetch_array($tv_1);

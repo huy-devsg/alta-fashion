@@ -107,7 +107,7 @@
 			<td>&nbsp;</td>
 			<td>
 				<br>
-				<input type="submit" name="bieu_mau_sua_san_pham" value="Sửa sản phẩm" style="width:200px;height:50px;font-size:24px" >
+				<input type="submit" name="bieu_mau_sua_san_pham" value="Sửa sản phẩm">
 			</td>
 		</tr>
 	</table>
