@@ -17,13 +17,13 @@
 					echo "<img src='$link_anh' class='product_img' width='200px' >";
 				echo "</a>";
 				echo '</div>';
-				echo "<div class='product_details'>";						
-				echo "<div class='product_name'>";						
+				echo "<div class='product_details'>";                      
+				echo "<div class='product_name'>";                      
 				echo "<a href='$link_chi_tiet' >";
 				echo $tv_2['ten'];
-				echo "</a>";
+				echo "</a><br>";
 				echo "</div>";
-				echo "<div class='product_price'>";						
+				echo "<div class='product_price'>";                     
 				echo $gia.'&ensp;VNĐ';
 				echo "</div>";
 				echo "</div>";

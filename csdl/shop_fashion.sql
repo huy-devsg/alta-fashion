@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 06, 2023 lúc 08:03 AM
--- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 8.0.12
+-- Thời gian đã tạo: Th3 09, 2023 lúc 03:08 AM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bai_viet` (
   `id` int(11) NOT NULL,
-  `tieu_de` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `anh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `noi_dung` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `tac_gia` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `lien_ket` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `tieu_de` longtext NOT NULL,
+  `anh` varchar(256) NOT NULL,
+  `noi_dung` longtext NOT NULL,
+  `tac_gia` varchar(500) NOT NULL,
+  `lien_ket` varchar(500) NOT NULL,
   `time` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -55,9 +55,9 @@ INSERT INTO `bai_viet` (`id`, `tieu_de`, `anh`, `noi_dung`, `tac_gia`, `lien_ket
 
 CREATE TABLE `banner` (
   `id` int(11) NOT NULL,
-  `hinh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `rong` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `cao` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `hinh` varchar(256) NOT NULL,
+  `rong` varchar(256) NOT NULL,
+  `cao` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -75,7 +75,7 @@ INSERT INTO `banner` (`id`, `hinh`, `rong`, `cao`) VALUES
 
 CREATE TABLE `footer` (
   `id` int(11) NOT NULL,
-  `html` mediumtext COLLATE utf8_unicode_ci NOT NULL
+  `html` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -83,7 +83,7 @@ CREATE TABLE `footer` (
 --
 
 INSERT INTO `footer` (`id`, `html`) VALUES
-(1, 'Copyright © HuyNguyenThanh');
+(1, '© 2023 Alta Fashion. All rights reserved.');
 
 -- --------------------------------------------------------
 
@@ -93,14 +93,14 @@ INSERT INTO `footer` (`id`, `html`) VALUES
 
 CREATE TABLE `hoa_don` (
   `id` int(11) NOT NULL,
-  `ten_nguoi_mua` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `dia_chi` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `dien_thoai` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `noi_dung` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `hang_duoc_mua` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `ten_nguoi_mua` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `dia_chi` mediumtext NOT NULL,
+  `dien_thoai` varchar(256) NOT NULL,
+  `noi_dung` mediumtext NOT NULL,
+  `hang_duoc_mua` mediumtext NOT NULL,
   `id_user` int(255) NOT NULL,
-  `tinh_trang` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `tinh_trang` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -122,8 +122,8 @@ INSERT INTO `hoa_don` (`id`, `ten_nguoi_mua`, `email`, `dia_chi`, `dien_thoai`, 
 
 CREATE TABLE `menu_doc` (
   `id` int(11) NOT NULL,
-  `ten` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `anh` varchar(500) COLLATE utf8_unicode_ci NOT NULL
+  `ten` varchar(256) NOT NULL,
+  `anh` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -145,9 +145,9 @@ INSERT INTO `menu_doc` (`id`, `ten`, `anh`) VALUES
 
 CREATE TABLE `menu_ngang` (
   `id` int(11) NOT NULL,
-  `ten` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `noi_dung` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `loai_menu` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `ten` varchar(256) NOT NULL,
+  `noi_dung` mediumtext NOT NULL,
+  `loai_menu` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -157,8 +157,8 @@ CREATE TABLE `menu_ngang` (
 INSERT INTO `menu_ngang` (`id`, `ten`, `noi_dung`, `loai_menu`) VALUES
 (2, 'SẢN PHẨM', '', 'san_pham'),
 (4, 'TIN TỨC', '<p>Nội dung c&aacute;ch mua h&agrave;ng <br /><br /> Nội dung c&aacute;ch mua h&agrave;ng <br /><br /> Nội dung c&aacute;ch mua h&agrave;ng <br /><br /> Nội dung c&aacute;ch mua h&agrave;ng <br /><br /> Nội dung c&aacute;ch mua h&agrave;ng <br /><br /> Nội dung c&aacute;ch mua h&agrave;ng <br /><br /> Nội dung c&aacute;ch mua h&agrave;ng <br /><br /></p>', 'tin_tuc'),
-(5, 'GIỚI THIỆU', 'Nội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>', ''),
-(6, 'LIÊN HỆ', 'Nội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>', '');
+(5, 'GIỚI THIỆU', 'Nội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>\r\nNội dung giới thiệu <br><br>\r\nNội dung giới thiệu', ''),
+(6, 'LIÊN HỆ', 'Nội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>\r\nNội dung liên hệ<br><br>\r\nNội dung liên hệ', '');
 
 -- --------------------------------------------------------
 
@@ -168,8 +168,8 @@ INSERT INTO `menu_ngang` (`id`, `ten`, `noi_dung`, `loai_menu`) VALUES
 
 CREATE TABLE `quang_cao` (
   `id` int(11) NOT NULL,
-  `anh` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `vi_tri` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `anh` mediumtext NOT NULL,
+  `vi_tri` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -188,13 +188,13 @@ INSERT INTO `quang_cao` (`id`, `anh`, `vi_tri`) VALUES
 
 CREATE TABLE `san_pham` (
   `id` int(11) NOT NULL,
-  `ten` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `ten` varchar(256) NOT NULL,
   `gia` int(255) NOT NULL,
-  `hinh_anh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `noi_dung` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `hinh_anh` varchar(256) NOT NULL,
+  `noi_dung` mediumtext NOT NULL,
   `thuoc_menu` int(255) NOT NULL,
-  `noi_bat` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `trang_chu` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_bat` varchar(256) NOT NULL,
+  `trang_chu` varchar(256) NOT NULL,
   `sap_xep_trang_chu` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -216,7 +216,18 @@ INSERT INTO `san_pham` (`id`, `ten`, `gia`, `hinh_anh`, `noi_dung`, `thuoc_menu`
 (59, 'BASIC CARGO PANTS - MINT GREEN', 750000, '1_188c6cd69d794e9ca53434e9a9739baf_1024x1024.webp', '', 4, 'co', 'co', 19),
 (60, 'BASIC CARGO PANTS - BLACK', 750000, 'img_4505_1dd0d89025034d659a6e7d1663d60a35_1024x1024.webp', '', 4, 'co', 'co', 20),
 (61, 'DESTROYED JEANS - BLUE', 750000, '2_d37bebcda9154685b436cc4207ca11b8_1024x1024.webp', '', 4, 'co', 'co', 21),
-(62, 'LOGOS TEE - BLACK', 320000, '2__2__502feecfed3f42d79c0e7b1a7b1c480d_grande.webp', '', 1, 'co', 'co', 22);
+(62, 'LOGOS TEE - BLACK', 320000, '2__2__502feecfed3f42d79c0e7b1a7b1c480d_grande.webp', '', 1, 'co', 'co', 22),
+(63, 'DSW FOREST JACKET', 350000, 'ao-khoac-local-brand-dep-gia-re-mau-den-10-c142833a-207c-4bff-b411-51ac65da0477.webp', '', 2, 'co', 'co', 23),
+(64, 'DSS PINKY VARSITY JACKET - LIMITED EDITION', 450000, 'ao-varsity-jacket-local-brand-mau-hong-nu-20.webp', '', 2, 'co', 'co', 24),
+(65, 'DSW BMG LEATHER VARSITY JACKET', 400000, 'ao-khoac-bong-chay-nam-da-varsity-jacket-local-brand-1.webp', '', 2, 'co', 'co', 25),
+(66, 'DSW VARSITY LEATHER JACKET', 400000, 'ao-khoac-bong-chay-nam-local-brand-davies-varsity-jacket-da-7.webp', '', 2, 'co', 'co', 26),
+(67, 'DSS HOODIE ZIPPER-WHITE', 750000, 'zipper-hoodie.webp', '', 3, 'co', 'co', 27),
+(68, 'DSS HOODIE D CARTOON', 750000, 'ao-khoac-mau-tim-hoodie-local-brand.webp', '', 3, 'co', 'co', 28),
+(69, 'DSS JACKET DAVIES FARM', 750000, 'ao-khoac-du-nu-dep.webp', '', 3, 'co', 'co', 29),
+(70, 'DSW HOODIE OLD SKULL', 750000, 'ao-khoac-hoodie-oversize-local-brand.webp', '', 3, '', 'co', 30),
+(71, 'DSW HOODIE WARRIOR', 750000, 'ao-hoodie-co-mu-local-brand.webp', '', 3, '', 'co', 31),
+(72, 'DSW HOODIE WARRIOR', 350000, 'warrior-short2.webp', '', 4, 'co', 'co', 32),
+(73, 'D13-Q31 CULOTTES BOX PANT', 350000, 'quan-dai-tui-hop-nu.webp', '', 4, 'co', 'co', 33);
 
 -- --------------------------------------------------------
 
@@ -226,8 +237,8 @@ INSERT INTO `san_pham` (`id`, `ten`, `gia`, `hinh_anh`, `noi_dung`, `thuoc_menu`
 
 CREATE TABLE `slideshow` (
   `id` int(11) NOT NULL,
-  `hinh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `lien_ket` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `hinh` varchar(256) NOT NULL,
+  `lien_ket` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -247,25 +258,35 @@ INSERT INTO `slideshow` (`id`, `hinh`, `lien_ket`) VALUES
 
 CREATE TABLE `tai_khoan` (
   `id` int(11) NOT NULL,
-  `ho_ten` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `ky_danh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `mat_khau` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `quyen` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `ho_ten` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `ky_danh` varchar(256) NOT NULL,
+  `mat_khau` varchar(256) NOT NULL,
+  `dia_chi` varchar(500) NOT NULL,
+  `quyen` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `tai_khoan`
 --
 
-INSERT INTO `tai_khoan` (`id`, `ho_ten`, `email`, `ky_danh`, `mat_khau`, `quyen`) VALUES
-(1, 'Nguyễn Thanh Huy', 'huy656363@gmail.com', 'admin', 'c3284d0f94606de1fd2af172aba15bf3', 'admin'),
-(20, 'ngu', 'b1', 'hehe', 'c3284d0f94606de1fd2af172aba15bf3', ''),
-(21, 'KAKA', 'AKAK', 'AKAK', '236cb3fbaa1ceafa5e3e3c75b23365ab', ''),
-(22, 'hahah', 'admin', 'ahha', 'c3284d0f94606de1fd2af172aba15bf3', ''),
-(23, 'kkkkokok', 'okokokok', 'kokokok', '861453e3246039da8119e458b351d2da', ''),
-(24, 'kakak', 'akkaka', 'akakka', '2ad41d41f684db6c604f39f102a57aaf', ''),
-(25, 'aa', 'aa', 'aa', 'ad79e2cd5fd5ae53547d991007344847', '');
+INSERT INTO `tai_khoan` (`id`, `ho_ten`, `email`, `ky_danh`, `mat_khau`, `dia_chi`, `quyen`) VALUES
+(1, 'Nguyễn Thanh Huy', 'huy656363@gmail.com', 'admin', 'c3284d0f94606de1fd2af172aba15bf3', 'Gò Vấp, TPHCM', 'admin'),
+(20, 'ngu', 'b1', 'hehe', 'c3284d0f94606de1fd2af172aba15bf3', '', ''),
+(21, 'KAKA', 'AKAK', 'AKAK', '236cb3fbaa1ceafa5e3e3c75b23365ab', '', ''),
+(22, 'hahah', 'admin', 'ahha', 'c3284d0f94606de1fd2af172aba15bf3', '', ''),
+(23, 'kkkkokok', 'okokokok', 'kokokok', '861453e3246039da8119e458b351d2da', '', ''),
+(24, 'kakak', 'akkaka', 'akakka', '2ad41d41f684db6c604f39f102a57aaf', '', ''),
+(25, 'aa', 'aa', 'aa', 'ad79e2cd5fd5ae53547d991007344847', '', ''),
+(26, 'huy', 'huy', 'huy', '3fb57ed347fc167c4e814c85933a1001', '', ''),
+(27, 'hh', 'hh', 'hh', '40ad491c1c6403330a6d7695e6fa3723', '', ''),
+(28, 'kk', 'kk', 'kk', 'a2d20c82b5c3805e346a494aa3d286b2', '', ''),
+(29, 'kkaa', 'aaaa', 'aaa', 'ad79e2cd5fd5ae53547d991007344847', '', ''),
+(30, 'huhu', 'huhuh', 'huuhu', '1c4559a3f3bcbc00aebb6ba9160430cf', '', ''),
+(31, 'kaka', 'akkakak', 'akkakak', '5c713bdd4b19d5d0e0bb6e80cbad8a61', '', ''),
+(32, 'akjkjkdhkh', 'kjhkjhkjh', 'kjhkjhjh', '923ce0dd91933b0154d66fe8878f783f', '', ''),
+(33, 'kakaoakskj', 'hjgjhgjhg', 'jhj', '3bbca1656d5ca3973e94de838cf7761a', '', ''),
+(34, 'kkaakak', 'huya', 'huya', '86772cf42503e5a8023f29f3b3a8cc21', '', '');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -369,7 +390,7 @@ ALTER TABLE `menu_doc`
 -- AUTO_INCREMENT cho bảng `menu_ngang`
 --
 ALTER TABLE `menu_ngang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `quang_cao`
@@ -381,7 +402,7 @@ ALTER TABLE `quang_cao`
 -- AUTO_INCREMENT cho bảng `san_pham`
 --
 ALTER TABLE `san_pham`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT cho bảng `slideshow`
@@ -393,7 +414,7 @@ ALTER TABLE `slideshow`
 -- AUTO_INCREMENT cho bảng `tai_khoan`
 --
 ALTER TABLE `tai_khoan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

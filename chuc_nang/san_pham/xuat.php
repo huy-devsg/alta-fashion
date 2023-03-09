@@ -7,7 +7,7 @@
 ?>
 <div class="product-list">
 <?php 
-    $so_du_lieu=10;
+    $so_du_lieu=15;
 	$tv="select count(*) from san_pham where thuoc_menu='$id';";
     $tv_1=mysqli_query($conn,$tv);
     $tv_2=mysqli_fetch_array($tv_1);
@@ -24,11 +24,11 @@
             $link_chi_tiet="?thamso=chi_tiet_san_pham&id=".$tv_2['id'];
             $gia=$tv_2['gia'];
             $gia=number_format($gia,0,",",".");
-            echo "<a href='$link_chi_tiet' >";
-            echo "<img src='$link_anh' width='200px' class='product_img' >";
-            echo "</a>";
-            echo "<br>";
-            echo "<br>";
+            echo '<div class="product_image">';
+				echo "<a href='$link_chi_tiet' >";
+					echo "<img src='$link_anh' class='product_img' width='200px' >";
+				echo "</a>";
+				echo '</div>';
             echo "<div class='product_details'>";                      
             echo "<div class='product_name'>";                      
             echo "<a href='$link_chi_tiet' >";
@@ -39,7 +39,6 @@
             echo $gia.'&ensp;VNĐ';
             echo "</div>";
             echo "</div>";
-            echo "<br>";
         }
         else 
         {
