@@ -32,7 +32,9 @@
 						</a>
 					</td>
 					<td class="td_content" style="width:200px" >
-						<?php echo $tieu_de ?>
+						<a href="<?php echo $link_sua; ?>" >
+							<?php echo $tieu_de ?>
+						</a>
 					</td>
 					<td class="td_content" width="600px" >
 						<?php echo $noi_dung ?>

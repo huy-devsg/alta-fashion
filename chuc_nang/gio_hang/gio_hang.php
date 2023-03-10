@@ -55,7 +55,7 @@
 		<form action="" method="post">
 			<input type="hidden" name="cap_nhat_gio_hang" value="co">
 			<table border=1 width=100% class="product_table">
-				<tr>
+				<tr class="tr_title">
 					<td width="100px">&nbsp;</td>
 					<td width="200px"><b>Tên</b></td>
 					<td width="150px"><b>Số lượng</b></td>

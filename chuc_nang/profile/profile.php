@@ -46,6 +46,11 @@
 							<i class="glyphicon glyphicon-home"></i>
 							Thông tin cá nhân </a>
 						</li>
+						<li>
+							<a href="?thamso=profile&dieu_huong=dia_chi">
+							<i class="fas fa-map-marker-alt"></i>
+							&nbsp;Địa chỉ mặc định </a>
+						</li>
             <?php if($tv_2['quyen']!="")
                 {
             ?>
@@ -55,11 +60,7 @@
 							Trang quản trị </a>
 						</li>
             <?php } ?>
-            <li>
-							<a href="?thamso=profile&dieu_huong=doi_mat_khau">
-							<i class="glyphicon glyphicon-ok"></i>
-							Đổi mật khẩu </a>
-						</li>
+          
 						<li>
 							<a href="?thamso=dang_xuat">
 							<i class="glyphicon glyphicon-log-out"></i>

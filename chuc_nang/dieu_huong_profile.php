@@ -20,6 +20,10 @@
                 echo '<h2 class="title_admin">THÔNG TIN CÁ NHÂN</h2>';
                 include('chuc_nang/profile/tai_khoan/sua_thong_tin.php');
             break;
+            case "dia_chi":
+                echo '<h2 class="title_admin">ĐỊA CHỈ MẶC ĐỊNH</h2>';
+                include('chuc_nang/profile/dia_chi/dia_chi.php');
+            break;
             case "them_menu_ngang":
                 echo '<h2 class="title_admin">THÊM MENU</h2>';
                 include("quan_tri/chuc_nang/menu_ngang/them_menu_ngang.php");

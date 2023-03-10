@@ -599,6 +599,11 @@ table {
   
   table td a:hover {
 	text-decoration: none;
+	background: #fe8c00;
+	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+	background: linear-gradient(to right, #f83600, #fe8c00);
+	-webkit-background-clip: text  !important;
+	-webkit-text-fill-color: transparent !important;
 	
   }
   
@@ -612,17 +617,16 @@ table {
   }
   .tr_title
   {
-	background: #1E9600;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+	background-color: #eeeeee;
 	height:40px;
+	font-weight: bold;
+	border: solid 1px black;
   }
   .tr_title:hover
   {
-	background: #833ab4;  /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);  /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #1E9600;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FF0000, #FFF200, #1E9600);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   tr:hover
   {
@@ -710,4 +714,8 @@ h2.title_admin
   input[type="submit"]:hover {
 	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
 	background: linear-gradient(to left, #f85b00, #fef100);
+  }
+  textarea
+  {
+	border: none;
   }

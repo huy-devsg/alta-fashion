@@ -94,6 +94,11 @@
 			line-height: 1.5;
 			margin-bottom: 20px;
 		}
+		.content-left img
+		{
+			width:30%;
+			margin:10px 0 10px 0;
+		}
 		.sidebar {
 			border-radius:20px ;
 			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -110,6 +115,7 @@
 			text-align: center;
 			margin-bottom: 20px;
 		}
+		
 		.sidebar ul {
 			list-style-type: none;
 			margin: 0;
