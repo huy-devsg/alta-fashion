@@ -44,7 +44,7 @@
 		}
 		else 
 		{
-			thong_bao_html("Không được bỏ trống nội dung có (*)");
+			thong_bao("Không được bỏ trống nội dung có (*)");
 			trang_truoc();
 			exit();
 		}

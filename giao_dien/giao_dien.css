@@ -719,3 +719,20 @@ h2.title_admin
   {
 	border: none;
   }
+button.add
+{
+	background: #fe8c00;
+	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+	background: linear-gradient(to right, #f83600, #fe8c00);
+	color: #000;
+	border: none;
+	font-size: 16px;
+	padding: 10px;
+	border-radius: 20px;
+	min-width: 6em;
+	position:absolute;
+	bottom:10%;
+	left:50%;
+	transform:translateX(-50%);
+
+}

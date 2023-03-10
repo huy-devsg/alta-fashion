@@ -4,28 +4,46 @@
 <form action="" method="post">
 	<table width="990px" >
 		<tr>
-			<td width="150px" >Tên : </td>
+			<td width="150px" >Tỉnh / Thành phố : </td>
 			<td width="840px">
-				<input style="width:400px;margin-top:3px;margin-bottom:3px;" name="ten" value="" >
+				<input type="text" name="tinh" value="" >
 			</td>
 		</tr>
 		<tr>
-			<td>Địa chỉ : </td>
-			<td>
-				Mặc định
+			<td width="150px" >Quận / Huyện : </td>
+			<td width="840px">
+				<input type="text" name="huyen" value="" >
 			</td>
 		</tr>
 		<tr>
-			<td>dia chi ne </td>
+			<td width="150px" >Phường / Xã : </td>
+			<td width="840px">
+				<input type="text" name="xa" value="" >
+			</td>
+		</tr>
+		<tr>
+			<td width="150px" >Tên Đường : </td>
+			<td width="840px">
+				<input type="text" name="duong" value="" >
+			</td>
+		</tr>
+		<tr>
+			<td width="150px" >Số Nhà / Hẻm : </td>
+			<td width="840px">
+				<input type="text" name="so_nha" value="" >
+			</td>
+		</tr>
+		<tr>
+			<td>Mặc định </td>
 			<td>
-                    <input type="radio">
+                    <input type="checkbox" name="mac_dinh" value="co"> Đặt làm mặc định
 			</td>
 		</tr>
 		<tr>
 			<td>&nbsp;</td>
 			<td>
 				<br>
-				<input type="submit" name="bieu_mau_them_menu_ngang" value="Thêm menu">
+				<input type="submit" name="bieu_mau_them_dia_chi" value="Thêm địa chỉ">
 			</td>
 		</tr>
 	</table>

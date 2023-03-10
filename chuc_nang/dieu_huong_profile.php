@@ -24,6 +24,10 @@
                 echo '<h2 class="title_admin">ĐỊA CHỈ MẶC ĐỊNH</h2>';
                 include('chuc_nang/profile/dia_chi/dia_chi.php');
             break;
+            case "them_dia_chi":
+                echo '<h2 class="title_admin">THÊM ĐỊA CHỈ MỚI</h2>';
+                include('chuc_nang/profile/dia_chi/them_dia_chi.php');
+            break;
             case "them_menu_ngang":
                 echo '<h2 class="title_admin">THÊM MENU</h2>';
                 include("quan_tri/chuc_nang/menu_ngang/them_menu_ngang.php");
@@ -320,5 +324,11 @@
             include("chuc_nang/profile/tai_khoan/sua_thong_tin_o_trong_csdl.php");
             thong_bao("Cập nhật thông tin thành công");
             trang_truoc();
+        }
+        if(isset($_POST['bieu_mau_them_dia_chi']))
+        {
+            include("chuc_nang/profile/dia_chi/them_dia_chi_o_trong_csdl.php");
+            thong_bao("Thêm địa chỉ thành công");
+            thong_bao_chuyen_link('?thamso=profile&dieu_huong=dia_chi');
         }
 ?>
