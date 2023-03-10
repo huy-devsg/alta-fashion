@@ -39,7 +39,8 @@
 			mysqli_query($conn,$tv);
 			unset($_SESSION['id_them_vao_gio']);
 			unset($_SESSION['sl_them_vao_gio']);
-			thong_bao_html_roi_chuyen_trang("Alta Fashion Thanks You","index.php");
+			thong_bao("Alta Fashion Thanks You");
+			trang_truoc();
 		}
 		else 
 		{

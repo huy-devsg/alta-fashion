@@ -2,7 +2,6 @@
 	if(!isset($bien_bao_mat)){exit();}
 ?>
 <?php
-	$lien_ket=trim($_POST['lien_ket']);
 	$ten_file_anh=$_FILES['hinh_anh']['name'];
 	$tieu_de=$_POST['tieu_de'];
 	$noi_dung=$_POST['noi_dung'];
@@ -15,14 +14,13 @@
 		$tv_k_2=mysqli_fetch_array($tv_k_1);
 		if($tv_k_2[0]==0)
 		{
-			$tv="
+			$tv_k="
 			INSERT INTO bai_viet (
 			id ,
 			tieu_de,
 			anh,
 			noi_dung,
 			tac_gia,
-			lien_ket,
 			time
 			)
 			VALUES (
@@ -31,7 +29,6 @@
 			'$ten_file_anh',
 			'$noi_dung',
 			'$tac_gia',
-			'$lien_ket',
 			'$time'
 			);";
 			mysqli_query($conn,$tv_k);

@@ -8,9 +8,9 @@
 
 	$tv_1=mysqli_query($conn,$tv);
 ?>
-<div style="width:990px;text-align:left" >
+<div style="text-align:left" >
 	<form method="post" >
-		<table width="850px" class="tb_a1" >
+		<table width="10%" class="tb_a1" >
 			<tr class="tr_title" >
 				<td width="120px" ><b>Hình ảnh</b></td>
 				<td width="450px" ><b>Tên</b></td>

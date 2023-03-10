@@ -26,9 +26,20 @@
 			<br>
 			<br>
 			<form>
-				<input type='hidden' name='thamso' value='gio_hang' > 
-				<input type='hidden' name='id' value='<?php echo $_GET['id']; ?>' > 
-				<input type='text' name='so_luong' value='1' style='width:50px' > 
+			<?php
+					if(isset($_SESSION['xac_dinh_dang_nhap']))
+					{
+						echo '<input type="hidden" name="thamso" value="profile"> ';
+						echo '<input type="hidden" name="dieu_huong" value="gio_hang"> ';
+						echo '<input type="hidden" name="id" value="'.$_GET['id'].'">'; 
+					}
+					else
+					{
+						echo '<input type="hidden" name="thamso" value="gio_hang"> ';
+						echo '<input type="hidden" name="id" value="'.$_GET['id'].'">'; 
+					}
+				?>
+				<input type='text' name='so_luong' value='1' style='width:50px' > 				
 				<input type='submit' value='Thêm vào giỏ' style='margin-left:15px' > 
 			</form> 
 		</td>
@@ -48,51 +59,3 @@
 		</td>
 	</tr>
 </table>
-<style>
-	/* Styles for the product details page */
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-table td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  vertical-align: top;
-}
-
-table td:first-child {
-  width: 250px;
-}
-
-table td img {
-  display: block;
-  margin: 0 auto;
-}
-
-table td a {
-  color: #333;
-  font-size: 18px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-table td a:hover {
-	background: #fe8c00;
-	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
-	background: linear-gradient(to right, #f83600, #fe8c00);
-	-webkit-background-clip: text  !important;
-	-webkit-text-fill-color: transparent !important;
-  text-decoration: none;
-}
-
-table td form {
-  margin-top: 10px;
-}
-
-table td:nth-child(2) {
-  padding-left: 20px;
-}
-
-</style>

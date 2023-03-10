@@ -1,9 +1,13 @@
 <?php 
 	if(isset($_GET['thamso']))
 	{$tham_so=$_GET['thamso'];
-		if($tham_so=='profile'||$tham_so=='bai_viet'||$tham_so=='xuat_bai_viet')
+		if($tham_so=='profile'||$tham_so=='bai_viet')
 		{
 			echo '<div style="margin-top:95px;">';
+		}
+		elseif($tham_so=='xuat_bai_viet')
+		{
+			echo '<div style="margin-top:76px;">';
 		}
 		else
 		{
@@ -38,7 +42,7 @@
 			include("chuc_nang/tim_kiem/xuat_san_pham_tim_kiem.php");
 		break;
 		case "gio_hang":
-			include("chuc_nang/gio_hang/gio_hang.php");
+				include("chuc_nang/gio_hang/gio_hang.php");
 		break;
 		case "dang_nhap":
 		case "dang_ky":

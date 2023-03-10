@@ -2,26 +2,22 @@
 	if(!isset($bien_bao_mat)){exit();}
 ?>
 <?php 
+	$id_user=$_SESSION['id_user'];
 	$so_dong_tren_mot_trang=20;
-    $id_user=$_SESSION['id_user'];
 	if(!isset($_GET['trang'])){$_GET['trang']=1;}
 	$tv="select count(*) from hoa_don where id_user='$id_user'";
 	$tv_1=mysqli_query($conn,$tv);			
 	$tv_2=mysqli_fetch_array($tv_1);
-	$so_trang=ceil($tv_2[0]/$so_dong_tren_mot_trang);
-	
-	$vtbd=($_GET['trang']-1)*$so_dong_tren_mot_trang;
-	$tv="select * from hoa_don where id_user='$id_user' order by id desc limit $vtbd,$so_dong_tren_mot_trang";
-	$tv_1=	mysqli_query($conn,$tv);			
-    if(mysqli_fetch_array($tv_1)==0)
-    {
-        echo 'Chưa có đơn hàng';
-    }
-    else
-    {
+	if ($tv_2[0] == 0) {
+		echo "Không có đơn hàng";
+	} else {
+		$so_trang=ceil($tv_2[0]/$so_dong_tren_mot_trang);
+		$vtbd=($_GET['trang']-1)*$so_dong_tren_mot_trang;
+		$tv="select * from hoa_don where id_user='$id_user' order by id desc limit $vtbd,$so_dong_tren_mot_trang";
+		$tv_1=mysqli_query($conn,$tv);		
 ?>
 <table width="990px" class="tb_a1" >
-	<tr style="background:#CCFFFF;height:40px;" >
+	<tr class="tr_title" >
 		<td><b>Tên</b></td>
 		<td><b>Email</b></td>
 		<td><b>Điện thoại</b></td>
@@ -35,8 +31,8 @@
 			$ten=$tv_2['ten_nguoi_mua'];
 			$email=$tv_2['email'];
 			$dien_thoai=$tv_2['dien_thoai'];
-            $dia_chi=$tv_2['dia_chi'];
-            $tinh_trang=$tv_2['tinh_trang'];
+			$dia_chi=$tv_2['dia_chi'];
+			$tinh_trang=$tv_2['tinh_trang'];
 			$link_xem="?thamso=profile&dieu_huong=xem_hoa_don&id=".$id."&trang=".$_GET['trang'];
 			?>
 				<tr class="a_1" >
@@ -49,10 +45,10 @@
 					<td>
 						<?php echo $dien_thoai; ?>
 					</td>
-                    <td>
+					<td>
 						<?php echo $dia_chi; ?>
 					</td>
-                    <td>
+					<td>
 						<?php echo $tinh_trang; ?>
 					</td>
 				</tr>

@@ -3,7 +3,7 @@
   <ol class="carousel-indicators">
     <?php
     // Lấy dữ liệu từ bảng "bai_viet"
-    $tv = "SELECT * FROM bai_viet";
+    $tv = "SELECT * FROM bai_viet order by id desc";
     $tv_1 = mysqli_query($conn, $tv);
     // Tạo các indicators
 ?>

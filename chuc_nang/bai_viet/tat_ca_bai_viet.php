@@ -16,7 +16,7 @@
         echo '<div class="article">';     
         echo "<img src='$link_anh'>";
         echo '<div class="author_right">';
-        echo $tac_gia;
+        echo strtoupper($tac_gia);
         echo '</div>';
         echo "<div class='tieu_de'>";
         echo '<a href="'.$link_menu.'">';

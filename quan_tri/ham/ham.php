@@ -13,7 +13,7 @@
 	{
 ?>
 				<script type="text/javascript">
-					window.location=$link;
+					window.location.href='<?php echo $link ?>';
 				</script>
 		<?php 
 	}

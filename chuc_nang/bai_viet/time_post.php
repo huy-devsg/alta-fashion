@@ -1,6 +1,6 @@
 <?php
     date_default_timezone_set('Asia/Ho_Chi_Minh');
-    $timestamp = strtotime($tv_2['time']);
+    $timestamp = $tv_2['time'];
     $current_time = time(); 
     $time_diff = $current_time - $timestamp; 
     if ($time_diff < 60) { 
