@@ -48,6 +48,7 @@
 						<a href="<?php echo $link_xoa; ?>" class="lk_a1" >
 							<span class="glyphicon glyphicon-remove"></span>
 					</a>
+					</td>
 				</tr>
 			<?php 
 		}

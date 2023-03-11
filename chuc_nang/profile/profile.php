@@ -46,6 +46,7 @@
 							<i class="glyphicon glyphicon-home"></i>
 							Thông tin cá nhân </a>
 						</li>
+						
 						<li>
 							<a href="?thamso=profile&dieu_huong=dia_chi">
 							<i class="fas fa-map-marker-alt"></i>
@@ -56,11 +57,15 @@
             ?>
             <li>
 							<a href="?thamso=profile&dieu_huong=quan_tri">
-							<i class="glyphicon glyphicon-wrench"></i>
+							<i class="glyphicon glyphicon-cog"></i>
 							Trang quản trị </a>
 						</li>
             <?php } ?>
-          
+						<li>
+							<a href="?thamso=profile&dieu_huong=doi_mat_khau">
+							<i class="glyphicon glyphicon-user"></i>
+							Đổi mật khẩu </a>
+						</li>
 						<li>
 							<a href="?thamso=dang_xuat">
 							<i class="glyphicon glyphicon-log-out"></i>

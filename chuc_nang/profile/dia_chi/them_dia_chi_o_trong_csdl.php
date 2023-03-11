@@ -45,7 +45,6 @@
                             '$mac_dinh'
                             );";
 		mysqli_query($conn,$tv);
-       
 	}
 	else 
 	{

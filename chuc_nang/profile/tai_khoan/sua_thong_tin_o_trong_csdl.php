@@ -25,7 +25,6 @@
 	WHERE id='$id';
 	";
 	mysqli_query($conn,$tv);
-	
 	$_SESSION['ky_danh']=$ky_danh;
 	$_SESSION['mat_khau']=$mat_khau;	
 ?>

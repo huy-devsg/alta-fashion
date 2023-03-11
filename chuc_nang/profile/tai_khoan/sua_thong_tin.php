@@ -9,14 +9,13 @@
 	$ho_ten=$tv_2['ho_ten'];	
 	$email=$tv_2['email'];	
 	$ky_danh=$tv_2['ky_danh'];	
-	$dia_chi=$tv_2['dia_chi'];
 	$mat_khau=$tv_2['mat_khau'];
+	$tv2="select * from dia_chi where id_user='$id_user' and mac_dinh='co'";
+	$tv2_1=mysqli_query($conn,$tv2);
+	$tv2_2=mysqli_fetch_array($tv2_1);
 ?>
 <style>
- input[type="text"],input[type="password"] {
-	width:80%;
-	text-align:left;
- }
+
 </style>
 <form action="" method="post" >
 	<table width="990px" >
@@ -41,17 +40,8 @@
 		<tr>
 			<td width="100px" >Địa chỉ : </td>
 			<td width="890px" >
-				<input type="text" name="dia_chi" value="<?php echo $dia_chi; ?>" >
+				<input type="text" name="dia_chi" value="<?php echo $tv2_2['so_nha'].' '.$tv2_2['duong'].', '.$tv2_2['xa'].', '.$tv2_2['huyen'].', '.$tv2_2['tinh'].' ' ?>" >
 			</td>
-		</tr>
-		<tr>
-			<td>Mật khẩu : </td>
-			<td >
-				<input type="text" name="mat_khau" value="" ><br><br>
-				Nếu bạn không thay đổi mật khẩu thì hãy để trống
-
-			</td>
-		</tr>
 		<tr>
 			<td>&nbsp;</td>
 			<td>

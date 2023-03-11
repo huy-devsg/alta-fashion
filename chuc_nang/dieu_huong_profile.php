@@ -28,6 +28,10 @@
                 echo '<h2 class="title_admin">THÊM ĐỊA CHỈ MỚI</h2>';
                 include('chuc_nang/profile/dia_chi/them_dia_chi.php');
             break;
+            case "doi_mat_khau":
+                echo '<h2 class="title_admin">ĐỔI MẬT KHẨU MỚI</h2>';
+                include('chuc_nang/profile/tai_khoan/doi_mat_khau.php');
+            break;
             case "them_menu_ngang":
                 echo '<h2 class="title_admin">THÊM MENU</h2>';
                 include("quan_tri/chuc_nang/menu_ngang/them_menu_ngang.php");
@@ -328,7 +332,16 @@
         if(isset($_POST['bieu_mau_them_dia_chi']))
         {
             include("chuc_nang/profile/dia_chi/them_dia_chi_o_trong_csdl.php");
-            thong_bao("Thêm địa chỉ thành công");
-            thong_bao_chuyen_link('?thamso=profile&dieu_huong=dia_chi');
+            thong_bao_chuyen_link("Thêm địa chỉ thành công",'?thamso=profile&dieu_huong=dia_chi');
+        }
+        if(isset($_GET['xoa_dia_chi']))
+        {
+            include("chuc_nang/profile/dia_chi/xoa_dia_chi.php");
+            thong_bao("Xóa địa chỉ thành công");
+            trang_truoc();
+        }
+        if(isset($_POST['bieu_mau_doi_mat_khau']))
+        {
+            include("chuc_nang/profile/tai_khoan/doi_mat_khau_o_trong_csdl.php");
         }
 ?>

@@ -2,8 +2,8 @@
 	if(!isset($bien_bao_mat)){exit();}
 ?>
 <?php 
-	$ky_danh=$_SESSION['ky_danh'];
-	$tv="select * from tai_khoan where ky_danh='$ky_danh'";
+	$id_user=$_SESSION['id_user'];
+	$tv="select * from tai_khoan where id_user='$id_user'";
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
 	$ho_ten=$tv_2['ho_ten'];	
@@ -11,6 +11,9 @@
 	$ky_danh=$tv_2['ky_danh'];	
 	$dia_chi=$tv_2['dia_chi'];
 	$mat_khau=$tv_2['mat_khau'];
+	$tv2="select * from dia_chi where id_user='$id_user' and mac_dinh='co'";
+	$tv2_1=mysqli_query($conn,$tv2);
+	$tv2_2=mysqli_fetch_array($tv2_1);
 ?>
 <style>
  input[type="text"],input[type="password"] {
@@ -42,7 +45,7 @@
 		<tr>
 			<td width="100px" >Địa chỉ : </td>
 			<td width="890px" >
-				<input type="text" name="ky_danh" value="<?php echo $dia_chi; ?>"readonly >
+				<input type="text" name="ky_danh" value="<?php echo $tv2_2['dia_chi']; ?>"readonly >
 			</td>
 		</tr>
 	</table>

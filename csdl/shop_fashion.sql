@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th3 10, 2023 lúc 07:52 PM
--- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 8.0.12
+-- Thời gian đã tạo: Th3 11, 2023 lúc 09:31 AM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bai_viet` (
   `id` int(11) NOT NULL,
-  `tieu_de` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `anh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `noi_dung` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `tac_gia` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `lien_ket` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
+  `tieu_de` longtext NOT NULL,
+  `anh` varchar(256) NOT NULL,
+  `noi_dung` longtext NOT NULL,
+  `tac_gia` varchar(500) NOT NULL,
+  `lien_ket` varchar(500) NOT NULL,
   `time` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -56,9 +56,9 @@ INSERT INTO `bai_viet` (`id`, `tieu_de`, `anh`, `noi_dung`, `tac_gia`, `lien_ket
 
 CREATE TABLE `banner` (
   `id` int(11) NOT NULL,
-  `hinh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `rong` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `cao` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `hinh` varchar(256) NOT NULL,
+  `rong` varchar(256) NOT NULL,
+  `cao` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -76,13 +76,13 @@ INSERT INTO `banner` (`id`, `hinh`, `rong`, `cao`) VALUES
 
 CREATE TABLE `dia_chi` (
   `id` int(11) NOT NULL,
-  `tinh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `huyen` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `xa` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `duong` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `so_nha` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `tinh` varchar(256) NOT NULL,
+  `huyen` varchar(256) NOT NULL,
+  `xa` varchar(256) NOT NULL,
+  `duong` varchar(256) NOT NULL,
+  `so_nha` varchar(256) NOT NULL,
   `id_user` int(255) NOT NULL,
-  `mac_dinh` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `mac_dinh` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -90,7 +90,7 @@ CREATE TABLE `dia_chi` (
 --
 
 INSERT INTO `dia_chi` (`id`, `tinh`, `huyen`, `xa`, `duong`, `so_nha`, `id_user`, `mac_dinh`) VALUES
-(3, 'TP HCM', 'Gò Vấp', 'Phường 17', 'Lê Đức Thọ', '193', 1, ''),
+(3, 'TP HCM', 'Gò Vấp', 'Phường 17', 'Lê Đức Thọ', '193', 1, 'khong'),
 (8, 'TP HCM', 'Gò Vấp', 'Phường 17', 'Lê Đức Thọ', '193', 25, 'khong'),
 (19, 'hihihiihihi', 'hihihihihi', 'ihihihihihih', 'hiihihihihhihi', 'hihihiihhhiih', 25, 'khong'),
 (20, 'huhuh', 'uhu', 'huh', 'uhuh', 'uhuhu', 25, 'khong'),
@@ -107,7 +107,7 @@ INSERT INTO `dia_chi` (`id`, `tinh`, `huyen`, `xa`, `duong`, `so_nha`, `id_user`
 
 CREATE TABLE `footer` (
   `id` int(11) NOT NULL,
-  `html` mediumtext COLLATE utf8_unicode_ci NOT NULL
+  `html` mediumtext NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -125,14 +125,14 @@ INSERT INTO `footer` (`id`, `html`) VALUES
 
 CREATE TABLE `hoa_don` (
   `id` int(11) NOT NULL,
-  `ten_nguoi_mua` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `dia_chi` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `dien_thoai` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `noi_dung` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `hang_duoc_mua` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `ten_nguoi_mua` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `dia_chi` mediumtext NOT NULL,
+  `dien_thoai` varchar(256) NOT NULL,
+  `noi_dung` mediumtext NOT NULL,
+  `hang_duoc_mua` mediumtext NOT NULL,
   `id_user` int(255) NOT NULL,
-  `tinh_trang` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `tinh_trang` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -157,8 +157,8 @@ INSERT INTO `hoa_don` (`id`, `ten_nguoi_mua`, `email`, `dia_chi`, `dien_thoai`, 
 
 CREATE TABLE `menu_doc` (
   `id` int(11) NOT NULL,
-  `ten` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `anh` varchar(500) COLLATE utf8_unicode_ci NOT NULL
+  `ten` varchar(256) NOT NULL,
+  `anh` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -180,9 +180,9 @@ INSERT INTO `menu_doc` (`id`, `ten`, `anh`) VALUES
 
 CREATE TABLE `menu_ngang` (
   `id` int(11) NOT NULL,
-  `ten` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `noi_dung` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `loai_menu` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `ten` varchar(256) NOT NULL,
+  `noi_dung` mediumtext NOT NULL,
+  `loai_menu` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -203,8 +203,8 @@ INSERT INTO `menu_ngang` (`id`, `ten`, `noi_dung`, `loai_menu`) VALUES
 
 CREATE TABLE `quang_cao` (
   `id` int(11) NOT NULL,
-  `anh` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `vi_tri` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `anh` mediumtext NOT NULL,
+  `vi_tri` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -223,13 +223,13 @@ INSERT INTO `quang_cao` (`id`, `anh`, `vi_tri`) VALUES
 
 CREATE TABLE `san_pham` (
   `id` int(11) NOT NULL,
-  `ten` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `ten` varchar(256) NOT NULL,
   `gia` int(255) NOT NULL,
-  `hinh_anh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `noi_dung` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `hinh_anh` varchar(256) NOT NULL,
+  `noi_dung` mediumtext NOT NULL,
   `thuoc_menu` int(255) NOT NULL,
-  `noi_bat` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `trang_chu` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `noi_bat` varchar(256) NOT NULL,
+  `trang_chu` varchar(256) NOT NULL,
   `sap_xep_trang_chu` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
@@ -272,8 +272,8 @@ INSERT INTO `san_pham` (`id`, `ten`, `gia`, `hinh_anh`, `noi_dung`, `thuoc_menu`
 
 CREATE TABLE `slideshow` (
   `id` int(11) NOT NULL,
-  `hinh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `lien_ket` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `hinh` varchar(256) NOT NULL,
+  `lien_ket` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -293,12 +293,12 @@ INSERT INTO `slideshow` (`id`, `hinh`, `lien_ket`) VALUES
 
 CREATE TABLE `tai_khoan` (
   `id` int(11) NOT NULL,
-  `ho_ten` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `email` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `ky_danh` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `mat_khau` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `dia_chi` varchar(500) COLLATE utf8_unicode_ci NOT NULL,
-  `quyen` varchar(256) COLLATE utf8_unicode_ci NOT NULL
+  `ho_ten` varchar(256) NOT NULL,
+  `email` varchar(256) NOT NULL,
+  `ky_danh` varchar(256) NOT NULL,
+  `mat_khau` varchar(256) NOT NULL,
+  `dia_chi` varchar(500) NOT NULL,
+  `quyen` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
@@ -306,7 +306,7 @@ CREATE TABLE `tai_khoan` (
 --
 
 INSERT INTO `tai_khoan` (`id`, `ho_ten`, `email`, `ky_danh`, `mat_khau`, `dia_chi`, `quyen`) VALUES
-(1, 'Nguyễn Thanh Huy', 'huy656363@gmail.com', 'admin', 'c3284d0f94606de1fd2af172aba15bf3', 'Gò Vấp, TPHCM', 'admin'),
+(1, 'Nguyễn Thanh Huy', 'huy656363@gmail.com', 'admin', 'c3284d0f94606de1fd2af172aba15bf3', '', 'admin'),
 (20, 'ngu', 'b1', 'hehe', 'c3284d0f94606de1fd2af172aba15bf3', '', ''),
 (21, 'KAKA', 'AKAK', 'AKAK', '236cb3fbaa1ceafa5e3e3c75b23365ab', '', ''),
 (22, 'hahah', 'admin', 'ahha', 'c3284d0f94606de1fd2af172aba15bf3', '', ''),
@@ -413,7 +413,7 @@ ALTER TABLE `banner`
 -- AUTO_INCREMENT cho bảng `dia_chi`
 --
 ALTER TABLE `dia_chi`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT cho bảng `footer`
