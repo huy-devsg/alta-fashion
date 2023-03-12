@@ -9,9 +9,19 @@
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
 				<div class="profile-userpic">
-					<a href="?thamso=profile&dieu_huong=thong_tin">
-						<img src="hinh_anh/profile/1.jpg" alt="">
+					<a href="?thamso=profile&dieu_huong=them_avatar">
+						<?php 
+							if($tv_2['avatar']!='')
+							{
+								echo '<img src="hinh_anh/profile/'.$tv_2['avatar'].'" alt="">';
+							}
+							else
+							{
+								echo '<img src="hinh_anh/profile/no_avatar.png" alt="">';
+							}
+						?>
 					</a>
+					<div class="border"></div>
 				</div>
 				<!-- END SIDEBAR USERPIC -->
 				<!-- SIDEBAR USER TITLE -->

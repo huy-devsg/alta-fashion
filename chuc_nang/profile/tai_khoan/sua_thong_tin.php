@@ -43,6 +43,12 @@
 				<input type="text" name="dia_chi" value="<?php echo $tv2_2['so_nha'].' '.$tv2_2['duong'].', '.$tv2_2['xa'].', '.$tv2_2['huyen'].', '.$tv2_2['tinh'].' ' ?>" >
 			</td>
 		<tr>
+			<td>
+				<a href="?thamso=profile&dieu_huong=them_avatar" class="nav_admin" >Thay đổi avatar</a>
+			</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
 			<td>&nbsp;</td>
 			<td>
 				<input type="submit" name="bieu_mau_sua_thong_tin" value="Cập nhật">

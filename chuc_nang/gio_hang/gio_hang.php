@@ -95,15 +95,43 @@
 					<td colspan=4 style="text-align:right;"><b>Tổng cộng:</b></td>
 					<td><b><?php echo number_format($tong_cong) ?></b></td>
 				</tr>
-			</table>
+				<tr>
+					<td colspan=4>
+						<input type="submit" value="Cập nhật giỏ hàng">
+					</td>
+				<td style="text-align:center;">
+				<?php
+	if(isset($_GET['thanh_toan']))
+	{
+		if($_GET['thanh_toan']=='co')
+		{
+			echo '';
+		}
+	}
+		else
+		{
+			echo '<input type="button" value="Thanh toán" onclick="window.location.href=\'index.php?thamso=profile&dieu_huong=gio_hang&thanh_toan=co\'">';
+		}
+
+	?>
+
+			</td>
+				</tr>
 			<br>
-			<input type="submit" value="Cập nhật giỏ hàng">
 		</form>
+		</table>
 
 		<br>
 <br>
 	<?php
-		include('bieu_mau_mua_hang.php');
+	if(isset($_GET['thanh_toan']))
+	{
+		if($_GET['thanh_toan']=='co')
+		{
+			include('bieu_mau_mua_hang.php');
+
+		}
+	}
 endif; ?>
 </div>
 <style>
@@ -113,5 +141,12 @@ endif; ?>
   display: block;
   margin: 0 auto;
 }
-
+.glyphicon-credit-card
+{
+	background: #fe8c00;
+	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+	background: linear-gradient(to right, #f83600, #fe8c00);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
 </style>

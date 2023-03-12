@@ -54,12 +54,12 @@
 </tr>
 <?php endwhile; ?>
             <tr>
-                <td>
+                <td colspan=3>
                 <a class="nav_admin" href='?thamso=profile&dieu_huong=them_dia_chi'>Thêm địa chỉ mới</a>
                 </td>
             </tr>
             <tr>
-                <td colspan=2 style="text-align:center">
+                <td colspan=3 style="text-align:center">
                     <input type="submit" name="dat_mac_dinh_dia_chi" value="Đặt làm mặc định">
                 </td>
             </tr>
@@ -71,7 +71,6 @@
    if(isset($_POST['dat_mac_dinh_dia_chi'])) { 
     if(isset($_POST['dia_chi_id'])) {
         $dia_chi_id = $_POST['dia_chi_id'];
-        $set_dia_chi= $_POST['set_dia_chi'];
         $sql = "UPDATE dia_chi SET mac_dinh = 'co' WHERE id = '$dia_chi_id' and id_user='$id_user'";
         $sql2="UPDATE dia_chi SET mac_dinh = 'khong' WHERE id != '$dia_chi_id' and id_user='$id_user'";
         mysqli_query($conn,$sql);

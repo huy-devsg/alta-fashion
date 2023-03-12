@@ -28,6 +28,10 @@
                 echo '<h2 class="title_admin">THÊM ĐỊA CHỈ MỚI</h2>';
                 include('chuc_nang/profile/dia_chi/them_dia_chi.php');
             break;
+            case "them_avatar":
+                echo '<h2 class="title_admin">ẢNH ĐẠI DIỆN</h2>';
+                include('chuc_nang/profile/avatar/them_avatar.php');
+            break;
             case "doi_mat_khau":
                 echo '<h2 class="title_admin">ĐỔI MẬT KHẨU MỚI</h2>';
                 include('chuc_nang/profile/tai_khoan/doi_mat_khau.php');
@@ -343,5 +347,9 @@
         if(isset($_POST['bieu_mau_doi_mat_khau']))
         {
             include("chuc_nang/profile/tai_khoan/doi_mat_khau_o_trong_csdl.php");
+        }
+        if(isset($_POST['bieu_mau_them_avatar']))
+        {
+            include("chuc_nang/profile/avatar/them_avatar_o_trong_csdl.php");
         }
 ?>

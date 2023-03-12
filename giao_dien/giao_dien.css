@@ -478,16 +478,29 @@ text-decoration: underline;
 	background: #fff;
   }
   
-  .profile-userpic img {
-	float: none;
-	margin: 0 auto;
+  .profile-userpic {
 	width: 10em;
 	height: 10em;
+	position: relative;
+	display: inline-block;
+	border-radius: 50%;
+	box-sizing: border-box;
+	z-index: 1;
+  }
+  .profile-userpic:hover {
+	transition: 0.3s ease-in-out;
+	border-radius: 50%;
+    box-shadow: 0px 0px 5px 5px rgba(255,105,0,0.8);
+}
+.profile-userpic img {
+	float: none;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
 	-webkit-border-radius: 50% !important;
 	-moz-border-radius: 50% !important;
 	border-radius: 50% !important;
   }
-  
   .profile-usertitle {
 	text-align: center;
 	margin-top: 20px;
@@ -502,9 +515,14 @@ text-decoration: underline;
   
   .profile-usertitle-job {
 	text-transform: uppercase;
-	color: #5b9bd1;
-	font-size: 12px;
-	font-weight: 600;
+	background: #fe8c00;
+	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+	background: linear-gradient(to right, #f83600, #fe8c00);
+	-webkit-background-clip: text  !important;
+	-webkit-text-fill-color: transparent !important;
+	font-size: 13px;
+	letter-spacing: 0.5px;
+	font-weight: bold;
 	margin-bottom: 15px;
   }
   
@@ -661,10 +679,6 @@ background: linear-gradient(to right, #FF0000, #FFF200, #1E9600); /* W3C, IE 10+
 	-webkit-background-clip: text  !important;
 	-webkit-text-fill-color: transparent !important;
   }
-  .nav_admin {
-	text-align: right;
-	margin-bottom: 20px;
-}
 .nav_admin
 {
 	background: #fe8c00;
@@ -698,7 +712,7 @@ h2.title_admin
 	height: 100%;
   }
   
-  input[type="submit"] {
+  input[type="submit"],input[type="button"] {
 	background: #fe8c00;
 	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
 	background: linear-gradient(to right, #f83600, #fe8c00);
@@ -711,11 +725,16 @@ h2.title_admin
 	min-width: 6em;
   
   }
-  input[type="submit"]:hover {
-	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
-	background: linear-gradient(to left, #f85b00, #fef100);
+  td input[type="file"] {
+	border: solid 1px rgb(193, 193, 193);
+	font-size: 16px;
+	margin: 0 auto;
+	padding: 10px;
+	text-align: center;
+	border-radius: 20px;
+	min-width: 6em;
   }
-  input[type="button"] {
+  input[type="file"]::-webkit-file-upload-button {
 	background: #fe8c00;
 	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
 	background: linear-gradient(to right, #f83600, #fe8c00);
@@ -723,10 +742,17 @@ h2.title_admin
 	border: none;
 	font-size: 16px;
 	padding: 10px;
+	text-align: center;
 	border-radius: 20px;
 	min-width: 6em;
-
-}
+	cursor: pointer;
+  }
+  
+  input[type="button"]:hover, input[type="submit"]:hover {
+	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+	background: linear-gradient(to left, #f85b00, #fef100);
+  }
+  
   textarea
   {
 	border: none;
