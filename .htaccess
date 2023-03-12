@@ -1,3 +1,5 @@
 RewriteEngine On
 RewriteRule "index.html" "index.php"
-RewriteRule "^([a-zA-Z0-9]+).html$" "?thamso=$1"
+RewriteRule "^([a-zA-Z0-9_-]+)/?.html$" "?thamso=$1" [NC,L]
+RewriteRule "^([a-zA-Z0-9_-]+)/([0-9]+).html$" "?thamso=$1&id=$2" [NC,L]
+RewriteRule "^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$" "?thamso=$1&dieu_huong=$2" [NC,L]

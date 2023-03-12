@@ -31,7 +31,7 @@
     $mac_dinh=$tv_2['mac_dinh'];
     $id=$tv_2['id'];
     $checked = ($mac_dinh == "co") ? "checked" : "";
-    $link_xoa="?thamso=profile&xoa_dia_chi=co&id=".$id;
+    $link_xoa="profile/xoa_dia_chi=co&id=".$id;
 ?>
 <tr>
     <td width="70%"><?php echo $so_nha.' '.$duong.', '.$xa.', '.$huyen.', '.$tinh.' ' ?>
@@ -55,7 +55,7 @@
 <?php endwhile; ?>
             <tr>
                 <td colspan=3>
-                <a class="nav_admin" href='?thamso=profile&dieu_huong=them_dia_chi'>Thêm địa chỉ mới</a>
+                <a class="nav_admin" href='profile/them-dia-chi.html'>Thêm địa chỉ mới</a>
                 </td>
             </tr>
             <tr>
@@ -85,5 +85,5 @@
 ?>
 <?php else: ?>
     <p>Không có địa chỉ</p>
-    <button class="add" onclick="location.href='?thamso=profile&dieu_huong=them_dia_chi'" >Thêm địa chỉ</button>
+    <button class="add" onclick="location.href='profile/them-dia-chi'" >Thêm địa chỉ</button>
 <?php endif; ?>

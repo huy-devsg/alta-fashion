@@ -25,7 +25,7 @@
 			?>
 			<br>
 			<br>
-			<form>
+			<form action="profile/gio-hang.html" method="post">
 			<?php
 					if(isset($_SESSION['xac_dinh_dang_nhap']))
 					{

@@ -44,7 +44,7 @@
 			</td>
 		<tr>
 			<td>
-				<a href="?thamso=profile&dieu_huong=them_avatar" class="nav_admin" >Thay đổi avatar</a>
+				<a href="profile/them-avatar.html" class="nav_admin" >Thay đổi avatar</a>
 			</td>
 			<td>&nbsp;</td>
 		</tr>

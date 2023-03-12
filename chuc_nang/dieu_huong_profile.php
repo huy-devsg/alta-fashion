@@ -4,79 +4,79 @@
         $dieu_huong=$_GET['dieu_huong'];
         switch($dieu_huong)
 	    {
-            case "gio_hang":
+            case "gio-hang":
             echo '<h2 class="title_admin">GIỎ HÀNG</h2>';
             include("chuc_nang/gio_hang/gio_hang.php");
             break;
-            case "don_hang":
+            case "don-hang":
                 echo '<h2 class="title_admin">ĐƠN HÀNG ĐÃ MUA</h2>';
                 include('chuc_nang/profile/hoa_don/hoa_don.php');
             break;
-            case "quan_tri":
+            case "quan-tri":
                 echo '<h2 class="title_admin">QUẢN TRỊ WEBSITE</h2>';
                 include("quan_tri/chuc_nang/quan_tri_2/index.php");
             break;
-            case "thong_tin":
+            case "thong-tin":
                 echo '<h2 class="title_admin">THÔNG TIN CÁ NHÂN</h2>';
                 include('chuc_nang/profile/tai_khoan/sua_thong_tin.php');
             break;
-            case "dia_chi":
+            case "dia-chi":
                 echo '<h2 class="title_admin">ĐỊA CHỈ MẶC ĐỊNH</h2>';
                 include('chuc_nang/profile/dia_chi/dia_chi.php');
             break;
-            case "them_dia_chi":
+            case "them-dia-chi":
                 echo '<h2 class="title_admin">THÊM ĐỊA CHỈ MỚI</h2>';
                 include('chuc_nang/profile/dia_chi/them_dia_chi.php');
             break;
-            case "them_avatar":
+            case "them-avatar":
                 echo '<h2 class="title_admin">ẢNH ĐẠI DIỆN</h2>';
                 include('chuc_nang/profile/avatar/them_avatar.php');
             break;
-            case "doi_mat_khau":
+            case "doi-mat-khau":
                 echo '<h2 class="title_admin">ĐỔI MẬT KHẨU MỚI</h2>';
                 include('chuc_nang/profile/tai_khoan/doi_mat_khau.php');
             break;
-            case "them_menu_ngang":
+            case "them-menu-ngang":
                 echo '<h2 class="title_admin">THÊM MENU</h2>';
                 include("quan_tri/chuc_nang/menu_ngang/them_menu_ngang.php");
             break;
-            case "quan_ly_menu_ngang":
+            case "quan-ly-menu-ngang":
                 echo '<h2 class="title_admin">DANH SÁCH MENU</h2>';
                 include("quan_tri/chuc_nang/menu_ngang/quan_ly_menu_ngang.php");
             break;
-            case "sua_menu_ngang":
+            case "sua-menu-ngang":
                 echo '<h2 class="title_admin">SỬA MENU</h2>';
                 include("quan_tri/chuc_nang/menu_ngang/sua_menu_ngang.php");
             break;
-            case "them_menu_doc":
+            case "them-menu-doc":
                 echo '<h2 class="title_admin">THÊM DANH MỤC SẢN PHẨM</h2>';
                 include("quan_tri/chuc_nang/menu_doc/them_menu_doc.php");
             break;
-            case "quan_ly_menu_doc":
+            case "quan-ly-menu-doc":
                 echo '<h2 class="title_admin">DANH SÁCH DANH MỤC</h2>';
                 include("quan_tri/chuc_nang/menu_doc/quan_ly_menu_doc.php");
             break;
-            case "sua_menu_doc":
+            case "sua-menu-doc":
                 echo '<h2 class="title_admin">SỬA DANH MỤC SẢN PHẨM</h2>';
                 include("quan_tri/chuc_nang/menu_doc/sua_menu_doc.php");
             break;
-            case "them_san_pham":
+            case "them-san-pham":
                 echo '<h2 class="title_admin">THÊM SẢN PHẨM</h2>';
                 include("quan_tri/chuc_nang/san_pham/them_san_pham.php");
             break;
-            case "quan_ly_san_pham":
+            case "quan-ly-san-pham":
                 echo '<h2 class="title_admin">DANH SÁCH SẢN PHẨM</h2>';
                 include("quan_tri/chuc_nang/san_pham/quan_ly_san_pham.php");
             break;
-            case "sua_san_pham":
+            case "sua-san-pham":
                 echo '<h2 class="title_admin">SỬA SẢN PHẨM</h2>';
                 include("quan_tri/chuc_nang/san_pham/sua_san_pham.php");
             break;
-            case "hoa_don":
+            case "hoa-don":
                 echo '<h2 class="title_admin">DANH SÁCH HÓA ĐƠN</h2>';
                 include("quan_tri/chuc_nang/hoa_don/quan_ly_hoa_don.php");
             break;
-            case "xem_hoa_don":
+            case "xem-hoa-don":
                 echo '<h2 class="title_admin">HÓA ĐƠN</h2>';
                 include("chuc_nang/profile/hoa_don/xem_hoa_don.php");
             break;
@@ -100,51 +100,51 @@
                 echo '<h2 class="title_admin">SỬA SLIDESHOW</h2>';
                 include("quan_tri/chuc_nang/slideshow/sua_slideshow.php");
             break;
-            case "them_bai_viet":
+            case "them-bai-viet":
                 echo '<h2 class="title_admin">THÊM BÀI VIẾT MỚI</h2>';
                 include("quan_tri/chuc_nang/bai_viet/them_bai_viet.php");
             break;
-            case "quan_ly_bai_viet":
+            case "quan-ly-bai-viet":
                 echo '<h2 class="title_admin">DANH SÁCH BÀI VIẾT</h2>';
                 include("quan_tri/chuc_nang/bai_viet/quan_ly_bai_viet.php");
             break;
-            case "sua_bai_viet":
+            case "sua-bai-viet":
                 echo '<h2 class="title_admin">SỬA BÀI VIẾT</h2>';
                 include("quan_tri/chuc_nang/bai_viet/sua_bai_viet.php");
             break;
-            case "sua_banner":
+            case "sua-banner":
                 echo '<h2 class="title_admin">SỬA BANNER</h2>';
                 include("quan_tri/chuc_nang/banner/sua_banner.php");
             break;
-            case "sua_footer":
+            case "sua-footer":
                 echo '<h2 class="title_admin">SỬA FOOTER</h2>';
                 include("quan_tri/chuc_nang/footer/sua_footer.php");
             break;
-            case "them_quang_cao_trai":
+            case "them-quang-cao-trai":
                 echo '<h2 class="title_admin">THÊM QUẢNG CÁO LEFT</h2>';
                 include("quan_tri/chuc_nang/quang_cao_trai/them_quang_cao_trai.php");
             break;
-            case "quan_ly_quang_cao_trai":
+            case "quan-ly-quang-cao-trai":
                 echo '<h2 class="title_admin">QUẢNG CÁO LEFT</h2>';
                 include("quan_tri/chuc_nang/quang_cao_trai/quan_ly_quang_cao_trai.php");
             break;
-            case "sua_quang_cao_trai":
+            case "sua-quang-cao-trai":
                 echo '<h2 class="title_admin">SỬA QUẢNG CÁO LEFT</h2>';
                 include("quan_tri/chuc_nang/quang_cao_trai/sua_quang_cao_trai.php");
             break;
-            case "them_quang_cao_phai":
+            case "them-quang-cao-phai":
                 echo '<h2 class="title_admin">THÊM QUẢNG CÁO RIGHT</h2>';
                 include("quan_tri/chuc_nang/quang_cao_phai/them_quang_cao_phai.php");
             break;
-            case "quan_ly_quang_cao_phai":
+            case "quan-ly-quang-cao-phai":
                 echo '<h2 class="title_admin">QUẢNG CÁO RIGHT</h2>';
                 include("quan_tri/chuc_nang/quang_cao_phai/quan_ly_quang_cao_phai.php");
             break;
-            case "sua_quang_cao_phai":
+            case "sua-quang-cao-phai":
                 echo '<h2 class="title_admin">SỬA QUẢNG CÁO RIGHT</h2>';
                 include("quan_tri/chuc_nang/quang_cao_phai/sua_quang_cao_phai.php");
             break;
-            case "sua_thong_tin_quan_tri":
+            case "sua-thong-tin-quan-tri":
                 echo '<h2 class="title_admin">QUYỀN HẠN WEBSITE</h2>';
                 include("quan_tri/chuc_nang/quan_tri_2/sua_thong_tin_quan_tri.php");
             break;

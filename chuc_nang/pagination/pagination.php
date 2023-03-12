@@ -12,7 +12,7 @@
 			}
 			else{
                 if(isset($_GET['tu_khoa'])){
-                    $link="?thamso=tim_kiem&tu_khoa=$tu&trang=".$i;
+                    $link="tim_kiem.html&tu_khoa=$tu&trang=".$i;
                 }
                 else
                 {

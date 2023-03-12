@@ -7,32 +7,32 @@
 <table width="80%" >
 	<tr>
 		<td width="495px" valign="top" >
-			<a href="?thamso=profile&dieu_huong=them_menu_ngang" class="lk_2" >Thêm menu</a><br>
-			<a href="?thamso=profile&dieu_huong=them_menu_doc" class="lk_2" >Thêm danh mục</a><br>
-			<a href="?thamso=profile&dieu_huong=them_san_pham" class="lk_2" >Thêm sản phẩm</a><br>
-			<a href="?thamso=profile&dieu_huong=them_bai_viet" class="lk_2" >Thêm bài viết</a><br>
+			<a href="profile/them-menu-ngang.html" class="lk_2" >Thêm menu</a><br>
+			<a href="profile/them-menu-doc.html" class="lk_2" >Thêm danh mục</a><br>
+			<a href="profile/them-san-pham.html" class="lk_2" >Thêm sản phẩm</a><br>
+			<a href="profile/them-bai-viet.html" class="lk_2" >Thêm bài viết</a><br>
 		</td>
 		<td width="495px" valign="top" >
-			<a href="?thamso=profile&dieu_huong=quan_ly_menu_ngang" class="lk_2" >Quản lý menu</a><br>
-			<a href="?thamso=profile&dieu_huong=quan_ly_menu_doc" class="lk_2" >Quản lý danh mục</a><br>
-			<a href="?thamso=profile&dieu_huong=quan_ly_san_pham" class="lk_2" >Quản lý sản phẩm</a><br>
-			<a href="?thamso=profile&dieu_huong=hoa_don" class="lk_2" >Quản lý hóa đơn</a><br>
-			<a href="?thamso=profile&dieu_huong=quan_ly_bai_viet" class="lk_2" >Quản lý bài viết</a><br><br><br>
+			<a href="profile/quan-ly-menu-ngang.html" class="lk_2" >Quản lý menu</a><br>
+			<a href="profile/quan-ly-menu-doc.html" class="lk_2" >Quản lý danh mục</a><br>
+			<a href="profile/quan-ly-san-pham.html" class="lk_2" >Quản lý sản phẩm</a><br>
+			<a href="profile/hoa-don.html" class="lk_2" >Quản lý hóa đơn</a><br>
+			<a href="profile/quan-ly-bai-viet.html" class="lk_2" >Quản lý bài viết</a><br><br><br>
 
 		</td>
 	</tr>
 	<tr>
 		<td valign="top" >
-			<a href="?thamso=profile&dieu_huong=san_pham_trang_chu" class="lk_2" >Sản phẩm trang chủ</a><br>
-			<a href="?thamso=profile&dieu_huong=san_pham_noi_bat" class="lk_2" >Sản phẩm nổi bật</a><br>
-			<a href="?thamso=profile&dieu_huong=slideshow" class="lk_2" >Slideshow</a><br>
+			<a href="profile/san-pham-trang-chu.html" class="lk_2" >Sản phẩm trang chủ</a><br>
+			<a href="profile/san-pham-noi-bat.html" class="lk_2" >Sản phẩm nổi bật</a><br>
+			<a href="profile/slideshow.html" class="lk_2" >Slideshow</a><br>
 		</td>
 		<td valign="top" >
-			<a href="?thamso=profile&dieu_huong=sua_banner" class="lk_2" >Thay đổi banner</a><br>
-			<a href="?thamso=profile&dieu_huong=sua_footer" class="lk_2" >Thay đổi footer</a><br>
-			<a href="?thamso=profile&dieu_huong=sua_quang_cao_trai" class="lk_2" >Thay đổi quảng cáo trái</a><br>
-			<a href="?thamso=profile&dieu_huong=sua_quang_cao_phai" class="lk_2" >Thay đổi quảng cáo phải</a><br>
-			<a href="?thamso=profile&dieu_huong=sua_thong_tin_quan_tri" class="lk_2" >Thay đổi thông tin admin</a><br>
+			<a href="profile/sua-banner.html" class="lk_2" >Thay đổi banner</a><br>
+			<a href="profile/sua-footer.html" class="lk_2" >Thay đổi footer</a><br>
+			<a href="profile/sua-quang-cao-trai.html" class="lk_2" >Thay đổi quảng cáo trái</a><br>
+			<a href="profile/sua-quang-cao-phai.html" class="lk_2" >Thay đổi quảng cáo phải</a><br>
+			<a href="profile/sua-thong-tin-quan-tri.html" class="lk_2" >Thay đổi thông tin admin</a><br>
 		</td>
 	</tr>
 </table>

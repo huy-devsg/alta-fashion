@@ -9,7 +9,7 @@
 			if($tv_2!=false)
 			{
 				$link_anh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
-				$link_chi_tiet="?thamso=chi_tiet_san_pham&id=".$tv_2['id'];
+				$link_chi_tiet = 'chi-tiet/'.$tv_2['id'].'.html';
 				$gia=$tv_2['gia'];
 				$gia=number_format($gia,0,",",".");
 				echo '<div class="product_image">';

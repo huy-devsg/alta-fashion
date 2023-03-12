@@ -5,7 +5,7 @@
 <?php
 	if(isset($_SESSION['xac_dinh_dang_nhap']))
 	{
-		header('location:index.php');
+		header('location:index.html');
 	}
 	else
 	{
@@ -17,7 +17,7 @@
 			<?php	
 				if(isset($_GET['thamso']))
 				{
-					if($_GET['thamso']=='dang_ky')
+					if($_GET['thamso']=='dang-ky')
 					{
 			?>
 					<tr>
@@ -40,7 +40,7 @@
 						<td colspan=2 style="text-align:center;">
 							<input type="hidden" name="dang_ky" value="dang_ky" >
 							<input type="submit" value="Đăng ký" ><br><br>
-							Bạn đã có tài khoản => <a href="?thamso=dang_nhap" style="color:rgba(255,105,0,1);font-weight:bold;	text-decoration: none;">Đăng nhập</a>
+							Bạn đã có tài khoản => <a href="dang-nhap.html" style="color:rgba(255,105,0,1);font-weight:bold;	text-decoration: none;">Đăng nhập</a>
 						</td>
 					</tr>
 					<?php
@@ -60,7 +60,7 @@
 						<td colspan=2 style="text-align:center;">
 							<input type="hidden" name="dang_nhap_quan_tri" value="dang_nhap_quan_tri" >
 							<input type="submit" value="Đăng nhập" ><br><br>
-							Bạn chưa có tài khoản => <a href="?thamso=dang_ky" style="color:rgba(255,105,0,1);font-weight:bold; text-decoration: none;">Đăng ký</a>
+							Bạn chưa có tài khoản => <a href="dang-ky.html" style="color:rgba(255,105,0,1);font-weight:bold; text-decoration: none;">Đăng ký</a>
 						</td>
 					</tr>	
 			<?php	

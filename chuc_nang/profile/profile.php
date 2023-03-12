@@ -9,7 +9,7 @@
 			<div class="profile-sidebar">
 				<!-- SIDEBAR USERPIC -->
 				<div class="profile-userpic">
-					<a href="?thamso=profile&dieu_huong=them_avatar">
+					<a href="profile/them-avatar.html">
 						<?php 
 							if($tv_2['avatar']!='')
 							{
@@ -44,21 +44,21 @@
 				<!-- END SIDEBAR USER TITLE -->
 				<!-- SIDEBAR BUTTONS -->
 				<div class="profile-userbuttons">
-					<button type="button" onclick="location.href='?thamso=profile&dieu_huong=gio_hang'" class="btn btn-success btn-sm">Giỏ Hàng</button>
-					<button type="button" onclick="location.href='?thamso=profile&dieu_huong=don_hang'" class="btn btn-danger btn-sm">Đơn Hàng</button>
+					<button type="button" onclick="location.href='profile/gio-hang.html'" class="btn btn-success btn-sm">Giỏ Hàng</button>
+					<button type="button" onclick="location.href='profile/don-hang.html'" class="btn btn-danger btn-sm">Đơn Hàng</button>
 				</div>
 				<!-- END SIDEBAR BUTTONS -->
 				<!-- SIDEBAR MENU -->
 				<div class="profile-usermenu">
 					<ul class="nav">
 						<li>
-							<a href="?thamso=profile&dieu_huong=thong_tin">
+							<a href="profile/thong-tin.html">
 							<i class="glyphicon glyphicon-home"></i>
 							Thông tin cá nhân </a>
 						</li>
 						
 						<li>
-							<a href="?thamso=profile&dieu_huong=dia_chi">
+							<a href=profile/dia-chi.html>
 							<i class="fas fa-map-marker-alt"></i>
 							&nbsp;Địa chỉ mặc định </a>
 						</li>
@@ -66,18 +66,18 @@
                 {
             ?>
             <li>
-							<a href="?thamso=profile&dieu_huong=quan_tri">
+							<a href="profile/quan-tri.html">
 							<i class="glyphicon glyphicon-cog"></i>
 							Trang quản trị </a>
 						</li>
             <?php } ?>
 						<li>
-							<a href="?thamso=profile&dieu_huong=doi_mat_khau">
+							<a href="profile/doi-mat-khau.html">
 							<i class="glyphicon glyphicon-user"></i>
 							Đổi mật khẩu </a>
 						</li>
 						<li>
-							<a href="?thamso=dang_xuat">
+							<a href="dang-xuat.html">
 							<i class="glyphicon glyphicon-log-out"></i>
               Đăng xuất </a>
 						</li>

@@ -14,7 +14,7 @@
     $index = 0;
     while ($tv_2 = mysqli_fetch_array($tv_1)) {
       $active = $index == 0 ? "active" : "";
-      $link_menu = "?thamso=xuat_bai_viet&id=".$tv_2['id'];
+      $link_menu = "xuat-bai-viet/".$tv_2['id'].".html";
       $link_anh="hinh_anh/bai_viet/".$tv_2['anh'];
       echo '<a href="'.$link_menu.'">';
       echo '<div class="item ' . $active . '">';
