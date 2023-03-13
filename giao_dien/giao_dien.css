@@ -2,7 +2,7 @@
 	background-color: #fff;
 	margin: 1em;
 	padding: 1em;
-	min-height: calc(100% - 38.4rem);;
+	min-height: calc(100% - 38.5rem);;
 	text-align: center;
 	border-radius: 20px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -614,8 +614,7 @@ table {
 	font-size: 18px;
 	text-decoration: none;
   }
-  
-  table td a:hover {
+  table td a:hover{
 	text-decoration: none;
 	background: #fe8c00;
 	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
@@ -624,7 +623,15 @@ table {
 	-webkit-text-fill-color: transparent !important;
 	
   }
-  
+  table td a:hover span {
+	text-decoration: none;
+	background: #fe8c00;
+	background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+	background: linear-gradient(to right, #f83600, #fe8c00);
+	-webkit-background-clip: text  !important;
+	-webkit-text-fill-color: transparent !important;
+	
+  }
   table td form {
 	margin-top: 10px;
   }

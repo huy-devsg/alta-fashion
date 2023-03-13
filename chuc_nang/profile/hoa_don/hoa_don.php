@@ -33,7 +33,7 @@
 			$dien_thoai=$tv_2['dien_thoai'];
 			$dia_chi=$tv_2['dia_chi'];
 			$tinh_trang=$tv_2['tinh_trang'];
-			$link_xem="?thamso=profile&dieu_huong=xem_hoa_don&id=".$id."&trang=".$_GET['trang'];
+			$link_xem="profile/quan-tri/xem-hoa-don&id=".$id;
 			?>
 				<tr class="a_1" >
 					<td>

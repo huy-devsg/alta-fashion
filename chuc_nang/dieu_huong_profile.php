@@ -49,6 +49,10 @@
         $quan_tri=$_GET['quan-tri'];
         switch($quan_tri)
         {
+            case "gio-hang":
+            echo '<h2 class="title_admin">GIỎ HÀNG</h2>';
+            include("chuc_nang/gio_hang/gio_hang.php");
+            break;
             case "them-menu-ngang":
                 echo '<h2 class="title_admin">THÊM MENU</h2>';
                 include("quan_tri/chuc_nang/menu_ngang/them_menu_ngang.php");

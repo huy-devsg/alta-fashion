@@ -25,22 +25,20 @@
 			?>
 			<br>
 			<br>
-			<form action="profile/gio-hang.html" method="post">
-			<?php
+			<form method="post">
+			<input type='text' name='so_luong' id='so_luong' value='1' style='width:50px' > 
+				<?php
 					if(isset($_SESSION['xac_dinh_dang_nhap']))
 					{
-						echo '<input type="hidden" name="thamso" value="profile"> ';
-						echo '<input type="hidden" name="dieu_huong" value="gio_hang"> ';
-						echo '<input type="hidden" name="id" value="'.$id.'">'; 
+						echo '<input type="button" onclick="location.href=\'?thamso=profile&quan-tri=gio-hang&id='.$id.'&so_luong=\' + document.getElementById(\'so_luong\').value;" value="Thêm vào giỏ"/>';
 					}
 					else
 					{
-						echo '<input type="hidden" name="thamso" value="gio_hang"> ';
-						echo '<input type="hidden" name="id" value="'.$id.'">'; 
+						echo '<input type="button" onclick="location.href=\'?thamso=gio-hang&id='.$id.'&so_luong=\' + document.getElementById(\'so_luong\').value;" value="Thêm vào giỏ"/>';
 					}
-				?>
-				<input type='text' name='so_luong' value='1' style='width:50px' > 				
-				<input type='submit' value='Thêm vào giỏ' style='margin-left:15px' > 
+					?>
+				
+
 			</form> 
 		</td>
 	</tr>

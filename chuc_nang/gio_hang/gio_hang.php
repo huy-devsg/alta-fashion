@@ -101,16 +101,23 @@
 					</td>
 				<td style="text-align:center;">
 				<?php
-	if(isset($_GET['thanh_toan']))
+	if(isset($_GET['thanh-toan']))
 	{
-		if($_GET['thanh_toan']=='co')
+		if($_GET['thanh-toan']=='co')
 		{
 			echo '';
 		}
 	}
 		else
 		{
-			echo '<input type="button" value="Thanh toán" onclick="window.location.href=\'index.php?thamso=profile&dieu_huong=gio_hang&thanh_toan=co\'">';
+			if(isset($_SESSION['xac_dinh_dang_nhap']))
+			{
+				echo '<input type="button" value="Thanh toán" onclick="window.location.href=\'index.php?thamso=profile&quan-tri=gio-hang&thanh-toan=co\'">';
+			}
+			else
+			{
+				echo '<input type="button" value="Thanh toán" onclick="window.location.href=\'index.php?thamso=gio-hang&thanh-toan=co\'">';
+			}
 		}
 
 	?>
@@ -124,9 +131,9 @@
 		<br>
 <br>
 	<?php
-	if(isset($_GET['thanh_toan']))
+	if(isset($_GET['thanh-toan']))
 	{
-		if($_GET['thanh_toan']=='co')
+		if($_GET['thanh-toan']=='co')
 		{
 			include('bieu_mau_mua_hang.php');
 

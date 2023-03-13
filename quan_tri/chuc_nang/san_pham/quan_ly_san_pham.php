@@ -19,7 +19,7 @@
 	}
 ?>
 <div style="width:990px;text-align:left" >
-	Chọn : <select name="danh_muc" onchange="window.location='?thamso=profile&dieu_huong=quan_ly_san_pham&id_menu='+this.value" >
+	Chọn : <select name="danh_muc" onchange="window.location='profile/quan-tri/quan-ly-san-pham&id_menu='+this.value" >
 	<option value="" >Toàn bộ sản phẩm</option>
 	<?php 
 		$tv="select * from menu_doc order by id ";
@@ -120,12 +120,20 @@
 			<?php 
 				for($i=1;$i<=$so_trang;$i++)
 				{
-					$link_phan_trang="?thamso=profile&dieu_huong=quan_ly_san_pham&id_menu=".$id_menu."&trang=".$i;
+					$link_phan_trang="profile/quan-tri/quan-ly-san-pham/".$id_menu."/trang=".$i;
 					echo "<a href='$link_phan_trang' class='phan_trang' >";
+					if(isset($_GET['trang']) && $_GET['trang'] == $i)
+					{
+						echo '<span style="color:red">';
 						echo 'Trang '.$i;
+						echo '</span>';
+					} else {
+						echo 'Trang '.$i;
+					}
 					echo "</a> ";
 				}
 			?>
+
 			<br><br>
 		</td>
 	</tr>
