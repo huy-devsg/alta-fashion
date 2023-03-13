@@ -1,5 +1,5 @@
 <?php
-	$id=$_GET['id'];
+    $id=makeID();
 	$tv_danhmuc="select * from menu_doc  where id='$id' limit 1";
     $tv_danhmuc1=mysqli_query($conn,$tv_danhmuc);
 	$tv_danhmuc2=mysqli_fetch_array($tv_danhmuc1);
@@ -21,7 +21,7 @@
         if($tv_2!=false)
         {
             $link_anh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
-            $link_chi_tiet="?thamso=chi_tiet_san_pham&id=".$tv_2['id'];
+            $link_chi_tiet ='san-pham/'.makeUrl($tv_2['ten']).'-'.$tv_2['id'].'.html';
             $gia=$tv_2['gia'];
             $gia=number_format($gia,0,",",".");
             echo '<div class="product_image">';

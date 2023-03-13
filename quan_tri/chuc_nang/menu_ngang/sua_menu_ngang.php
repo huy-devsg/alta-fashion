@@ -9,15 +9,11 @@
 	$ten=$tv_2['ten'];
 	$loai_menu=$tv_2['loai_menu'];
 	$noi_dung=$tv_2['noi_dung'];
-	$link_dong="?thamso=profile&dieu_huong=quan_ly_menu_ngang&trang=".$_GET['trang'];
 ?>
 <form action="" method="post">
 	<table width="990px" >
 		<tr>
-			<td width="180px" ><b style="color:blue;font-size:20px" >Sửa menu ngang</b><br><br> </td>
-			<td width="810px" align="right" >
-				<a href="<?php echo $link_dong; ?>" class="lk_a1" style="margin-right:30px" >Đóng</a>
-			</td>
+			<td colspan="2" ><b style="color:blue;font-size:20px" >Sửa menu ngang</b><br><br> </td>
 		</tr>
 		<tr>
 			<td >Tên : </td>

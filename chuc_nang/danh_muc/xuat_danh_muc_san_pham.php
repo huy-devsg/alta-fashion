@@ -4,7 +4,7 @@
       $tv="select * from menu_doc order by id limit 4";
       $tv_1=mysqli_query($conn, $tv);
       while ($tv_2 = mysqli_fetch_array($tv_1)) {
-        $link_menu ='danh-muc/'.$tv_2['id'].'.html';
+        $link_menu ='danh-muc/'.makeUrl($tv_2['ten']).'-'.$tv_2['id'].'.html';
         $link_anh="hinh_anh/danh_muc/".$tv_2['anh'];
         echo '<a href="'.$link_menu.'" class="grid-item">';
         echo '<div class="grid-item-wrapper" style="background-color: rgba(255, 255, 255, 1);position: relative;">';

@@ -12,15 +12,13 @@
 	$noi_bat=$tv_2['noi_bat'];
 	$noi_dung=$tv_2['noi_dung'];
 	$ten_anh=$tv_2['hinh_anh'];
-	$link_hinh="../hinh_anh/san_pham/".$tv_2['hinh_anh'];
-	$link_dong="?thamso=quan_ly_san_pham&id_menu=".$_GET['id_menu']."&trang=".$_GET['trang'];
+	$link_hinh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
 ?>
 <form action="" method="post" enctype="multipart/form-data" >
 	<table width="990px" >
 		<tr>
 			<td width="180px" ><b style="color:blue;font-size:20px" >Sửa sản phẩm</b><br><br> </td>
 			<td width="810px" align="right" >
-				<a href="<?php echo $link_dong; ?>" class="lk_a1" style="margin-right:30px" >Đóng</a>
 			</td>
 		</tr>
 		<tr>

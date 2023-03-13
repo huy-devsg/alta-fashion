@@ -7,14 +7,12 @@
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
 	$ten=$tv_2['ten'];
-	$link_dong="?thamso=profile&dieu_huong=quan_ly_menu_doc&trang=".$_GET['trang'];
 ?>
 <form action="" method="post">
 	<table width="990px" >
 		<tr>
 			<td width="180px" ><b style="color:blue;font-size:20px" >Sửa danh mục sản phẩm</b><br><br> </td>
 			<td width="810px" align="right" >
-				<a href="<?php echo $link_dong; ?>" class="lk_a1" style="margin-right:30px" >Đóng</a>
 			</td>
 		</tr>
 		<tr>

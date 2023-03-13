@@ -27,8 +27,8 @@
 			$ten=$tv_2['ten_nguoi_mua'];
 			$email=$tv_2['email'];
 			$dien_thoai=$tv_2['dien_thoai'];
-			$link_xem="?thamso=profile&dieu_huong=xem_hoa_don&id=".$id."&trang=".$_GET['trang'];
-			$link_xoa="?thamso=profile&xoa_hoa_don=co&id=".$id;
+			$link_xem="profile/quan-tri/xem-hoa-don&id=".$id;
+			$link_xoa="profile/quan-tri/xoa-hoa-don&id=".$id;
 			?>
 				<tr class="a_1" >
 					<td>

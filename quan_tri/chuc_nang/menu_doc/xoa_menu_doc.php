@@ -9,10 +9,10 @@
 	if($tv_2[0]==0)
 	{
 		$truy_van_xoa="DELETE FROM menu_doc WHERE id = $id ";
-		mysqli_query($truy_van_xoa);
+		mysqli_query($conn,$truy_van_xoa);
 	}
 	else 
 	{
-		thong_bao_html("Menu này vẫn còn dữ liệu nên không thể xóa");
+		thong_bao("Menu này vẫn còn dữ liệu nên không thể xóa");
 	}
 ?>

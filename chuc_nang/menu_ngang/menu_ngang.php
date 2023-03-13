@@ -7,9 +7,9 @@
 					<li><a href="index.html">TRANG CHỦ</a></li>';
 					while($tv_2=mysqli_fetch_array($tv_1))
 					{
-						if($tv_2['loai_menu']==""){$link_menu="menu/".$tv_2['id'].".html";}
+						if($tv_2['loai_menu']==""){$link_menu="menu/".makeUrl($tv_2['ten']).'-'.$tv_2['id'].".html";}
 						if($tv_2['loai_menu']=="gio_hang"){$link_menu="gio-hang.html";}
-						if($tv_2['loai_menu']=="tin_tuc"){$link_menu="bai-viet.html";}
+						if($tv_2['loai_menu']=="bai_viet"){$link_menu="bai-viet.html";}
 						if($tv_2['loai_menu']=="san_pham"){$link_menu="san-pham.html";}
 						echo "<li class='nav-item'><a href='$link_menu'>";
 							echo $tv_2['ten'];

@@ -1,11 +1,11 @@
 </div>
 </div>
 <?php  
-	$id=$_GET['id'];
+	$id=makeID();
 	$tv="select * from bai_viet where id='$id'";
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
-	$link_menu = "xuat-bai-viet/".$tv_2['id'].".html";
+	$link_menu = 'bai-viet/'.makeUrl($tv_2['tieu_de']).'-'.$tv_2['id'].'.html';
     $link_anh="hinh_anh/bai_viet/".$tv_2['anh'];
 	$tac_gia=$tv_2['tac_gia'];
 	$tieu_de=$tv_2['tieu_de'];
@@ -171,7 +171,7 @@
 					<?php
 						while($tv_bv2=mysqli_fetch_array($tv_bv1))
 						{
-							$link_menu = "xuat-bai-viet/".$tv_bv2['id'].".html";
+							$link_menu = 'bai-viet/'.makeUrl($tv_bv2['tieu_de']).'-'.$tv_bv2['id'].'.html';
 							$link_anh="hinh_anh/bai_viet/".$tv_bv2['anh'];
 							$tac_gia=$tv_bv2['tac_gia'];
 							$tieu_de=$tv_bv2['tieu_de'];

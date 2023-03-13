@@ -25,8 +25,8 @@
 		{
 			$id=$tv_2['id'];
 			$ten=$tv_2['ten'];
-			$link_sua="?thamso=profile&dieu_huong=sua_menu_doc&id=".$id."&trang=".$_GET['trang'];
-			$link_xoa="?xoa_menu_doc=co&id=".$id;
+			$link_sua="profile/quan-tri/sua-menu-doc&id=".$id;
+			$link_xoa="profile/quan-tri/xoa-menu-doc&id=".$id;
 			?>
 				<tr class="a_1" >
 					<td>

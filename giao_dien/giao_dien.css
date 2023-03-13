@@ -2,7 +2,7 @@
 	background-color: #fff;
 	margin: 1em;
 	padding: 1em;
-	min-height: calc(100% - 38.5rem);;
+	min-height: calc(100% - 38.4rem);;
 	text-align: center;
 	border-radius: 20px;
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -725,21 +725,19 @@ h2.title_admin
 	min-width: 6em;
   
   }
-  td input[type="file"] {
-	border: solid 1px rgb(193, 193, 193);
+  input[type="file"] {
+	border: none;
 	font-size: 16px;
-	margin: 0 auto;
 	padding: 10px;
-	text-align: center;
 	border-radius: 20px;
 	min-width: 6em;
   }
   input[type="file"]::-webkit-file-upload-button {
+	background: #efefef;
 	color: #000;
 	border: none;
 	font-size: 16px;
 	padding: 10px;
-	text-align: center;
 	border-radius: 20px;
 	min-width: 6em;
 	cursor: pointer;

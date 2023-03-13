@@ -31,7 +31,7 @@
     $mac_dinh=$tv_2['mac_dinh'];
     $id=$tv_2['id'];
     $checked = ($mac_dinh == "co") ? "checked" : "";
-    $link_xoa="profile/xoa_dia_chi=co&id=".$id;
+    $link_xoa="profile/quan-tri/xoa-dia-chi&id=".$id;
 ?>
 <tr>
     <td width="70%"><?php echo $so_nha.' '.$duong.', '.$xa.', '.$huyen.', '.$tinh.' ' ?>

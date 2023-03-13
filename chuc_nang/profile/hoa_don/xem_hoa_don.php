@@ -13,15 +13,12 @@
 	$noi_dung=$tv_2['noi_dung'];
     $tinh_trang=$tv_2['tinh_trang'];
 	$hang_duoc_mua=$tv_2['hang_duoc_mua'];
-	$link_dong="?thamso=hoa_don&&trang=".$_GET['trang'];
-	$link_xoa="?xoa_hoa_don_o_trang_chi_tiet=co&id=".$id."&trang=".$_GET['trang'];
 ?>
 
 <table width="990px" >
 	<tr>
 		<td width="250px" ><b style="color:blue;font-size:20px" >Sản phẩm </b><br><br> </td>	
 		<td width="740px" align="right" >
-			<a href="<?php echo $link_dong; ?>" class="lk_a1" style="margin-right:30px" >Đóng</a>
 		</td>		
 	</tr>
 	<tr>

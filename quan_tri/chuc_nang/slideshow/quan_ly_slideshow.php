@@ -17,8 +17,8 @@
 		{
 			$id=$tv_2['id'];
 			$link_hinh="../hinh_anh/slideshow/".$tv_2['hinh'];
-			$link_sua="?thamso=sua_slideshow&id=".$id;
-			$link_xoa="?thamso=profile&xoa_slideshow=co&id=".$id;
+			$link_sua="profile/quan-tri/sua-slideshow&id=".$id;
+			$link_xoa="profile/quan-tri/xoa-slideshow&id=".$id;
 			?>
 				<tr class="a_1" >
 					<td align="center" >

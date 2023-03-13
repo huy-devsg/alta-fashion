@@ -4,6 +4,9 @@
         $dieu_huong=$_GET['dieu_huong'];
         switch($dieu_huong)
 	    {
+            case "moi":
+                include("chuc_nang/bai_viet/xuat_bai_viet.php");
+            break;
             case "gio-hang":
             echo '<h2 class="title_admin">GIỎ HÀNG</h2>';
             include("chuc_nang/gio_hang/gio_hang.php");
@@ -36,6 +39,16 @@
                 echo '<h2 class="title_admin">ĐỔI MẬT KHẨU MỚI</h2>';
                 include('chuc_nang/profile/tai_khoan/doi_mat_khau.php');
             break;
+            default: 
+            echo '<h2 class="title_admin">THÔNG TIN CÁ NHÂN</h2>';
+            include('chuc_nang/profile/tai_khoan/sua_thong_tin.php');
+        }
+    }
+    elseif(isset($_GET['quan-tri']))
+    {
+        $quan_tri=$_GET['quan-tri'];
+        switch($quan_tri)
+        {
             case "them-menu-ngang":
                 echo '<h2 class="title_admin">THÊM MENU</h2>';
                 include("quan_tri/chuc_nang/menu_ngang/them_menu_ngang.php");
@@ -47,6 +60,10 @@
             case "sua-menu-ngang":
                 echo '<h2 class="title_admin">SỬA MENU</h2>';
                 include("quan_tri/chuc_nang/menu_ngang/sua_menu_ngang.php");
+            break;
+            case "xoa-menu-ngang":
+            include("quan_tri/chuc_nang/menu_ngang/xoa_menu_ngang.php");
+            thong_bao("Xóa menu thành công");
             break;
             case "them-menu-doc":
                 echo '<h2 class="title_admin">THÊM DANH MỤC SẢN PHẨM</h2>';
@@ -80,23 +97,23 @@
                 echo '<h2 class="title_admin">HÓA ĐƠN</h2>';
                 include("chuc_nang/profile/hoa_don/xem_hoa_don.php");
             break;
-            case "san_pham_trang_chu":
+            case "san-pham-trang-chu":
                 echo '<h2 class="title_admin">HIỂN THỊ TRANG CHỦ</h2>';
                 include("quan_tri/chuc_nang/san_pham_trang_chu/san_pham_trang_chu.php");
             break;
-            case "san_pham_noi_bat":
+            case "san-pham-noi-bat":
                 echo '<h2 class="title_admin">HIỂN THỊ BÁN CHẠY</h2>';
                 include("quan_tri/chuc_nang/san_pham_noi_bat/san_pham_noi_bat.php");
             break;
-            case "them_slideshow":
+            case "them-slideshow":
                 echo '<h2 class="title_admin">THÊM SLIDESHOW</h2>';
                 include("quan_tri/chuc_nang/slideshow/them_slideshow.php");
             break;
-            case "quan_ly_slideshow":
+            case "quan-ly-slideshow":
                 echo '<h2 class="title_admin">DANH SÁCH SLIDESHOW</h2>';
                 include("quan_tri/chuc_nang/slideshow/quan_ly_slideshow.php");
             break;
-            case "sua_slideshow":
+            case "sua-slideshow":
                 echo '<h2 class="title_admin">SỬA SLIDESHOW</h2>';
                 include("quan_tri/chuc_nang/slideshow/sua_slideshow.php");
             break;
@@ -144,14 +161,47 @@
                 echo '<h2 class="title_admin">SỬA QUẢNG CÁO RIGHT</h2>';
                 include("quan_tri/chuc_nang/quang_cao_phai/sua_quang_cao_phai.php");
             break;
-            case "sua-thong-tin-quan-tri":
+            case "xoa-menu-doc":
+                include("quan_tri/chuc_nang/menu_doc/xoa_menu_doc.php");
+                thong_bao("Xóa danh mục thành công");
+                break;
+            case "xoa-san-pham":
+                include("quan_tri/chuc_nang/san_pham/xoa_san_pham.php");
+                thong_bao("Xóa sản phẩm thành công");
+                break;
+            case "xoa-hoa-don":
+                include("quan_tri/chuc_nang/hoa_don/xoa_hoa_don.php");
+                thong_bao("Xóa đơn thành công");
+                break;
+            case "xoa-hoa-don-o-trang-chi-tiet":
+                include("quan_tri/chuc_nang/hoa_don/xoa_hoa_don_o_trang_chi_tiet.php");
+                thong_bao("Xóa hóa đơn thành công");
+                break;
+            case "xoa-slideshow":
+                include("quan_tri/chuc_nang/slideshow/xoa_slideshow.php");
+                thong_bao("Xóa slideshow thành công");
+                break;
+            case "xoa-bai-viet":
+                include("quan_tri/chuc_nang/bai_viet/xoa_bai_viet.php");
+                thong_bao("Xóa bài viết thành công");
+                break;
+            case "xoa-quang-cao-trai":
+                include("quan_tri/chuc_nang/quang_cao_trai/xoa_quang_cao_trai.php");
+                thong_bao("Xóa nội dung quảng cáo trái thành công");
+                break;
+            case "xoa-quang-cao-phai":
+                include("quan_tri/chuc_nang/quang_cao_phai/xoa_quang_cao_phai.php");
+                thong_bao("Xóa nội dung quảng cáo phải thành công");
+                break;
+            case "xoa-dia-chi":
+                include("chuc_nang/profile/dia_chi/xoa_dia_chi.php");
+                thong_bao("Xóa địa chỉ thành công");
+                break;
+            default:
                 echo '<h2 class="title_admin">QUYỀN HẠN WEBSITE</h2>';
                 include("quan_tri/chuc_nang/quan_tri_2/sua_thong_tin_quan_tri.php");
-            break;
-            default: 
-            echo '<h2 class="title_admin">THÔNG TIN CÁ NHÂN</h2>';
-            include('chuc_nang/profile/tai_khoan/sua_thong_tin.php');
         }
+    
     }
     else
     {
@@ -171,12 +221,7 @@
             thong_bao("Sửa menu thành công");
             trang_truoc();
         }
-        if(isset($_GET['xoa_menu_ngang']))
-        {
-            include("quan_tri/chuc_nang/menu_ngang/xoa_menu_ngang.php");
-            thong_bao("Xóa menu thành công");
-            trang_truoc();
-        }
+        
         if(isset($_POST['bieu_mau_them_menu_doc']))
         {
             include("quan_tri/chuc_nang/menu_doc/them_menu_doc_vao_csdl.php");
@@ -189,12 +234,7 @@
             thong_bao("Sửa danh mục thành công");
             trang_truoc();
         }
-        if(isset($_GET['xoa_menu_doc']))
-        {
-            include("quan_tri/chuc_nang/menu_doc/xoa_menu_doc.php");
-            thong_bao("Xóa danh mục thành công");
-            trang_truoc();
-        }
+       
         if(isset($_POST['bieu_mau_them_san_pham']))
         {
             include("quan_tri/chuc_nang/san_pham/them_san_pham_vao_csdl.php");
@@ -207,24 +247,7 @@
             thong_bao("Sửa sản phẩm thành công");
             trang_truoc();
         }
-        if(isset($_GET['xoa_san_pham']))
-        {
-            include("quan_tri/chuc_nang/san_pham/xoa_san_pham.php");
-            thong_bao("Xóa sản phẩm thành công");
-            trang_truoc();
-        }
-        if(isset($_GET['xoa_hoa_don']))
-        {
-            include("quan_tri/chuc_nang/hoa_don/xoa_hoa_don.php");
-            thong_bao("Xóa đơn thành công");
-            trang_truoc();
-        }
-        if(isset($_GET['xoa_hoa_don_o_trang_chi_tiet']))
-        {
-            include("quan_tri/chuc_nang/hoa_don/xoa_hoa_don_o_trang_chi_tiet.php");
-            thong_bao("Xóa hóa đơn thành công");
-            trang_truoc();
-        }
+       
         if(isset($_POST['bieu_mau_san_pham_trang_chu']))
         {
             include("quan_tri/chuc_nang/san_pham_trang_chu/sua_san_pham_trang_chu.php");
@@ -249,12 +272,7 @@
             thong_bao("Sửa slideshow thành công");
             trang_truoc();
         }
-        if(isset($_GET['xoa_slideshow']))
-        {
-            include("quan_tri/chuc_nang/slideshow/xoa_slideshow.php");
-            thong_bao("Xóa slideshow thành công");
-            trang_truoc();
-        }
+        
         if(isset($_POST['bieu_mau_them_bai_viet']))
         {
             include("quan_tri/chuc_nang/bai_viet/them_bai_viet_vao_csdl.php");
@@ -267,12 +285,7 @@
             thong_bao("Sửa bài viết thành công");
             trang_truoc();
         }
-        if(isset($_GET['xoa_bai_viet']))
-        {
-            include("quan_tri/chuc_nang/bai_viet/xoa_bai_viet.php");
-            thong_bao("Xóa bài viết thành công");
-            trang_truoc();
-        }
+       
         if(isset($_POST['bieu_mau_sua_banner']))
         {
             include("quan_tri/chuc_nang/banner/sua_banner_o_trong_csdl.php");
@@ -297,12 +310,7 @@
             thong_bao("Sửa nội dung quảng cáo trái thành công");
             trang_truoc();
         }
-        if(isset($_GET['xoa_quang_cao_trai']))
-        {
-            include("quan_tri/chuc_nang/quang_cao_trai/xoa_quang_cao_trai.php");
-            thong_bao("Xóa nội dung quảng cáo trái thành công");
-            trang_truoc();
-        }
+        
         if(isset($_POST['bieu_mau_them_quang_cao_phai']))
         {
             include("quan_tri/chuc_nang/quang_cao_phai/them_quang_cao_phai_vao_csdl.php");
@@ -315,12 +323,7 @@
             thong_bao("Sửa nội dung quảng cáo phải thành công");
             trang_truoc();
         }
-        if(isset($_GET['xoa_quang_cao_phai']))
-        {
-            include("quan_tri/chuc_nang/quang_cao_phai/xoa_quang_cao_phai.php");
-            thong_bao("Xóa nội dung quảng cáo phải thành công");
-            trang_truoc();
-        }
+       
         if(isset($_POST['bieu_mau_sua_thong_tin_quan_tri']))
         {
             include("quan_tri/chuc_nang/quan_tri_2/sua_thong_tin_quan_tri_o_trong_csdl.php");
@@ -338,12 +341,7 @@
             include("chuc_nang/profile/dia_chi/them_dia_chi_o_trong_csdl.php");
             thong_bao_chuyen_link("Thêm địa chỉ thành công",'?thamso=profile&dieu_huong=dia_chi');
         }
-        if(isset($_GET['xoa_dia_chi']))
-        {
-            include("chuc_nang/profile/dia_chi/xoa_dia_chi.php");
-            thong_bao("Xóa địa chỉ thành công");
-            trang_truoc();
-        }
+        
         if(isset($_POST['bieu_mau_doi_mat_khau']))
         {
             include("chuc_nang/profile/tai_khoan/doi_mat_khau_o_trong_csdl.php");

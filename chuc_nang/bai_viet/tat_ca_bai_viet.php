@@ -9,7 +9,7 @@
         $tv="select * from bai_viet order by id limit 2";
         $tv_1=mysqli_query($conn, $tv);
         while ($tv_2 = mysqli_fetch_array($tv_1)) {
-          $link_menu = "xuat-bai-viet/".$tv_2['id'].".html";
+          $link_menu = 'bai-viet/'.makeUrl($tv_2['tieu_de']).'-'.$tv_2['id'].'.html';
           $link_anh="hinh_anh/bai_viet/".$tv_2['anh'];
         $tieu_de=$tv_2['tieu_de'];
         $tac_gia=$tv_2['tac_gia'];

@@ -86,8 +86,8 @@
 			$gia=$tv_2['gia'];
 			$gia=number_format($gia,0,",",".");
 			$link_hinh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
-			$link_sua="?thamso=sua_san_pham&id_menu=".$id_menu."&id=".$id."&trang=".$_GET['trang'];
-			$link_xoa="?thamso=profile&xoa_san_pham=co&id=".$id;
+			$link_sua="profile/quan-tri/sua-san-pham&id=".$id;
+			$link_xoa="profile/quan-tri/xoa-san-pham&id=".$id;
 			?>
 				<tr class="a_1" >
 					<td class="td_content" >

@@ -1,7 +1,7 @@
 <h2>CHI TIẾT SẢN PHẨM</h2><br>
 <?php
 	$_SESSION['trang_chi_tiet_gio_hang']="co";
-	$id=$_GET['id'];
+	$id=makeID();
 	$tv="select * from san_pham where id='$id'";
 	$tv_1=mysqli_query($conn,$tv);
 	$tv_2=mysqli_fetch_array($tv_1);
@@ -31,12 +31,12 @@
 					{
 						echo '<input type="hidden" name="thamso" value="profile"> ';
 						echo '<input type="hidden" name="dieu_huong" value="gio_hang"> ';
-						echo '<input type="hidden" name="id" value="'.$_GET['id'].'">'; 
+						echo '<input type="hidden" name="id" value="'.$id.'">'; 
 					}
 					else
 					{
 						echo '<input type="hidden" name="thamso" value="gio_hang"> ';
-						echo '<input type="hidden" name="id" value="'.$_GET['id'].'">'; 
+						echo '<input type="hidden" name="id" value="'.$id.'">'; 
 					}
 				?>
 				<input type='text' name='so_luong' value='1' style='width:50px' > 				

@@ -19,8 +19,8 @@
 		{
 			$id=$tv_2['id'];
 			$link_hinh="hinh_anh/bai_viet/".$tv_2['anh'];
-			$link_sua="?thamso=profile&dieu_huong=sua_bai_viet&id=".$id;
-			$link_xoa="?thamso=profile&xoa_bai_viet=co&id=".$id;
+			$link_sua="profile/quan-tri/sua-bai-viet&id=".$id;
+			$link_xoa="profile/quan-tri/xoa-bai-viet&id=".$id;
 			$tieu_de=$tv_2['tieu_de'];
 			$noi_dung = $tv_2['noi_dung'];
 			$noi_dung = mb_substr($noi_dung, 0, 270) . "...";

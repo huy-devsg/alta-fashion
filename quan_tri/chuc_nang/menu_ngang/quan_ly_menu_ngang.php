@@ -25,8 +25,8 @@
 		{
 			$id=$tv_2['id'];
 			$ten=$tv_2['ten'];
-			$link_sua="?thamso=profile&dieu_huong=sua_menu_ngang&id=".$id."&trang=".$_GET['trang'];
-			$link_xoa="?thamso=profile&xoa_menu_ngang=co&id=".$id;
+			$link_sua="profile/quan-tri/sua-menu-ngang&id=".$id;
+			$link_xoa="profile/quan-tri/xoa-menu-ngang&id=".$id;
 			?>
 				<tr class="a_1" >
 					<td>
@@ -52,7 +52,7 @@
 			<?php 
 				for($i=1;$i<=$so_trang;$i++)
 				{
-					$link_phan_trang="?thamso=profile&dieu_huong=quan_ly_menu_ngang&trang=".$i;
+					$link_phan_trang="profile/quan-tri/quan-ly-menu-ngang&trang=".$i;
 					echo "<a href='$link_phan_trang' class='phan_trang' >";
 						echo $i;
 					echo "</a> ";

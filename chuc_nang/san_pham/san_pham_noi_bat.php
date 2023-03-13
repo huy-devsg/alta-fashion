@@ -9,7 +9,7 @@
 			if($tv_2!=false)
 			{
 				$link_anh="hinh_anh/san_pham/".$tv_2['hinh_anh'];
-				$link_chi_tiet = 'chi-tiet/'.$tv_2['id'].'.html';
+				$link_chi_tiet ='san-pham/'.makeUrl($tv_2['ten']).'-'.$tv_2['id'].'.html';
 				$gia=$tv_2['gia'];
 				$gia=number_format($gia,0,",",".");
 				echo '<div class="product_image">';
