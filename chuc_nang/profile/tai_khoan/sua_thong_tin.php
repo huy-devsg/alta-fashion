@@ -8,6 +8,7 @@
 	$tv_2=mysqli_fetch_array($tv_1);
 	$ho_ten=$tv_2['ho_ten'];	
 	$email=$tv_2['email'];	
+	$phone=$tv_2['phone'];	
 	$ky_danh=$tv_2['ky_danh'];	
 	$mat_khau=$tv_2['mat_khau'];
 	$tv2="select * from dia_chi where id_user='$id_user' and mac_dinh='co'";
@@ -35,6 +36,12 @@
 			<td width="100px" >Email : </td>
 			<td width="890px" >
 				<input type="text" name="email" value="<?php echo $email; ?>" >
+			</td>
+		</tr>
+		<tr>
+			<td width="100px" >Số điện thoại : </td>
+			<td width="890px" >
+				<input type="text" name="phone" value="<?php echo $phone; ?>" >
 			</td>
 		</tr>
 		<tr>

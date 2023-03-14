@@ -30,6 +30,7 @@
 		$ky_danh=str_replace('"',"",$ky_danh);
 		$ho_ten=$_POST['ho_ten'];
 		$email=$_POST['email'];
+		$phone=$_POST['phone'];
 		$mat_khau=md5($_POST['mat_khau']);
 		$mat_khau=md5($mat_khau);
 		$tv="select count(*) from tai_khoan where ky_danh='$ky_danh' or email='$email'";
@@ -41,13 +42,13 @@
 		}
 		else 
 		{
+			echo 'aaaaaaâ';
 			$tv="
-			INSERT INTO tai_khoan (id ,ho_ten,email,ky_danh,mat_khau,quyen)
-			VALUES (NULL,'$ho_ten','$email','$ky_danh','$mat_khau','')";
+			INSERT INTO tai_khoan (id,avatar,ho_ten,email,phone,ky_danh,mat_khau,dia_chi,quyen)
+			VALUES (NULL,'','$ho_ten','$email','$phone','$ky_danh','$mat_khau','','')";
 			mysqli_query($conn,$tv);	
 			$_SESSION['ky_danh']=$ky_danh;
 			$_SESSION['mat_khau']=$mat_khau;
-			thong_bao("Đăng kí thành công");	
 		}
 
 	}

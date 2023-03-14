@@ -17,6 +17,7 @@
 		<td width="370px" ><b>Tên</b></td>
 		<td width="300px" ><b>Email</b></td>
 		<td width="120px" ><b>Điện thoại</b></td>
+		<td width="120px" ><b>Trạng thái</b></td>
 		<td align="center" width="100px" ><b>Xem</b></td>
 		<td align="center" width="100px" ><b>Xóa</b></td>
 	</tr>
@@ -27,6 +28,7 @@
 			$ten=$tv_2['ten_nguoi_mua'];
 			$email=$tv_2['email'];
 			$dien_thoai=$tv_2['dien_thoai'];
+			$tinh_trang=$tv_2['tinh_trang'];
 			$link_xem="profile/quan-tri/xem-hoa-don&id=".$id;
 			$link_xoa="profile/quan-tri/xoa-hoa-don&id=".$id;
 			?>
@@ -39,6 +41,13 @@
 					</td>
 					<td>
 						<?php echo $dien_thoai; ?>
+					</td>
+					<td>
+						<?php
+						echo $tinh_trang;
+						?>
+						
+
 					</td>
 					<td align="center" >
 						<a href="<?php echo $link_xem; ?>" class="lk_a1" >

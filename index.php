@@ -17,7 +17,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Alta Fashion</title>
+		<title>Alta Clothing</title>
 		<base href="/alta-fashion/"/>
 		<link rel="icon" href="hinh_anh/logo/icon.png">
 		<link rel="stylesheet" type="text/css" href="giao_dien/giao_dien.css">

@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-4 col-sm-6 col-xs-12 footer-col">
           <div class="footer-col-inner">
-            <h3>Về Alta Fashion</h3>
+            <h3>Về Alta Clothing</h3>
             <ul>
               <li><a href="#">Giới thiệu</a></li>
               <li><a href="#">Tuyển dụng</a></li>

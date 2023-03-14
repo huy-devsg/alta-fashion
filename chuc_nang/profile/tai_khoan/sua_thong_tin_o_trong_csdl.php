@@ -8,20 +8,15 @@
 	$tv_2=mysqli_fetch_array($tv_1);
 	$ho_ten=$_POST['ho_ten'];	
 	$email=$_POST['email'];	
+	$phone=$_POST['phone'];	
 	$dia_chi=$_POST['dia_chi'];
-	$mat_khau=$tv_2['mat_khau'];
-	$mat_khau_tu_form=$_POST['mat_khau'];
-	if($mat_khau_tu_form!="")
-	{
-		$mat_khau=md5($mat_khau_tu_form);
-		$mat_khau=md5($mat_khau);
-	}
+	
 	$tv="
 	UPDATE tai_khoan SET 
 	ho_ten = '$ho_ten',
 	email = '$email',
-	dia_chi = '$dia_chi',
-	mat_khau = '$mat_khau' 
+	phone = '$phone',
+	dia_chi = '$dia_chi'
 	WHERE id='$id';
 	";
 	mysqli_query($conn,$tv);

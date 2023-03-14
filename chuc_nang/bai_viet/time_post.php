@@ -1,18 +1,23 @@
 <?php
     date_default_timezone_set('Asia/Ho_Chi_Minh');
     $timestamp = $tv_2['time'];
-    $current_time = time(); 
-    $time_diff = $current_time - $timestamp; 
-    if ($time_diff < 60) { 
-      echo 'Vừa xong';
-    } elseif ($time_diff < 3600) { 
-      $minutes_ago = floor($time_diff / 60);
-      echo $minutes_ago . ' phút trước';
-    } elseif ($time_diff < 86400) { 
-      $hours_ago = floor($time_diff / 3600); 
-      echo $hours_ago . ' giờ trước';
-    } else { // hơn 1 ngày
-      $days_ago = floor($time_diff / 86400);
-      echo $days_ago . ' ngày trước';
+    $current_time = time();
+    $date1 = date_create(date('Y-m-d', $timestamp));
+    $date2 = date_create(date('Y-m-d', $current_time));
+    $interval = date_diff($date1, $date2);
+    
+    if ($interval->y > 0) {
+        echo $interval->y . ' năm trước';
+    } elseif ($interval->m > 0) {
+        echo $interval->m . ' tháng trước';
+    } elseif ($interval->d > 0) {
+        echo $interval->d . ' ngày trước';
+    } elseif ($interval->h > 0) {
+        echo $interval->h . ' giờ trước';
+    } elseif ($interval->i > 0) {
+        echo $interval->i . ' phút trước';
+    } else {
+        echo 'Vừa xong';
     }
+    
 ?>

@@ -28,7 +28,7 @@
 		{
 			$chuoi_tim_sql_2=$chuoi_tim_sql_2.$m_2[$i]." ";
 		} 
-		$so_du_lieu=8;
+		$so_du_lieu=10;
 		$tv="select count(*) from san_pham  where $chuoi_tim_sql_2";
 		$tv_1=mysqli_query($conn,$tv);
 		$tv_2=mysqli_fetch_array($tv_1);

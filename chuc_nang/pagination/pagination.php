@@ -16,7 +16,7 @@
                 }
                 else
                 {
-                    $link="?thamso=xuat_san_pham_2&trang=".$i;
+                    $link="san-pham/trang=".$i;
                 }
                     if($trang_hien_tai == $i)
                     {

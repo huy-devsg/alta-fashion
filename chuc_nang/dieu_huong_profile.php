@@ -24,7 +24,7 @@
                 include('chuc_nang/profile/tai_khoan/sua_thong_tin.php');
             break;
             case "dia-chi":
-                echo '<h2 class="title_admin">ĐỊA CHỈ MẶC ĐỊNH</h2>';
+                echo '<h2 class="title_admin">ĐỊA CHỈ GIAO HÀNG</h2>';
                 include('chuc_nang/profile/dia_chi/dia_chi.php');
             break;
             case "them-dia-chi":

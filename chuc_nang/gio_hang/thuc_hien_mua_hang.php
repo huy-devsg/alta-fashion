@@ -2,7 +2,14 @@
 	if(isset($_SESSION['id_them_vao_gio']))
 	{
 		$ten_nguoi_mua=trim($_POST['ten_nguoi_mua']);
-		$id_user=$_SESSION['id_user'];
+		if(isset($_SESSION['id_user']))
+		{
+			$id_user=$_SESSION['id_user'];
+		}
+		else
+		{
+			$id_user="";
+		}
 		$email=trim($_POST['email']);
 		$dien_thoai=trim($_POST['dien_thoai']);
 		$dia_chi=trim(nl2br($_POST['dia_chi']));
@@ -39,7 +46,7 @@
 			mysqli_query($conn,$tv);
 			unset($_SESSION['id_them_vao_gio']);
 			unset($_SESSION['sl_them_vao_gio']);
-			thong_bao("Alta Fashion Thanks You");
+			thong_bao("Alta Clothing cảm ơn bạn đã mua hàng");
 			trang_truoc();
 		}
 		else 

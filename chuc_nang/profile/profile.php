@@ -60,7 +60,7 @@
 						<li>
 							<a href=profile/dia-chi.html>
 							<i class="fas fa-map-marker-alt"></i>
-							&nbsp;Địa chỉ mặc định </a>
+							&nbsp;Địa chỉ giao hàng</a>
 						</li>
             <?php if($tv_2['quyen']!="")
                 {

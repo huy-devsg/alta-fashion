@@ -124,7 +124,11 @@
 					echo "<a href='$link_phan_trang' class='phan_trang' >";
 					if(isset($_GET['trang']) && $_GET['trang'] == $i)
 					{
-						echo '<span style="color:red">';
+						echo '<span style="background: #fe8c00;
+						background: -webkit-linear-gradient(to right, #f83600, #fe8c00);
+						background: linear-gradient(to right, #f83600, #fe8c00);
+						-webkit-background-clip: text  !important;
+						-webkit-text-fill-color: transparent !important;font-weight:bold;">';
 						echo 'Trang '.$i;
 						echo '</span>';
 					} else {

@@ -1,7 +1,7 @@
 	<h2>SẢN PHẨM MỚI NHẤT</h2>
 	<div class="product-list">
 		<?php 
-		$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham order by id desc limit 15";
+		$tv="select id,ten,gia,hinh_anh,thuoc_menu from san_pham where trang_chu='co' order by id desc limit 15";
 		$tv_1=mysqli_query($conn,$tv);
 		while($tv_2=mysqli_fetch_array($tv_1))
 		{
@@ -14,7 +14,7 @@
 				$gia=number_format($gia,0,",",".");
 				echo '<div class="product_image">';
 				echo "<a href='$link_chi_tiet' >";
-					echo "<img src='$link_anh' class='product_img' width='200px' >";
+					echo "<img src='$link_anh'>";
 				echo "</a>";
 				echo '</div>';	
 				echo "<div class='product_details'>";						
