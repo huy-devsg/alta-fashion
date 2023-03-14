@@ -109,57 +109,69 @@
 			 </tr>
 	<tr height="30px" >
 		<td colspan="5" style="text-align:center;">
-		<form method="POST">
-		<select name="tinh_trang" style="width:20%;text-align:center">
-				<option><?php echo $tinh_trang ?></option>
-				<?php
-					if ($tinh_trang != 'Chờ xử lý') {
-						echo '<option value=1>Chờ xử lý</option>';
-					}
-					if ($tinh_trang != 'Đã xác nhận') {
-						echo '<option value=2>Đã xác nhận</option>';
-					}
-					if ($tinh_trang != 'Đang giao hàng') {
-						echo '<option value=3>Đang giao hàng</option>';
-					}
-					if ($tinh_trang != 'Đã giao hàng') {
-						echo '<option value=4>Đã giao hàng</option>';
-					}
-				?>
-			</select><br><br>
-			<input type="submit" name="update_status" value="Cập nhật trạng thái">
-				</form>
 			<?php
-				if(isset($_POST['update_status']))
+				if(isset($_SESSION['quyen']))
 				{
-					if($_POST['tinh_trang']==1)
+					if($_SESSION['quyen']!='admin')
 					{
-						$query="UPDATE hoa_don SET tinh_trang='Chờ xử lý' where id='$id'";
-						mysqli_query($conn,$query);
-					}
-					elseif($_POST['tinh_trang']==2)
-					{
-						$query="UPDATE hoa_don SET tinh_trang='Đã xác nhận' where id='$id'";
-						mysqli_query($conn,$query);
-
-					}
-					elseif($_POST['tinh_trang']==3)
-					{
-						$query="UPDATE hoa_don SET tinh_trang='Đang giao hàng' where id='$id'";
-						mysqli_query($conn,$query);
-
+						echo $tinh_trang;
 					}
 					else
 					{
-						$query="UPDATE hoa_don SET tinh_trang='Đã giao hàng' where id='$id'";
-						mysqli_query($conn,$query);
-					}
-					echo '<script>
-					alert("Cập nhật trạng thái đơn hàng thành công");
-					window.location.href = window.location.href;
-					</script>';
-				}
 			?>
+						<form method="POST">
+						<select name="tinh_trang" style="width:20%;text-align:center">
+								<option><?php echo $tinh_trang ?></option>
+								<?php
+									if ($tinh_trang != 'Chờ xử lý') {
+										echo '<option value=1>Chờ xử lý</option>';
+									}
+									if ($tinh_trang != 'Đã xác nhận') {
+										echo '<option value=2>Đã xác nhận</option>';
+									}
+									if ($tinh_trang != 'Đang giao hàng') {
+										echo '<option value=3>Đang giao hàng</option>';
+									}
+									if ($tinh_trang != 'Đã giao hàng') {
+										echo '<option value=4>Đã giao hàng</option>';
+									}
+								?>
+							</select><br><br>
+							<input type="submit" name="update_status" value="Cập nhật trạng thái">
+								</form>
+							<?php
+								if(isset($_POST['update_status']))
+								{
+									if($_POST['tinh_trang']==1)
+									{
+										$query="UPDATE hoa_don SET tinh_trang='Chờ xử lý' where id='$id'";
+										mysqli_query($conn,$query);
+									}
+									elseif($_POST['tinh_trang']==2)
+									{
+										$query="UPDATE hoa_don SET tinh_trang='Đã xác nhận' where id='$id'";
+										mysqli_query($conn,$query);
+
+									}
+									elseif($_POST['tinh_trang']==3)
+									{
+										$query="UPDATE hoa_don SET tinh_trang='Đang giao hàng' where id='$id'";
+										mysqli_query($conn,$query);
+
+									}
+									else
+									{
+										$query="UPDATE hoa_don SET tinh_trang='Đã giao hàng' where id='$id'";
+										mysqli_query($conn,$query);
+									}
+									echo '<script>
+									alert("Cập nhật trạng thái đơn hàng thành công");
+									window.location.href = window.location.href;
+									</script>';
+								}
+							}
+						}
+							?>
 		</td>
 	</tr>
 </table>

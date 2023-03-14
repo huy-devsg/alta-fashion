@@ -61,6 +61,7 @@
 		$tv_2=mysqli_fetch_array($tv_1);
 		if($tv_2!=false)
 		{	
+			$_SESSION['quyen']=$tv_2['quyen'];
 			$_SESSION['id_user']=$tv_2['id'];
 			$_SESSION['xac_dinh_dang_nhap']="co";
 		}
